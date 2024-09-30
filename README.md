@@ -56,7 +56,7 @@ El proyecto incluye **Integración Continua (CI)**, donde cada cambio en la rama
 
 ### Clonar el Repositorio
 ```bash
--git clone
+-git clone https://github.com/isaiale/App_Movil/tree/Main
 
 Entrar en el Directorio del Proyecto
 -cd mi-enfermera-favorita-app
