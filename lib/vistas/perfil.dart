@@ -60,7 +60,7 @@ class Perfil extends StatelessWidget {
                           Icon(Icons.phone, color: Colors.grey),
                           SizedBox(width: 8),
                           Text(
-                            telefono,
+                            telefonoo,
                             style: TextStyle(fontSize: 16),
                           ),
                         ],
