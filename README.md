@@ -61,12 +61,12 @@ Para clonar este repositorio y configurarlo localmente, sigue estos pasos:
 
 2. Entrar en el Directorio del Proyecto
    ```bash
-   -cd mi-enfermera-favorita-app
+   cd mi-enfermera-favorita-app
 
 3. Instalar Dependencias
    ```bash
-   -npm install
+   npm install
 
 4. Ejecutar la Aplicación
    ```bash
-   -npm start
+   npm start
