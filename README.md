@@ -52,17 +52,21 @@ La estrategia de despliegue seleccionada es **Despliegue Directo (Big Bang)**. L
 ### CI/CD
 El proyecto incluye **Integración Continua (CI)**, donde cada cambio en la rama `main` activa pruebas automáticas para asegurar la calidad del código antes del despliegue en producción.
 
-## Instrucciones para Clonar e Instalar el Proyecto
+- ## Instalación y Configuración
+Para clonar este repositorio y configurarlo localmente, sigue estos pasos:
 
-### Clonar el Repositorio
-```bash
--git clone https://github.com/isaiale/App_Movil/tree/Main
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/isaiale/App_Movil/tree/Main
 
-Entrar en el Directorio del Proyecto
--cd mi-enfermera-favorita-app
+2. Entrar en el Directorio del Proyecto
+   ```bash
+   -cd mi-enfermera-favorita-app
 
-Instalar Dependencias
--npm install
+3. Instalar Dependencias
+   ```bash
+   -npm install
 
-Ejecutar la Aplicación
--npm start
+4. Ejecutar la Aplicación
+   ```bash
+   -npm start
