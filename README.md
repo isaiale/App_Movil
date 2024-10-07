@@ -36,12 +36,12 @@ Este proyecto utiliza **Git** para el control de versiones y **GitHub** como pla
 - Antes de fusionar cambios en la rama principal, se crea un **Pull Request** para la revisión del código.
 - Una vez aprobado el Pull Request, se fusiona en la rama `main`.
 
-- ## Estrategia de Versionamiento
+### Estrategia de Versionamiento
 El proyecto utiliza una **Estrategia de Flujo de Trabajo Centralizado**:
 - Todas las tareas se realizan en la rama principal (`main`).
 - Las nuevas funcionalidades o correcciones se realizan en **branches** locales, que luego son revisadas y fusionadas en `main` mediante **Pull Requests**.
 
-- ## Estrategia de Despliegue
+### Estrategia de Despliegue
 La estrategia de despliegue seleccionada es **Despliegue Directo (Big Bang)**. Los cambios se despliegan de una vez en el entorno de producción después de pasar por las fases de desarrollo y staging.
 
 ### Entornos Definidos
