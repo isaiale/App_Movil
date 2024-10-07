@@ -31,28 +31,28 @@ El desarrollo sigue la metodología ágil **Scrum**, con sprints de 2 semanas pa
 ## Control de Versiones
 Este proyecto utiliza **Git** para el control de versiones y **GitHub** como plataforma para la colaboración.
 
-### Flujo de Trabajo Centralizado
+## Flujo de Trabajo Centralizado
 - Todos los desarrolladores trabajan directamente en la rama principal (**main**).
 - Antes de fusionar cambios en la rama principal, se crea un **Pull Request** para la revisión del código.
 - Una vez aprobado el Pull Request, se fusiona en la rama `main`.
 
-### Estrategia de Versionamiento
+## Estrategia de Versionamiento
 El proyecto utiliza una **Estrategia de Flujo de Trabajo Centralizado**:
 - Todas las tareas se realizan en la rama principal (`main`).
 - Las nuevas funcionalidades o correcciones se realizan en **branches** locales, que luego son revisadas y fusionadas en `main` mediante **Pull Requests**.
 
-### Estrategia de Despliegue
+## Estrategia de Despliegue
 La estrategia de despliegue seleccionada es **Despliegue Directo (Big Bang)**. Los cambios se despliegan de una vez en el entorno de producción después de pasar por las fases de desarrollo y staging.
 
-### Entornos Definidos
+## Entornos Definidos
 - **Desarrollo (Development):** Entorno donde los desarrolladores trabajan en nuevas funcionalidades.
 - **Staging:** Entorno de preproducción para realizar pruebas antes de desplegar en producción.
 - **Producción (Production):** Entorno final donde la aplicación está disponible para los usuarios.
 
-### CI/CD
+## CI/CD
 El proyecto incluye **Integración Continua (CI)**, donde cada cambio en la rama `main` activa pruebas automáticas para asegurar la calidad del código antes del despliegue en producción.
 
-- ## Instalación y Configuración
+## Instalación y Configuración
 Para clonar este repositorio y configurarlo localmente, sigue estos pasos:
 
 1. Clona el repositorio:
