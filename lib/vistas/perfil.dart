@@ -33,12 +33,11 @@ class Perfil extends StatelessWidget {
 
     // Obtener la fecha de creación y formatearla
     String fechaCreado = userInfo['fechaCreado'] ?? 'Fecha de creación no disponible';
-
-    // Formatear la fecha si tiene un formato válido
     String formattedDate;
+
     try {
-      DateTime parsedDate = DateTime.parse(fechaCreado); // Parsear la fecha
-      formattedDate = DateFormat('yyyy/MM/dd').format(parsedDate); // Formatear la fecha
+      DateTime parsedDate = DateTime.parse(fechaCreado);
+      formattedDate = DateFormat('yyyy/MM/dd').format(parsedDate);
     } catch (e) {
       formattedDate = 'Fecha inválida';
     }
@@ -54,23 +53,22 @@ class Perfil extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start, // Mueve el contenido hacia arriba
-          crossAxisAlignment: CrossAxisAlignment.center, // Centra el contenido horizontalmente
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // SizedBox(height: 10.0), // Espacio desde la parte superior
             CircleAvatar(
-              radius: 50.0, // Ajusta el tamaño del círculo a 60
-              backgroundColor: Colors.pink, // Color de fondo del avatar
+              radius: 50.0,
+              backgroundColor: Colors.pink,
               child: Text(
-                iniciales, // Mostrar las iniciales
+                iniciales,
                 style: TextStyle(
-                  fontSize: 36.0, // Ajusta el tamaño del texto dentro del círculo
+                  fontSize: 36.0,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
               ),
             ),
-            SizedBox(height: 20.0), // Espacio entre el círculo y el nombre
+            SizedBox(height: 20.0),
             Text(
               '$nombre $apellido',
               style: TextStyle(
@@ -80,7 +78,7 @@ class Perfil extends StatelessWidget {
             ),
             SizedBox(height: 10.0),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center, // Centrar el contenido horizontalmente
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.email, color: Colors.grey),
                 SizedBox(width: 8.0),
@@ -137,6 +135,14 @@ class Perfil extends StatelessWidget {
                   style: TextStyle(fontSize: 16.0),
                 ),
               ],
+            ),
+            SizedBox(height: 30),
+            // Botón para editar perfil
+            ElevatedButton(
+              onPressed: () {
+                // Navegar a pantalla de edición de perfil o abrir modal
+              },
+              child: Text('Editar Perfil'),
             ),
           ],
         ),
