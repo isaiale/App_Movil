@@ -1,148 +1,145 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart'; // Importa intl para formatear fechas
+import '../servicios/UserService.dart'; // Importa el servicio de usuario
 
 class Perfil extends StatelessWidget {
-  // Datos del usuario proporcionados
-  final String nombre = 'isai';
-  final String apellido = 'alejandro';
-  final String correo = 'isaialejandro2024@outlook.com';
-  final String estado = 'ACTIVO';
-  final String telefono = '7891091412';
-  final String rol = 'User';
-  final String fechaCreado = '2024-02-18';
-
   @override
   Widget build(BuildContext context) {
+    // Obtener la información decodificada del token
+    final userInfo = UserService().decodedToken;
+
+    // Verifica si la información del usuario está disponible
+    if (userInfo == null) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('Perfil'),
+        ),
+        body: Center(
+          child: Text('No se pudo cargar la información del usuario.'),
+        ),
+      );
+    }
+
+    // Extraer la información específica del usuario del token decodificado
+    String nombre = userInfo['nombre'] ?? 'Nombre';
+    String apellido = userInfo['apellido'] ?? 'Apellido';
+    String correo = userInfo['correo'] ?? 'Correo no disponible';
+    String estado = userInfo['estado'] ?? 'Estado no disponible';
+    String telefono = userInfo['numeroTelefono'] ?? 'Teléfono no disponible';
+    String rol = userInfo['rol'] ?? 'Rol no disponible';
+
+    // Obtener las iniciales del nombre y apellido
+    String iniciales = '${nombre[0]}${apellido[0]}'.toUpperCase();
+
+    // Obtener la fecha de creación y formatearla
+    String fechaCreado = userInfo['fechaCreado'] ?? 'Fecha de creación no disponible';
+
+    // Formatear la fecha si tiene un formato válido
+    String formattedDate;
+    try {
+      DateTime parsedDate = DateTime.parse(fechaCreado); // Parsear la fecha
+      formattedDate = DateFormat('yyyy/MM/dd').format(parsedDate); // Formatear la fecha
+    } catch (e) {
+      formattedDate = 'Fecha inválida';
+    }
+
     return Scaffold(
-      body: Stack(
-        children: [
-          // Contenido del perfil
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
+      appBar: AppBar(
+        title: Text('Perfil'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start, // Mueve el contenido hacia arriba
+          crossAxisAlignment: CrossAxisAlignment.center, // Centra el contenido horizontalmente
+          children: [
+            // SizedBox(height: 10.0), // Espacio desde la parte superior
+            CircleAvatar(
+              radius: 50.0, // Ajusta el tamaño del círculo a 60
+              backgroundColor: Colors.pink, // Color de fondo del avatar
+              child: Text(
+                iniciales, // Mostrar las iniciales
+                style: TextStyle(
+                  fontSize: 36.0, // Ajusta el tamaño del texto dentro del círculo
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(height: 20.0), // Espacio entre el círculo y el nombre
+            Text(
+              '$nombre $apellido',
+              style: TextStyle(
+                fontSize: 22.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center, // Centrar el contenido horizontalmente
               children: [
-                SizedBox(height: 80), // Espacio para el Positioned (icono atrás y título)
-                // Imagen de perfil con bordes redondeados
-                CircleAvatar(
-                  radius: 50,
-                  backgroundImage: AssetImage('imagenes/AdminIsai.jpg'), // Ruta de la imagen
-                ),
-                SizedBox(height: 20),
-                // Información del usuario centrada
-                Center(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            '$nombre $apellido',
-                            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        children: [
-                          Icon(Icons.email, color: Colors.grey),
-                          SizedBox(width: 8),
-                          Text(
-                            correo,
-                            style: TextStyle(fontSize: 16, color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        children: [
-                          Icon(Icons.phone, color: Colors.grey),
-                          SizedBox(width: 8),
-                          Text(
-                            telefono,
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        children: [
-                          Icon(Icons.check_circle_outline, color: Colors.grey),
-                          SizedBox(width: 8),
-                          Text(
-                            'Estado: $estado',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        children: [
-                          Icon(Icons.lock_outline, color: Colors.grey),
-                          SizedBox(width: 8),
-                          Text(
-                            'Rol: $rol',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        children: [
-                          Icon(Icons.date_range, color: Colors.grey),
-                          SizedBox(width: 8),
-                          Text(
-                            'Miembro desde: $fechaCreado',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 30),
-                // Botón para editar perfil
-                ElevatedButton(
-                  onPressed: () {
-                    // Navegar a pantalla de edición de perfil o abrir modal
-                  },
-                  child: Text('Editar Perfil'),
+                Icon(Icons.email, color: Colors.grey),
+                SizedBox(width: 8.0),
+                Text(
+                  correo,
+                  style: TextStyle(fontSize: 16.0, color: Colors.grey),
                 ),
               ],
             ),
-          ),
-          // Botón para volver atrás y título de la pantalla
-          Positioned(
-            top: 40.0,
-            left: 20.0,
-            child: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.black),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ),
-          // Título "Perfil" en la parte superior
-          Positioned(
-            top: 43.0,
-            left: 0, // Se asegura de que el Row ocupe todo el ancho
-            right: 0, // Se asegura de que el Row ocupe todo el ancho
-            child: Row(
+            SizedBox(height: 10.0),
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Icon(Icons.phone, color: Colors.grey),
+                SizedBox(width: 8.0),
                 Text(
-                  "Perfil",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  telefono,
+                  style: TextStyle(fontSize: 16.0),
                 ),
               ],
             ),
-          ),
-        ],
+            SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.check_circle_outline, color: Colors.grey),
+                SizedBox(width: 8.0),
+                Text(
+                  'Estado: $estado',
+                  style: TextStyle(fontSize: 16.0),
+                ),
+              ],
+            ),
+            SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.lock_outline, color: Colors.grey),
+                SizedBox(width: 8.0),
+                Text(
+                  'Rol: $rol',
+                  style: TextStyle(fontSize: 16.0),
+                ),
+              ],
+            ),
+            SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.date_range, color: Colors.grey),
+                SizedBox(width: 8.0),
+                Text(
+                  'Miembro desde: $formattedDate',
+                  style: TextStyle(fontSize: 16.0),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
