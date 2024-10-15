@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../servicios/producto_service.dart';
-import '../componentes/drawer.dart'; // Importa el nuevo componente Hamburguesa para el AppBar y Drawer
+import '../componentes/drawer.dart'; 
 import '../vistas/detalle_producto.dart';
-import '../componentes/custom_app_bar.dart'; // Importa el CustomAppBar
+import '../componentes/custom_app_bar.dart';
 
 class Productos extends StatefulWidget {
   @override
@@ -12,6 +12,7 @@ class Productos extends StatefulWidget {
 class _ProductosState extends State<Productos> {
   final ProductoService _productoService = ProductoService();
   List<dynamic> productos = [];
+  String? selectedCategory;  // Nueva variable para la categoría seleccionada
 
   @override
   void initState() {
@@ -32,9 +33,14 @@ class _ProductosState extends State<Productos> {
 
   @override
   Widget build(BuildContext context) {
+    // Filtrar los productos según la categoría seleccionada
+    List<dynamic> filteredProductos = selectedCategory == null
+        ? productos
+        : productos.where((producto) => producto['categoria'].contains(selectedCategory)).toList();
+
     return Scaffold(
       appBar: CustomAppBar(title: 'Productos'),
-      drawer: DrawerUser(), // Usa el componente CustomDrawer
+      drawer: DrawerUser(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -59,10 +65,11 @@ class _ProductosState extends State<Productos> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  _buildCategoryChip('Hot Coffee'),
-                  _buildCategoryChip('Cold Brew'),
-                  _buildCategoryChip('Espresso'),
-                  _buildCategoryChip('Milk Tea'),
+                  _buildCategoryChip('Chalecos'),
+                  _buildCategoryChip('Filipinas'),
+                  _buildCategoryChip('Pantalones'),
+                  _buildCategoryChip('Zapatos'),
+                  _buildCategoryChip('Accesorios'),
                 ],
               ),
             ),
@@ -70,7 +77,7 @@ class _ProductosState extends State<Productos> {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
-              child: productos.isEmpty
+              child: filteredProductos.isEmpty
                   ? Center(child: CircularProgressIndicator())
                   : GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -79,18 +86,19 @@ class _ProductosState extends State<Productos> {
                         mainAxisSpacing: 10.0,
                         childAspectRatio: 0.73,
                       ),
-                      itemCount: productos.length,
+                      itemCount: filteredProductos.length,
                       itemBuilder: (context, index) {
                         return ProductCard(
-                          id: productos[index]['_id'],
-                          title: productos[index]['nombre'],
-                          price: productos[index]['precio'].toDouble(),
-                          imageUrl: productos[index]['imagenes'][0]['url'],
-                          inventario: productos[index]['inventario'],
-                          categoria: productos[index]['categoria'] ?? [],
-                          descuento: productos[index]['descuento'] ?? 0,
-                          talla: productos[index]['talla'] ?? [],
-                          sexo: productos[index]['sexo'] ?? 'Desconocido',
+                          id: filteredProductos[index]['_id'],
+                          title: filteredProductos[index]['nombre'],
+                          descripcion: filteredProductos[index]['descripcion'],
+                          price: filteredProductos[index]['precio'].toDouble(),
+                          imageUrl: filteredProductos[index]['imagenes'][0]['url'],
+                          inventario: filteredProductos[index]['inventario'],
+                          categoria: filteredProductos[index]['categoria'] ?? [],
+                          descuento: filteredProductos[index]['descuento'] ?? 0,
+                          talla: filteredProductos[index]['talla'] ?? [],
+                          sexo: filteredProductos[index]['sexo'] ?? 'Desconocido',
                         );
                       },
                     ),
@@ -101,21 +109,32 @@ class _ProductosState extends State<Productos> {
     );
   }
 
+  // Modificar el método para seleccionar la categoría
   Widget _buildCategoryChip(String label) {
+    bool isSelected = selectedCategory == label;
     return Padding(
       padding: const EdgeInsets.only(right: 8.0),
-      child: Chip(
+      child: ChoiceChip(
         label: Text(label),
+        selected: isSelected,
+        onSelected: (bool selected) {
+          setState(() {
+            selectedCategory = selected ? label : null;
+          });
+        },
         backgroundColor: Colors.green,
+        selectedColor: Colors.lightGreen,
         labelStyle: TextStyle(color: Colors.white),
       ),
     );
   }
 }
 
+
 class ProductCard extends StatelessWidget {
   final String id;
   final String title;
+  final String descripcion;
   final double price;
   final String imageUrl;
   final int inventario;
@@ -127,6 +146,7 @@ class ProductCard extends StatelessWidget {
   ProductCard({
     required this.id,
     required this.title,
+    required this.descripcion,
     required this.price,
     required this.imageUrl,
     required this.inventario,
@@ -161,7 +181,7 @@ class ProductCard extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(4.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -192,7 +212,9 @@ class ProductCard extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => DetalleProducto(
+                                id: id,
                                 title: title,
+                                descripcion: descripcion,
                                 price: price,
                                 imageUrl: imageUrl,
                                 inventario: inventario,

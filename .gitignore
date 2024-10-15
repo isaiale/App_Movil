@@ -29,7 +29,11 @@ migrate_working_dir/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
+build/
+# Add for linux, macos, and windows build directories
+linux/
+macos/
+windows/
 
 # Symbolication related
 app.*.symbols
@@ -41,3 +45,20 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# iOS specific
+ios/Pods/
+ios/Flutter/Flutter.framework
+ios/.generated/
+
+# Web related
+web/.generated/
+
+# MacOS specific
+*.xcworkspace
+*.xcuserdata
+DerivedData/
+*.xcuserstate
+
+# Personal generated images
+imagenes/
