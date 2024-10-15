@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'productos.dart';
-import 'Home.dart'; // Importa la nueva pantalla Home
+import 'Home.dart';
 import 'compras.dart';
 
 class TabsScreen extends StatefulWidget {
@@ -11,7 +11,7 @@ class TabsScreen extends StatefulWidget {
 class _TabsScreenState extends State<TabsScreen> {
   int _selectedIndex = 0;
 
-  // Lista de pantallas, reemplaza Perfil() por Home()
+  // Lista de pantallas
   final List<Widget> _pages = [
     Productos(),
     Home(),
@@ -27,7 +27,10 @@ class _TabsScreenState extends State<TabsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedIndex], // Cambia entre las páginas según el índice seleccionado
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _pages, // Esto mantiene el estado de las pantallas
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -35,7 +38,7 @@ class _TabsScreenState extends State<TabsScreen> {
             label: 'Productos',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home), // Cambia el ícono a uno relacionado con Home
+            icon: Icon(Icons.home),
             label: 'Inicio',
           ),
           BottomNavigationBarItem(
@@ -44,9 +47,9 @@ class _TabsScreenState extends State<TabsScreen> {
           ),
         ],
         currentIndex: _selectedIndex,
-        backgroundColor: Colors.pink, // Color de fondo del BottomNavigationBar
-        selectedItemColor: Colors.white, // Color de los íconos y texto seleccionados
-        unselectedItemColor: Colors.white, // Color de los íconos y texto no seleccionados
+        backgroundColor: Colors.pink,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white,
         onTap: _onItemTapped,
       ),
     );
