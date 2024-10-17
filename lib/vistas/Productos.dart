@@ -98,7 +98,7 @@ class _ProductosState extends State<Productos> {
                           categoria: filteredProductos[index]['categoria'] ?? [],
                           descuento: filteredProductos[index]['descuento'] ?? 0,
                           talla: filteredProductos[index]['talla'] ?? [],
-                          sexo: filteredProductos[index]['sexo'] ?? 'Desconocido',
+                          sexo: filteredProductos[index]['sexo'] ?? 'No aplica',
                         );
                       },
                     ),

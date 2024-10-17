@@ -1,5 +1,8 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import '../componentes/AlertMessage.dart';
 import 'package:flutter/material.dart';
+import '../servicios/UserService.dart';
 
 class DetalleProducto extends StatefulWidget {
   final String id;
@@ -31,11 +34,84 @@ class DetalleProducto extends StatefulWidget {
 }
 
 class _DetalleProductoState extends State<DetalleProducto> {
+  final userInfo = UserService().decodedToken;
+  String? idUsuario;
   int cantidad = 1;
   String? tallaSeleccionada; // Para almacenar la talla seleccionada
 
   @override
+  void initState() {
+    super.initState();
+
+    // Verificar si userInfo no es nulo y contiene el campo '_id'
+    if (userInfo != null && userInfo?['_id'] != null) {
+      idUsuario = userInfo!['_id']; // Guardar el ID del usuario
+      print('ID del usuario: $idUsuario'); // Mostrar en la terminal
+    }
+  }
+
+  Future<void> _agregarAlCarrito() async {
+    // Verificar si hay un usuario logueado
+    if (idUsuario == null) {
+      AlertMessage.show(
+        context: context,
+        message: 'Debes iniciar sesión para añadir productos al carrito.',
+        type: MessageType.warning,
+      );
+      return;
+    }
+
+    // Preparar los datos para enviar a la API
+    final data = {
+      'usuario': idUsuario,
+      'producto': widget.id,
+      'cantidad': cantidad,
+      'talla': tallaSeleccionada ?? 'No aplica', // Si no hay talla, "No aplica"
+      'sexo': widget.sexo.isNotEmpty
+          ? widget.sexo
+          : 'No aplica', // Si no tiene sexo, "No aplica"
+    };
+
+    try {
+      // Realizar la solicitud POST a la API
+      final response = await http.post(
+        Uri.parse(
+            'https://back-end-enfermera.vercel.app/api/carrito'), // Reemplaza con tu URL
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode(data),
+      );
+
+      if (response.statusCode == 201) {
+        // Éxito: Mostrar mensaje de confirmación
+        AlertMessage.show(
+          context: context,
+          message: 'Producto añadido al carrito con éxito.',
+          type: MessageType.success,
+        );
+      } else {
+        // Error en la respuesta de la API
+        AlertMessage.show(
+          context: context,
+          message: 'Error al añadir el producto al carrito.',
+          type: MessageType.error,
+        );
+      }
+    } catch (error) {
+      // Error en la conexión
+      AlertMessage.show(
+        context: context,
+        message: 'No se pudo conectar con el servidor.',
+        type: MessageType.error,
+      );
+      print('Error al enviar solicitud: $error');
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
+    print(
+        'Mostrando producto: ${widget.title}, Precio: ${widget.price}, Inventario: ${widget.inventario}, talla:${widget.talla}, sexo:${widget.sexo}');
+
     // Cálculo del precio con descuento si existe
     double precioConDescuento =
         widget.descuento != null && widget.descuento! > 0
@@ -183,8 +259,8 @@ class _DetalleProductoState extends State<DetalleProducto> {
                         Text(
                           '\$${widget.price.toStringAsFixed(2)}',
                           style: TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.grey,
+                            fontSize: 20.0,
+                            color: Colors.red,
                             decoration:
                                 TextDecoration.lineThrough, // Precio tachado
                           ),
@@ -212,6 +288,15 @@ class _DetalleProductoState extends State<DetalleProducto> {
                       ),
                     ),
                   SizedBox(height: 20.0),
+                  if (widget.inventario == 0)
+                    Text(
+                      '📍Producto Agotado',
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
 
                   // Selector de cantidad
                   Row(
@@ -247,10 +332,19 @@ class _DetalleProductoState extends State<DetalleProducto> {
                             icon: Icon(Icons.add_circle_outline),
                             onPressed: () {
                               setState(() {
-                                if (cantidad < widget.inventario) {
+                                if (widget.inventario == 0) {
+                                  // Mostrar alerta cuando el producto está agotado
+                                  AlertMessage.show(
+                                    context: context,
+                                    message:
+                                        'El producto está agotado.',
+                                    type: MessageType.error,
+                                  );
+                                } else if (cantidad < widget.inventario) {
+                                  // Incrementar la cantidad si no supera el inventario
                                   cantidad++;
                                 } else {
-                                  // Mostrar la alerta de advertencia cuando el usuario intenta exceder el inventario
+                                  // Mostrar alerta si la cantidad supera el inventario disponible
                                   AlertMessage.show(
                                     context: context,
                                     message:
@@ -275,8 +369,8 @@ class _DetalleProductoState extends State<DetalleProducto> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('Precio Total',
-                              style: TextStyle(color: Colors.grey)),
-                          SizedBox(height: 5.0),
+                              style: TextStyle(color: Colors.black, fontSize: 17.0)),
+                          SizedBox(height: 4.0),
                           Text(
                             '\$${(precioConDescuento * cantidad).toStringAsFixed(2)}',
                             style: TextStyle(
@@ -288,20 +382,45 @@ class _DetalleProductoState extends State<DetalleProducto> {
                         ],
                       ),
                       ElevatedButton(
-                        onPressed: () {
-                          // Acción para agregar al carrito
-                          if (cantidad <= widget.inventario) {
-                            // Lógica para añadir al carrito
-                          } else {
-                            // Mostrar la alerta si la cantidad excede el inventario
-                            AlertMessage.show(
-                              context: context,
-                              message:
-                                  'La cantidad que seleccionaste supera la existencia actual del producto.',
-                              type: MessageType.warning,
-                            );
-                          }
-                        },
+                        onPressed: widget.inventario > 0
+                            ? () {
+                                if (tallas.isNotEmpty &&
+                                    tallaSeleccionada == null) {
+                                  AlertMessage.show(
+                                    context: context,
+                                    message:
+                                        'Por favor, selecciona una talla antes de añadir al carrito.',
+                                    type: MessageType.warning,
+                                  );
+                                  return; // Detener la ejecución si no se selecciona talla
+                                }
+                                _agregarAlCarrito(); // Lógica para añadir al carrito
+                              }
+                            : null, // Deshabilitar botón si inventario es 0
+                        // onPressed: () {
+                        //   // Verificar si el producto tiene tallas y el usuario no ha seleccionado ninguna
+                        //   if (widget.talla.isNotEmpty &&
+                        //       tallaSeleccionada == null) {
+                        //     AlertMessage.show(
+                        //       context: context,
+                        //       message:
+                        //           'Por favor, selecciona una talla antes de añadir al carrito.',
+                        //       type: MessageType.warning,
+                        //     );
+                        //     return; // Detener ejecución si no se selecciona talla
+                        //   }
+
+                        //   if (cantidad <= widget.inventario) {
+                        //     _agregarAlCarrito(); // Llamada a la función de agregar al carrito
+                        //   } else {
+                        //     AlertMessage.show(
+                        //       context: context,
+                        //       message:
+                        //           'La cantidad seleccionada excede el inventario disponible del producto.',
+                        //       type: MessageType.warning,
+                        //     );
+                        //   }
+                        // },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(
                               horizontal: 40.0, vertical: 15.0),
@@ -312,10 +431,7 @@ class _DetalleProductoState extends State<DetalleProducto> {
                         ),
                         child: Text(
                           'Añadir al carrito',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16.0,
-                          ),
+                          style: TextStyle(color: Colors.white, fontSize: 16.0),
                         ),
                       ),
                     ],
