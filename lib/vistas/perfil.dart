@@ -138,12 +138,12 @@ class Perfil extends StatelessWidget {
             ),
             SizedBox(height: 30),
             // Botón para editar perfil
-            ElevatedButton(
-              onPressed: () {
-                // Navegar a pantalla de edición de perfil o abrir modal
-              },
-              child: Text('Editar Perfil'),
-            ),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     // Navegar a pantalla de edición de perfil o abrir modal
+            //   },
+            //   child: Text('Editar Perfil'),
+            // ),
           ],
         ),
       ),
