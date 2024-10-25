@@ -44,10 +44,10 @@ class _ComprasState extends State<Compras> {
 
     try {
       final response = await http.get(url);
-      print('Estado de la respuesta: ${response.statusCode}');
+      // print('Estado de la respuesta: ${response.statusCode}');
 
       if (response.statusCode == 200) {
-        print('Respuesta completa: ${response.body}');
+        // print('Respuesta completa: ${response.body}');
         final List<dynamic> compras = jsonDecode(response.body);
 
         if (compras.isEmpty) {

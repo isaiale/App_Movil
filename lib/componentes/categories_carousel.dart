@@ -29,7 +29,7 @@ class _CategoriesCarouselState extends State<CategoriesCarousel> {
             .map((category) => {
                   '_id': category['_id'],
                   'name': category['nombre'],
-                  'icon': Icons.category,
+                  'icon': Icons.category, // Se puede cambiar el icono aquí
                 })
             .toList();
       });
@@ -41,39 +41,57 @@ class _CategoriesCarouselState extends State<CategoriesCarousel> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: SizedBox(
-        height: 50.0,
+        height: 40.0, // Altura del carrusel de categorías
         child: categories.isEmpty
             ? Center(child: CircularProgressIndicator())
-            : Center(
-                child: Wrap(
-                  spacing: 8.0,
-                  alignment: WrapAlignment.center,
-                  children: categories.map((category) {
-                    return GestureDetector(
-                      onTap: () {
-                        String categoriaId = category['_id'] ?? '';
-                        if (categoriaId.isNotEmpty) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  ProductosCategoria(categoriaId: categoriaId),
-                            ),
-                          );
-                        } else {
-                          print("ID de categoría nulo o vacío");
-                        }
-                      },
+            : ListView.builder(
+                scrollDirection: Axis.horizontal, // Desplazamiento horizontal
+                itemCount: categories.length,
+                itemBuilder: (context, index) {
+                  final category = categories[index];
+                  return GestureDetector(
+                    onTap: () {
+                      String categoriaId = category['_id'] ?? '';
+                      if (categoriaId.isNotEmpty) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                ProductosCategoria(categoriaId: categoriaId),
+                          ),
+                        );
+                      } else {
+                        print("ID de categoría nulo o vacío");
+                      }
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Chip(
-                        label: Text(category['name']),
+                        label: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              category['icon'],
+                              color: Colors.white,
+                              size: 20.0,
+                            ),
+                            SizedBox(width: 8.0),
+                            Text(
+                              category['name'],
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        ),
                         backgroundColor: Colors.green,
-                        labelStyle: TextStyle(color: Colors.white),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
                       ),
-                    );
-                  }).toList(),
-                ),
+                    ),
+                  );
+                },
               ),
       ),
     );

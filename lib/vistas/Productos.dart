@@ -25,7 +25,7 @@ class _ProductosState extends State<Productos> {
       List<dynamic> data = await _productoService.fetchProductos();
       setState(() {
         productos = data;
-        print('Total de Productos: ${productos.length} encontrados ${productos}.');
+        // print('Total de Productos: ${productos.length} encontrados ${productos}.');
       });
     } catch (e) {
       print('Error: $e');
