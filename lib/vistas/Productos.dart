@@ -25,6 +25,7 @@ class _ProductosState extends State<Productos> {
       List<dynamic> data = await _productoService.fetchProductos();
       setState(() {
         productos = data;
+        print('Total de Productos: ${productos.length} encontrados ${productos}.');
       });
     } catch (e) {
       print('Error: $e');
@@ -138,7 +139,7 @@ class ProductCard extends StatelessWidget {
   final double price;
   final String imageUrl;
   final int inventario;
-  final List<dynamic> categoria;
+  final dynamic categoria;
   final int? descuento;
   final List<dynamic> talla;
   final String sexo;
@@ -245,4 +246,6 @@ class ProductCard extends StatelessWidget {
       ),
     );
   }
+
+
 }

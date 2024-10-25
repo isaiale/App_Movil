@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'package:app_movil/servicios/producto_service.dart';
+import 'lista_productos.dart';
 
 class ProductosCategoria extends StatefulWidget {
   final String categoriaId;
@@ -12,6 +12,7 @@ class ProductosCategoria extends StatefulWidget {
 }
 
 class _ProductosCategoriaState extends State<ProductosCategoria> {
+  final ProductosCategoriaService _productoService = ProductosCategoriaService();
   List<dynamic> productos = [];
   bool isLoading = true;
 
@@ -22,40 +23,21 @@ class _ProductosCategoriaState extends State<ProductosCategoria> {
   }
 
   Future<void> fetchProductosByCategoria() async {
+    print('Iniciando la solicitud para obtener productos de la categoría: ${widget.categoriaId}');
     try {
-      final response = await http.get(
-        Uri.parse(
-          'https://back-end-enfermera.vercel.app/api/productos/productos/categoria/${widget.categoriaId}',
-        ),
-      );
+      final data = await _productoService.fetchProductosByCategoria(widget.categoriaId);
 
-      if (response.statusCode == 200) {
-        final data = json.decode(response.body);
-        print(data); // Imprime la respuesta para verificar su estructura
-
-        // Verificamos si data es un Map y contiene la clave 'productos'
-        if (data is Map<String, dynamic> && data.containsKey('productos')) {
-          setState(() {
-            productos = data['productos']; // Accedemos a la lista de productos
-            isLoading = false;
-          });
-        } else {
-          setState(() {
-            productos = []; // Si no hay productos, dejamos la lista vacía
-            isLoading = false;
-          });
-        }
-      } else {
-        setState(() {
-          isLoading = false;
-        });
-        print('Error: ${response.statusCode}');
-      }
+      setState(() {
+        productos = data;
+        print(productos);
+        isLoading = false;
+      });
+      print('Productos cargados: ${productos.length} encontrados');
     } catch (e) {
       setState(() {
         isLoading = false;
       });
-      print('Error: $e');
+      print('Error al obtener los productos: $e');
     }
   }
 
@@ -72,127 +54,49 @@ class _ProductosCategoriaState extends State<ProductosCategoria> {
               : Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: GridView.builder(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2, // Número de productos por fila
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
                       crossAxisSpacing: 10.0,
                       mainAxisSpacing: 10.0,
-                      childAspectRatio:
-                          0.75, // Relación de aspecto de los productos
+                      childAspectRatio: 0.74,
                     ),
                     itemCount: productos.length,
                     itemBuilder: (context, index) {
+                      final producto = productos[index];
+
+                      if (producto is! Map<String, dynamic>) {
+                        print('Producto inesperado: $producto');
+                        return Center(child: Text('Producto no disponible'));
+                      }
+
+                      final nombre = producto['nombre'] ?? 'Sin nombre';
+                      final precio = (producto['precio'] ?? 0).toDouble();
+                      final descripcion = producto['descripcion'] ?? 'Sin descripción';
+                      final inventario = producto['inventario'] ?? 0;
+                      final descuento = producto['descuento'] ?? 0;
+                      final talla = producto['talla'] ?? [];
+                      final sexo = producto['sexo'] ?? 'No aplica';
+                      final categoria = producto['categoria']?['nombre'] ?? 'Sin categoría';
+                      final imagenes = producto['imagenes'] ?? [];
+                      final imageUrl = imagenes.isNotEmpty
+                          ? imagenes[0]['url']
+                          : 'https://via.placeholder.com/150';
+
                       return ProductCard(
-                        id: productos[index]['_id'],
-                        title: productos[index]['nombre'],
-                        price: productos[index]['precio'].toDouble(),
-                        imageUrl: productos[index]['imagenes'][0]['url'],
-                        inventario: productos[index]['inventario'],
-                        categoria: productos[index]['categoria'] ?? [],
-                        descuento: productos[index]['descuento'] ?? 0,
-                        talla: productos[index]['talla'] ?? [],
-                        sexo: productos[index]['sexo'] ?? 'Desconocido',
+                        id: producto['_id'] ?? '',
+                        title: nombre,
+                        price: precio,
+                        descripcion: descripcion,
+                        inventario: inventario,
+                        descuento: descuento,
+                        talla: talla,
+                        sexo: sexo,
+                        categoria: categoria,
+                        imageUrl: imageUrl,
                       );
                     },
                   ),
                 ),
-    );
-  }
-}
-
-class ProductCard extends StatelessWidget {
-  final String id;
-  final String title;
-  final double price;
-  final String imageUrl;
-  final int inventario;
-  final List<dynamic> categoria;
-  final int descuento;
-  final List<dynamic> talla;
-  final String sexo;
-
-  ProductCard({
-    required this.id,
-    required this.title,
-    required this.price,
-    required this.imageUrl,
-    required this.inventario,
-    required this.categoria,
-    required this.descuento,
-    required this.talla,
-    required this.sexo,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 4.0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15.0),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          AspectRatio(
-            aspectRatio: 1,
-            child: ClipRRect(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15.0),
-                topRight: Radius.circular(15.0),
-              ),
-              child: Image.network(
-                imageUrl,
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  Spacer(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '\$$price',
-                        style: const TextStyle(
-                          fontSize: 18.0,
-                          color: Colors.green,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          // Lógica para manejar la acción cuando se presiona el botón
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
-                          minimumSize: Size(40, 40),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                        child: Icon(Icons.add_shopping_cart, color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

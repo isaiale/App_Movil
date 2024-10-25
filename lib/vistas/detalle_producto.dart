@@ -11,7 +11,7 @@ class DetalleProducto extends StatefulWidget {
   final double price;
   final String imageUrl;
   final int inventario;
-  final List<dynamic> categoria;
+  final dynamic categoria;
   final int? descuento;
   final List<dynamic> talla;
   final String sexo;
@@ -120,13 +120,27 @@ class _DetalleProductoState extends State<DetalleProducto> {
 
     // Verificar la categoría para determinar el tipo de tallas a mostrar
     List<String> tallas = [];
-    if (widget.categoria.any((c) => c["nombre"] == "Zapatos")) {
-      tallas = ["23", "24", "25", "26"];
-    } else if (widget.categoria
-        .any((c) => c["nombre"] == "Chalecos" || c["nombre"] == "Filipinas")) {
-      tallas = ['Ch', 'M', 'G', 'XL'];
-    } else if (widget.categoria.any((c) => c["nombre"] == "Pantalones")) {
-      tallas = ['28', '30', '32', '34', '36', '38'];
+
+    if (widget.categoria is List) {
+      // Si es una lista, aplicar la lógica con any
+      if (widget.categoria.any((c) => c["nombre"] == "Zapatos")) {
+        tallas = ["23", "24", "25", "26"];
+      } else if (widget.categoria.any(
+          (c) => c["nombre"] == "Chalecos" || c["nombre"] == "Filipinas")) {
+        tallas = ['Ch', 'M', 'G', 'XL'];
+      } else if (widget.categoria.any((c) => c["nombre"] == "Pantalones")) {
+        tallas = ['28', '30', '32', '34', '36', '38'];
+      }
+    } else if (widget.categoria is String) {
+      // Si es un String, compararlo directamente
+      if (widget.categoria == "Zapatos") {
+        tallas = ["23", "24", "25", "26"];
+      } else if (widget.categoria == "Chalecos" ||
+          widget.categoria == "Filipinas") {
+        tallas = ['Ch', 'M', 'G', 'XL'];
+      } else if (widget.categoria == "Pantalones") {
+        tallas = ['28', '30', '32', '34', '36', '38'];
+      }
     }
 
     return Scaffold(
@@ -336,8 +350,7 @@ class _DetalleProductoState extends State<DetalleProducto> {
                                   // Mostrar alerta cuando el producto está agotado
                                   AlertMessage.show(
                                     context: context,
-                                    message:
-                                        'El producto está agotado.',
+                                    message: 'El producto está agotado.',
                                     type: MessageType.error,
                                   );
                                 } else if (cantidad < widget.inventario) {
@@ -369,7 +382,8 @@ class _DetalleProductoState extends State<DetalleProducto> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('Precio Total',
-                              style: TextStyle(color: Colors.black, fontSize: 17.0)),
+                              style: TextStyle(
+                                  color: Colors.black, fontSize: 17.0)),
                           SizedBox(height: 4.0),
                           Text(
                             '\$${(precioConDescuento * cantidad).toStringAsFixed(2)}',
@@ -397,30 +411,6 @@ class _DetalleProductoState extends State<DetalleProducto> {
                                 _agregarAlCarrito(); // Lógica para añadir al carrito
                               }
                             : null, // Deshabilitar botón si inventario es 0
-                        // onPressed: () {
-                        //   // Verificar si el producto tiene tallas y el usuario no ha seleccionado ninguna
-                        //   if (widget.talla.isNotEmpty &&
-                        //       tallaSeleccionada == null) {
-                        //     AlertMessage.show(
-                        //       context: context,
-                        //       message:
-                        //           'Por favor, selecciona una talla antes de añadir al carrito.',
-                        //       type: MessageType.warning,
-                        //     );
-                        //     return; // Detener ejecución si no se selecciona talla
-                        //   }
-
-                        //   if (cantidad <= widget.inventario) {
-                        //     _agregarAlCarrito(); // Llamada a la función de agregar al carrito
-                        //   } else {
-                        //     AlertMessage.show(
-                        //       context: context,
-                        //       message:
-                        //           'La cantidad seleccionada excede el inventario disponible del producto.',
-                        //       type: MessageType.warning,
-                        //     );
-                        //   }
-                        // },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(
                               horizontal: 40.0, vertical: 15.0),
