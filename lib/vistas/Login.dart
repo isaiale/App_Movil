@@ -49,7 +49,7 @@ class _LoginState extends State<Login> {
         );
 
         // Navegar a la pantalla principal utilizando rutas nombradas
-        Navigator.pushReplacementNamed(context, '/tabs');
+        Navigator.pushReplacementNamed(context, '/home');
       } else {
         // Decodificar la respuesta de error de la API
         final errorData = jsonDecode(response.body);

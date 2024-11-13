@@ -22,7 +22,7 @@ class _InicioState extends State<Inicio> {
 
     // Si el token es válido, redirigir a la pantalla principal
     if (token != null && !JwtDecoder.isExpired(token)) {
-      Navigator.pushReplacementNamed(context, '/tabs');  // Navegar a la pantalla principal
+      Navigator.pushReplacementNamed(context, '/home');  // Navegar a la pantalla principal
     } else {
       Navigator.pushReplacementNamed(context, '/login');  // Navegar a la pantalla de Login
     }

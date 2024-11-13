@@ -107,7 +107,7 @@ class _DrawerUserState extends State<DrawerUser> {
             onTap: () {
               Navigator.pop(context); // Cierra el drawer
               Navigator.pushReplacementNamed(
-                  context, '/tabs'); // Navegar a la pantalla de inicio (o tabs)
+                  context, '/home'); // Navegar a la pantalla de inicio (o tabs)
             },
           ),
           ListTile(
@@ -126,6 +126,15 @@ class _DrawerUserState extends State<DrawerUser> {
               Navigator.pop(context); // Cierra el drawer
               Navigator.pushNamed(context,
                   '/carrito'); // Navega a la página del carrito de compras
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.shopping_bag),
+            title: Text('Compras'),
+            onTap: () {
+              Navigator.pop(context); // Cierra el drawer
+              Navigator.pushNamed(context,
+                  '/compras'); // Navega a la página del carrito de compras
             },
           ),
 
