@@ -5,6 +5,11 @@ import '../servicios/UserService.dart';
 import '../componentes/CustomElevatedButton.dart';
 import '../componentes/ConfirmationDialog.dart';
 import '../componentes/AlertMessage.dart';
+import '../componentes/productlistview.dart';
+import '../componentes/showDialogModalProducto.dart';
+import '../componentes/paymentStripe.dart';
+import 'package:app_movil/componentes/drawer.dart';
+import '../componentes/custom_app_bar.dart';
 
 class CarritoCompras extends StatefulWidget {
   @override
@@ -13,9 +18,13 @@ class CarritoCompras extends StatefulWidget {
 
 class _CarritoComprasState extends State<CarritoCompras> {
   List<dynamic> productos = []; // Aquí se almacenarán los productos
+  Map<String, dynamic>? userInfo;
   bool isLoading = true; // Indicador de carga
   double total = 0.0; // Total inicial
   String? userId; // Para almacenar el ID del usuario
+  String? nombre;
+  String? apellido;
+  String? correo;
 
   @override
   void initState() {
@@ -27,6 +36,12 @@ class _CarritoComprasState extends State<CarritoCompras> {
   Future<void> fetchCarrito() async {
     await UserService().loadToken(); // Cargar el token al inicio
     userId = UserService().userId;
+    userInfo = UserService().decodedToken;
+    nombre = userInfo!['nombre'];
+    apellido = userInfo!['apellido'];
+    correo = userInfo!['correo'];
+    print(
+        'Este es el nombre del usuario $nombre, $apellido, con el correo $correo');
 
     if (userId != null) {
       final url = 'https://back-end-enfermera.vercel.app/api/carrito/$userId';
@@ -153,13 +168,6 @@ class _CarritoComprasState extends State<CarritoCompras> {
             recalcularTotal();
           });
           print('Producto eliminado correctamente');
-          // Mostrar mensaje de eliminación exitosa
-          // AlertMessage.show(
-          //   context: context,
-          //   message: 'Producto eliminado del carrito',
-          //   backgroundColor: Colors.green,
-          //   icon: Icons.check_circle,
-          // );
           AlertMessage.show(
             context: context,
             message: 'Producto eliminado del carrito',
@@ -217,97 +225,9 @@ class _CarritoComprasState extends State<CarritoCompras> {
   }
 
   void _mostrarDetallesProducto(BuildContext context, dynamic producto) {
-    // Calcular el precio con descuento, si aplica
-    double precio = double.tryParse(producto['precio'].toString()) ?? 0.0;
-    double descuento = double.tryParse(producto['descuento'].toString()) ?? 0.0;
-    double precioConDescuento =
-        descuento > 0 ? precio * (1 - descuento / 100) : precio;
-
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Center(
-            child: Text(
-              producto['nombre'],
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
-            ),
-          ),
-          content: SingleChildScrollView(
-            child: Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment:
-                    CrossAxisAlignment.center, // Alineación centrada
-                children: [
-                  if (producto['imagenes'] != null &&
-                      producto['imagenes'].isNotEmpty)
-                    Image.network(
-                      producto['imagenes'][0]['url'],
-                      height: 120,
-                      width: 120,
-                      fit: BoxFit.cover,
-                    ),
-                  SizedBox(height: 10),
-                  if (descuento > 0) ...[
-                    Text(
-                      'Precio Original: \$${producto['precio']}',
-                      style: TextStyle(
-                        fontSize: 18,
-                        decoration: TextDecoration.lineThrough,
-                        decorationColor: Colors.red, // Color del tachado
-                        color: Colors.black, // Color del texto
-                      ),
-                    ),
-                    SizedBox(height: 5),
-                    Text(
-                      'Precio con Descuento: \$${precioConDescuento.toStringAsFixed(2)}',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                  ] else
-                    Text(
-                      'Precio: \$${producto['precio']}',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  SizedBox(height: 10),
-                  Text(
-                    'Cantidad: ${producto['cantidad']}',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  if (producto['talla'] != 'No aplica' &&
-                      producto['talla'] != null)
-                    Text(
-                      'Talla: ${producto['talla']}',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  if (producto['sexo'] != 'No aplica' &&
-                      producto['sexo'] != null)
-                    Text(
-                      'Sexo: ${producto['sexo']}',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  if (descuento > 0)
-                    Text(
-                      'Descuento: ${producto['descuento']}%',
-                      style: TextStyle(color: Colors.green, fontSize: 18),
-                    ),
-                ],
-              ),
-            ),
-          ),
-          actions: [
-            Center(
-              child: TextButton(
-                child: Text('Cerrar', style: TextStyle(fontSize: 18)),
-                onPressed: () {
-                  Navigator.of(context).pop(); // Cierra el modal
-                },
-              ),
-            ),
-          ],
-        );
-      },
+    ProductDetailsDialog.show(
+      context,
+      producto: producto,
     );
   }
 
@@ -315,41 +235,113 @@ class _CarritoComprasState extends State<CarritoCompras> {
   void _mostrarOpcionesPago(BuildContext context) {
     showModalBottomSheet(
       context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
+      ),
+      backgroundColor: Colors.white,
       builder: (BuildContext bc) {
         return Container(
-          padding: EdgeInsets.all(16.0),
-          child: Wrap(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
+              const Text(
+                'Selecciona tu método de pago',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),
+              ),
+              const SizedBox(height: 10.0),
+              Divider(
+                thickness: 1,
+                color: Colors.grey[300],
+              ),
+              const SizedBox(height: 10.0),
               ListTile(
-                leading: Icon(Icons.credit_card),
-                title: Text('Con tarjeta'),
+                leading: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blueAccent.withOpacity(0.2),
+                  ),
+                  child:
+                      const Icon(Icons.credit_card, color: Colors.blueAccent),
+                ),
+                title: const Text(
+                  'Con tarjeta',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
                 onTap: () {
-                  // Lógica para pago con tarjeta
                   Navigator.pop(context); // Cierra el modal
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PaymentPage(
+                        productosCarrito: productos,
+                        user: {
+                          "nombre": nombre,
+                          "apellido": apellido,
+                          "correo": correo,
+                          "_id": userId,
+                        },
+                        total: total,
+                      ),
+                    ),
+                  );
                 },
               ),
+              const SizedBox(height: 10.0),
               ListTile(
-                leading: Icon(Icons.paypal),
-                title: Text('PayPal'),
+                leading: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.amber.withOpacity(0.2),
+                  ),
+                  child: const Icon(Icons.paypal, color: Colors.amber),
+                ),
+                title: const Text(
+                  'PayPal',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
                 onTap: () {
-                  // Lógica para pago con PayPal
                   Navigator.pop(context); // Cierra el modal
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Pago con PayPal no implementado.'),
+                    ),
+                  );
                 },
               ),
-              Divider(),
-              Center(
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey, // Color gris para el botón
-                    minimumSize: Size.fromHeight(50), // Tamaño mínimo del botón
+              const SizedBox(height: 10.0),
+              Divider(
+                thickness: 1,
+                color: Colors.grey[300],
+              ),
+              const SizedBox(height: 20.0),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.redAccent,
+                  padding: const EdgeInsets.symmetric(vertical: 15.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
                   ),
-                  onPressed: () {
-                    Navigator.pop(context); // Cierra el modal
-                  },
-                  child: Text(
-                    'Cancelar',
-                    style: TextStyle(fontSize: 18, color: Colors.white),
-                  ),
+                  minimumSize: const Size.fromHeight(50),
+                ),
+                onPressed: () {
+                  Navigator.pop(context); // Cierra el modal
+                },
+                child: const Text(
+                  'Cancelar',
+                  style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
               ),
             ],
@@ -362,159 +354,71 @@ class _CarritoComprasState extends State<CarritoCompras> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Carrito de Compras'),
-      ),
-      body: isLoading
-          ? Center(child: CircularProgressIndicator())
-          : productos.isEmpty
-              ? Center(child: Text('No hay productos en el carrito.'))
-              : Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(height: 10),
-                      Expanded(
-                        child: ListView.builder(
-                          itemCount: productos.length,
-                          itemBuilder: (context, index) {
-                            final producto = productos[index];
-                            return Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(vertical: 10.0),
-                              child: Card(
-                                elevation: 3,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      IconButton(
-                                        icon: Icon(Icons.info,
-                                            color: Colors.black),
-                                        onPressed: () {
-                                          // Llamar al modal para mostrar los detalles del producto
-                                          _mostrarDetallesProducto(
-                                              context, producto);
-                                        },
-                                      ),
-                                      Image.network(
-                                        producto['imagenes'][0]['url'],
-                                        height: 60,
-                                        width: 60,
-                                        fit: BoxFit.cover,
-                                      ),
-                                      SizedBox(width: 10),
-                                      Expanded(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              producto['nombre'],
-                                              style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                            Text(
-                                              'Cantidad: ${producto['cantidad']}',
-                                              style: TextStyle(
-                                                fontSize: 14,
-                                                color: Colors.grey,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Row(
-                                        children: [
-                                          IconButton(
-                                            icon: Icon(
-                                                Icons.remove_circle_outline),
-                                            onPressed: () {
-                                              disminuirCantidad(index);
-                                            },
-                                          ),
-                                          Text(
-                                            '${producto['cantidad']}',
-                                            style: TextStyle(fontSize: 18),
-                                          ),
-                                          IconButton(
-                                            icon:
-                                                Icon(Icons.add_circle_outline),
-                                            onPressed: () {
-                                              incrementarCantidad(index);
-                                            },
-                                          ),
-                                        ],
-                                      ),
-                                      SizedBox(width: 10),
-                                      Text(
-                                        '\$${producto['precio']}',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      IconButton(
-                                        icon: Icon(Icons.delete,
-                                            color: Colors.red),
-                                        onPressed: () {
-                                          _confirmarEliminarProducto(
-                                              index); // Preguntar antes de eliminar
-                                        },
-                                      )
-                                    ],
-                                  ),
-                                ),
+        appBar: CustomAppBar(title: 'Carrito de Compras'),
+        drawer: DrawerUser(),
+        body: isLoading
+            ? Center(child: CircularProgressIndicator())
+            : productos.isEmpty
+                ? Center(child: Text('No hay productos en el carrito.'))
+                : Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 10),
+                        // Lista de productos con diseño mejorado
+                        Expanded(
+                          child: ProductListView(
+                            productos: productos,
+                            disminuirCantidad: disminuirCantidad,
+                            incrementarCantidad: incrementarCantidad,
+                            mostrarDetallesProducto: _mostrarDetallesProducto,
+                            confirmarEliminarProducto:
+                                _confirmarEliminarProducto,
+                          ),
+                        ),
+                        const Divider(thickness: 1.5, color: Colors.grey),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Total:',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87,
                               ),
-                            );
+                            ),
+                            Text(
+                              '\$$total',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+                        CustomElevatedButton(
+                          text: "Pagar",
+                          onPressed: () {
+                            _mostrarOpcionesPago(context);
                           },
                         ),
-                      ),
-                      Divider(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Total: ',
+                        const SizedBox(height: 20),
+                        Center(
+                          child: Text(
+                            '📍 La entrega del producto será en la tienda.',
                             style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                              color: Colors.black54,
+                              fontSize: 16,
+                              fontStyle: FontStyle.italic,
                             ),
-                          ),
-                          Text(
-                            '\$$total',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      CustomElevatedButton(
-                        text: "Pagar",
-                        onPressed: () {
-                          _mostrarOpcionesPago(context);
-                        },
-                      ),
-                      SizedBox(height: 10),
-                      Center(
-                        child: Text(
-                          'La entrega del producto será en la tienda.',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 15,
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-    );
+                      ],
+                    ),
+                  ));
   }
 }

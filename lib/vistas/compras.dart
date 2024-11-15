@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../componentes/custom_app_bar.dart'; // Importa el CustomAppBar
+import '../componentes/custom_app_bar.dart';
 import 'package:app_movil/componentes/drawer.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -137,58 +137,172 @@ class _ComprasState extends State<Compras> {
                           final String fechaCompra =
                               _formatDate(compra['fechaCompra']);
 
-                          return Card(
-                            margin: EdgeInsets.all(10),
+                          return Container(
+                            margin: EdgeInsets.symmetric(
+                                horizontal: 15.0, vertical: 10.0),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15.0),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black
+                                      .withOpacity(0.1), // Sombra ligera
+                                  blurRadius: 10.0,
+                                  spreadRadius: 2.0,
+                                  offset: Offset(0, 4), // Posición de la sombra
+                                ),
+                              ],
+                            ),
                             child: Padding(
-                              padding: const EdgeInsets.all(10.0),
+                              padding: const EdgeInsets.all(15.0),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    'Fecha: $fechaCompra',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold),
+                                  // Fecha de la compra
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Fecha:',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.0,
+                                        ),
+                                      ),
+                                      Text(
+                                        fechaCompra,
+                                        style: TextStyle(
+                                          color: Colors.grey[600],
+                                          fontSize: 14.0,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                  SizedBox(height: 5),
-                                  Text('Total: \$${compra['total']}'),
-                                  SizedBox(height: 5),
-                                  RichText(
-                                    text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: 'Estado: ',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.black,
-                                          ),
+                                  SizedBox(height: 5.0),
+
+                                  // Total de la compra
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Total:',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.0,
                                         ),
-                                        TextSpan(
-                                          text: compra['estado'],
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.green,
-                                          ),
+                                      ),
+                                      Text(
+                                        '\$${compra['total']}',
+                                        style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.0,
                                         ),
-                                      ],
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 5.0),
+
+                                  // Estado de la compra
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Estado:',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.0,
+                                        ),
+                                      ),
+                                      Text(
+                                        compra['estado'],
+                                        style: TextStyle(
+                                          color:
+                                              compra['estado'] == 'Completado'
+                                                  ? Colors.green
+                                                  : Colors.blue,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.0,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10.0),
+
+                                  // Lista de productos
+                                  Text(
+                                    'Productos:',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16.0,
                                     ),
                                   ),
-                                  SizedBox(height: 10),
-                                  Text('Productos:',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(height: 10.0),
+
                                   ...productos.map((producto) {
                                     final prod = producto['producto'];
-                                    return ListTile(
-                                      leading: Image.network(
-                                        prod['imagenes'][0]['url'],
-                                        width: 50,
-                                        height: 50,
+                                    return Container(
+                                      margin: EdgeInsets.only(bottom: 10.0),
+                                      padding: EdgeInsets.all(10.0),
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey[100],
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
                                       ),
-                                      title: Text(prod['nombre']),
-                                      subtitle: Text(
-                                          'Cantidad: ${producto['cantidad']}'),
-                                      trailing: Text(
-                                          '\$${producto['precioUnitario']}'),
+                                      child: Row(
+                                        children: [
+                                          // Imagen del producto
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                            child: Image.network(
+                                              prod['imagenes'][0]['url'],
+                                              width: 50.0,
+                                              height: 50.0,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          SizedBox(width: 10.0),
+
+                                          // Detalles del producto
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  prod['nombre'],
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 14.0,
+                                                  ),
+                                                ),
+                                                SizedBox(height: 5.0),
+                                                Text(
+                                                  'Cantidad: ${producto['cantidad']}',
+                                                  style: TextStyle(
+                                                    color: Colors.grey[600],
+                                                    fontSize: 12.0,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+
+                                          // Precio del producto
+                                          Text(
+                                            '\$${producto['precioUnitario']}',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 14.0,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     );
                                   }).toList(),
                                 ],

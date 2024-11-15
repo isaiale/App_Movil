@@ -432,6 +432,7 @@ class _DetalleProductoState extends State<DetalleProducto> {
           ),
         ],
       ),
+    
     );
   }
 
