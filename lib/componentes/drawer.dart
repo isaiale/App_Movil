@@ -9,35 +9,31 @@ class DrawerUser extends StatefulWidget {
 }
 
 class _DrawerUserState extends State<DrawerUser> {
-  Map<String, dynamic>? userInfo; // Información del usuario
-  bool isLoading = true; // Estado de carga
+  Map<String, dynamic>? userInfo;
+  bool isLoading = true;
 
   @override
   void initState() {
     super.initState();
-    _loadUserInfo(); // Cargar información del usuario al iniciar
+    _loadUserInfo();
   }
 
-  // Función para cargar el token y decodificarlo
   Future<void> _loadUserInfo() async {
     await UserService().loadToken();
     setState(() {
-      userInfo =
-          UserService().decodedToken; // Asignar la información del usuario
-      isLoading = false; // Detener la carga
+      userInfo = UserService().decodedToken;
+      isLoading = false;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // Mostrar un indicador de carga si la información del usuario aún se está obteniendo
     if (isLoading) {
       return Drawer(
         child: Center(child: CircularProgressIndicator()),
       );
     }
 
-    // Si no hay información del usuario (usuario no logueado), redirigir a login
     if (userInfo == null) {
       return Drawer(
         child: ListView(
@@ -60,90 +56,86 @@ class _DrawerUserState extends State<DrawerUser> {
       );
     }
 
-    // Extraer nombre y apellido del usuario
     String nombre = userInfo!['nombre'] ?? 'Nombre no disponible';
     String apellido = userInfo!['apellido'] ?? 'Apellido no disponible';
-
-    // Obtener las iniciales del nombre y apellido
     String iniciales = '${nombre[0]}${apellido[0]}'.toUpperCase();
 
-    // Construir el Drawer con la información del usuario
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.pink,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0xFFFF4081), Color(0xFFFF4081)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
             ),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
                   radius: 40,
                   backgroundColor: Colors.white,
                   child: Text(
                     iniciales,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.pink,
                     ),
-                  ), // Muestra las iniciales en lugar de la imagen
+                  ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
-                  '$nombre $apellido', // Mostrar nombre y apellido
-                  style: TextStyle(
+                  '$nombre $apellido',
+                  style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 24,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ],
             ),
           ),
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Inicio'),
+            leading: const Icon(Icons.home, color: Colors.black54),
+            title: const Text('Inicio'),
             onTap: () {
-              Navigator.pop(context); // Cierra el drawer
-              Navigator.pushReplacementNamed(
-                  context, '/home'); // Navegar a la pantalla de inicio (o tabs)
+              Navigator.pop(context);
+              Navigator.pushReplacementNamed(context, '/home');
             },
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Perfil'),
+            leading: const Icon(Icons.person, color: Colors.black54),
+            title: const Text('Perfil'),
             onTap: () {
-              Navigator.pop(context); // Cierra el drawer
-              Navigator.pushNamed(
-                  context, '/perfil'); // Navega a la página de perfil
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/perfil');
             },
           ),
           ListTile(
-            leading: Icon(Icons.shopping_cart),
-            title: Text('Carrito de Compras'),
+            leading: const Icon(Icons.shopping_cart, color: Colors.black54),
+            title: const Text('Carrito de Compras'),
             onTap: () {
-              Navigator.pop(context); // Cierra el drawer
-              Navigator.pushNamed(context,
-                  '/carrito'); // Navega a la página del carrito de compras
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/carrito');
             },
           ),
           ListTile(
-            leading: Icon(Icons.shopping_bag),
-            title: Text('Compras'),
+            leading: const Icon(Icons.shopping_bag, color: Colors.black54),
+            title: const Text('Compras'),
             onTap: () {
-              Navigator.pop(context); // Cierra el drawer
-              Navigator.pushNamed(context,
-                  '/compras'); // Navega a la página del carrito de compras
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/compras');
             },
           ),
-
-          Divider(), // Línea divisoria
+          const Divider(),
           ListTile(
-            leading: Icon(Icons.exit_to_app),
-            title: Text('Salir'),
+            leading: const Icon(Icons.exit_to_app, color: Colors.red),
+            title: const Text('Salir'),
             onTap: () async {
-              // Mostrar el diálogo reutilizable de confirmación antes de salir
               bool shouldLogout = await showConfirmationDialog(
                 context: context,
                 title: 'Confirmación',
@@ -152,7 +144,7 @@ class _DrawerUserState extends State<DrawerUser> {
                 cancelText: 'Cancelar',
               );
               if (shouldLogout) {
-                await _logout(context); // Si el usuario confirma, cerrar sesión
+                await _logout(context);
               }
             },
           ),
@@ -161,17 +153,13 @@ class _DrawerUserState extends State<DrawerUser> {
     );
   }
 
-  // Función para cerrar sesión
   Future<void> _logout(BuildContext context) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.remove('token'); // Eliminar el token guardado
-
-    // Redirigir a la pantalla de Login utilizando rutas nombradas
+    await prefs.remove('token');
     Navigator.pushNamedAndRemoveUntil(
       context,
       '/login',
-      (Route<dynamic> route) =>
-          false, // Elimina todas las pantallas anteriores de la pila de navegación
+      (Route<dynamic> route) => false,
     );
   }
 }

@@ -47,7 +47,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0), // Espacio interno para la imagen
                     child: Image.asset(
-                      'imagenes/Logo de mi enfermera favorita.jpg',
+                      'imagenes/LogoM.png',
                       fit: BoxFit.contain,
                       height: 40, // Altura ajustada para la imagen
                     ),

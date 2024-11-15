@@ -34,7 +34,7 @@ class _InicioState extends State<Inicio> {
       backgroundColor: Colors.white, // Fondo blanco
       body: Center(
         child: Image.asset(
-          'imagenes/Logo de mi enfermera favorita.jpg',  // Coloca tu logo aquí
+          'imagenes/LogoM.png',  // Coloca tu logo aquí
           width: 150,
           height: 150,
         ),
