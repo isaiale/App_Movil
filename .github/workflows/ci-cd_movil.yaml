@@ -1,0 +1,45 @@
+name: Flutter CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - pruebas
+      - test
+  pull_request:
+    branches:
+      - main
+      - develop
+      - pruebas
+      - test
+  workflow_dispatch: # Activación manual opcional
+
+jobs:
+  build:
+    name: Build, Test, and Deploy Flutter App MEF
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Clonar el repositorio
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    # 2. Configurar Flutter
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: 'stable'
+
+    # 3. Instalar dependencias
+    - name: Install Dependencies
+      run: flutter pub get
+    
+      #notificaciones con Slack
+    - name: Notify Slack 
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      run: |
+        curl -X POST -H 'Content-type: application/json' \
+        --data '{"text":"¡Construcción y pruebas completadas con éxito!"}' \
+        $SLACK_WEBHOOK_URL
