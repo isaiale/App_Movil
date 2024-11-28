@@ -31,9 +31,14 @@ jobs:
       with:
         flutter-version: '3.13.6'
 
-    # 3. Instalar dependencias
-    - name: Install Dependencies
-      run: flutter pub get
+    # 3. Cachear las dependencias de Flutter
+    - name: Cache Flutter Dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.pub-cache
+        key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pub-
     
       #notificaciones con Slack
     - name: Notify Slack 
