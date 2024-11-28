@@ -40,11 +40,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pub-
     
-    # 4. Instalar dependencias
-    - name: Install Dependencies
-      run: flutter pub get
-    
-     # 5. Notificaciones con Slack
+     # 4. Notificaciones con Slack
     - name: Notify Slack 
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
