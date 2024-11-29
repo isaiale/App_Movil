@@ -56,12 +56,6 @@ jobs:
     - name: Run Widget Tests
       run: flutter test --name "Widget Tests" test/
 
-
-            # 8. Compilar la aplicación Flutter (APK)
-    - name: Build Flutter APK
-      run: flutter build apk --release
-      continue-on-error: true 
-
     # 9. Instalar Java 17 (necesario para compilar APK)
     - name: Set up JDK 17
       uses: actions/setup-java@v3
@@ -72,6 +66,7 @@ jobs:
     # 10. Compilar la aplicación Flutter (APK)
     - name: Build Flutter APK
       run: flutter build apk --release
+      continue-on-error: true 
 
     # 11. Subir el APK como artefacto
     - name: Upload APK Artifact
