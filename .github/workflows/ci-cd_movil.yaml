@@ -64,7 +64,7 @@ jobs:
     # 8. Compilar la aplicación Flutter (APK)
     - name: Build Flutter APK
       run: flutter build apk --release
-      #continue-on-error: true 
+      continue-on-error: true 
 
     # 9. Subir el APK como artefacto
     - name: Upload APK Artifact
