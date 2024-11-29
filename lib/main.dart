@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
-/* import '/vistas/inicio.dart'; // Pantalla de inicio (Splash) */
+import 'package:sentry_flutter/sentry_flutter.dart';// Pantalla de inicio (Splash) */
 import 'vistas/Inicio.dart';
-import 'vistas/login.dart'; // Pantalla de login
+import 'vistas/Login.dart'; // Pantalla de login
 // import 'vistas/tabs.dart'; // Pantalla principal (con pestañas)
-import 'vistas/registrarse.dart'; // Pantalla de registro
+import 'vistas/Registrarse.dart'; // Pantalla de registro
 import 'vistas/RecuperacionContra.dart'; // Recuperación de contraseña
 import 'vistas/perfil.dart'; // Perfil
 import 'vistas/carrito.dart'; // Carrito de compras
