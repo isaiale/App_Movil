@@ -74,23 +74,5 @@ jobs:
         path: build/app/outputs/flutter-apk/app-release.apk
 
 
-    # Notificación de éxito
-    - name: Notify Success to Slack
-      if: success()  # Solo se ejecuta si todo fue exitoso
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-      run: |
-        curl -X POST -H 'Content-type: application/json' \
-        --data '{"text":"¡Construcción y pruebas completadas con éxito!"}' \
-        $SLACK_WEBHOOK_URL
-
-    # Notificación de error
-    - name: Notify Failure to Slack
-      if: failure()  # Solo se ejecuta si algo falla
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-      run: |
-        curl -X POST -H 'Content-type: application/json' \
-        --data '{"text":"¡Error! Algo salió mal en el flujo de trabajo de Flutter. Revisa los detalles del error."}' \
-        $SLACK_WEBHOOK_URL
+    
     
