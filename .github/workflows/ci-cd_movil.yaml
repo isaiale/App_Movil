@@ -40,6 +40,14 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pub-
     
+    # Verify Flutter installation
+    - name: Flutter Doctor
+      run: flutter doctor
+
+     # Install dependencies
+    - name: Install dependencies
+      run: flutter pub get
+    
     # Notificaciones con Slack
     - name: Notify Slack 
       env:
