@@ -48,6 +48,19 @@ jobs:
     - name: Install dependencies
       run: flutter pub get
     
+    # 6. Compilar la aplicación Flutter (APK)
+    - name: Build Flutter APK
+      run: flutter build apk --release
+
+    # 7. Subir el APK como artefacto
+    - name: Upload APK Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: flutter-apk
+        path: build/app/outputs/flutter-apk/app-release.apk
+
+
+      
     # Notificación de éxito
     - name: Notify Success to Slack
       if: success()  # Solo se ejecuta si todo fue exitoso
