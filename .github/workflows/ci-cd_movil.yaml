@@ -40,22 +40,11 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pub-
     
-    # 4. Compilar la aplicación Flutter (APK)
-    - name: Build Flutter APK
-      run: flutter build apk --release
-
-    # 5. Subir el APK como artefacto
-    - name: Upload APK Artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: flutter-apk
-        path: build/app/outputs/flutter-apk/app-release.apk
-
-    # 6. Notificaciones con Slack
+    # Notificaciones con Slack
     - name: Notify Slack 
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       run: |
         curl -X POST -H 'Content-type: application/json' \
-        --data '{"text":"¡Construcción completada con éxito! El artefacto APK está disponible."}' \
+        --data '{"text":"¡Construcción y pruebas completadas con éxito!"}' \
         $SLACK_WEBHOOK_URL
