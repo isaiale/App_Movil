@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
-import '/vistas/inicio.dart'; // Pantalla de inicio (Splash)
-import '/vistas/login.dart'; // Pantalla de login
+/* import '/vistas/inicio.dart'; // Pantalla de inicio (Splash) */
+import 'vistas/Inicio.dart';
+import 'vistas/login.dart'; // Pantalla de login
 // import 'vistas/tabs.dart'; // Pantalla principal (con pestañas)
-import '/vistas/registrarse.dart'; // Pantalla de registro
-import '/vistas/RecuperacionContra.dart'; // Recuperación de contraseña
-import '/vistas/perfil.dart'; // Perfil
-import '/vistas/carrito.dart'; // Carrito de compras
-import '/vistas/Productos.dart';
-import '/vistas/compras.dart';
-import '/vistas/Home.dart';
+import 'vistas/registrarse.dart'; // Pantalla de registro
+import 'vistas/RecuperacionContra.dart'; // Recuperación de contraseña
+import 'vistas/perfil.dart'; // Perfil
+import 'vistas/carrito.dart'; // Carrito de compras
+import 'vistas/Productos.dart';
+import 'vistas/compras.dart';
+import 'vistas/Home.dart';
 
 
 Future<void> main() async {
