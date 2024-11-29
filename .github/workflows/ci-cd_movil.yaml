@@ -55,11 +55,17 @@ jobs:
         java-version: '17'
         distribution: 'adoptopenjdk'
 
-    # 7. Compilar la aplicación Flutter (APK)
+    # 7. Establecer JAVA_HOME a la ubicación de Java 17
+    - name: Set JAVA_HOME for Gradle
+      run: |
+        echo "JAVA_HOME=$JAVA_HOME" >> $GITHUB_ENV
+        echo "Path to JAVA_HOME: $JAVA_HOME"
+
+    # 8. Compilar la aplicación Flutter (APK)
     - name: Build Flutter APK
       run: flutter build apk --release
 
-    # 8. Subir el APK como artefacto
+    # 9. Subir el APK como artefacto
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v3
       with:
