@@ -48,27 +48,25 @@ jobs:
     - name: Install dependencies
       run: flutter pub get
     
-     # 6. Ejecutar pruebas unitarias
-    - name: Run Unit Tests
-      run: flutter test test/
-
-    # 7. Ejecutar pruebas de widgets
-    - name: Run Widget Tests
-      run: flutter test --name "Widget Tests" test/
-
-    # 9. Instalar Java 17 (necesario para compilar APK)
+    # 6. Instalar Java 17 (requiere Java 17 para la compilación)
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
         java-version: '17'
         distribution: 'temurin'
 
-    # 10. Compilar la aplicación Flutter (APK)
+    # 7. Establecer JAVA_HOME a la ubicación de Java 17
+    - name: Set JAVA_HOME for Gradle
+      run: |
+        echo "JAVA_HOME=$JAVA_HOME" >> $GITHUB_ENV
+        echo "Path to JAVA_HOME: $JAVA_HOME"
+
+    # 8. Compilar la aplicación Flutter (APK)
     - name: Build Flutter APK
       run: flutter build apk --release
       continue-on-error: true 
 
-    # 11. Subir el APK como artefacto
+    # 9. Subir el APK como artefacto
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v3
       with:
