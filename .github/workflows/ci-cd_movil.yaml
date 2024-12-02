@@ -97,7 +97,7 @@ jobs:
 
     - name: Deploy to Firebase App Distribution
       env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}  # Asegúrate de agregar el token en los secrets
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_AUTH_TOKEN }}  # Asegúrate de agregar el token en los secrets
       run: |
         firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk \
           --app YOUR_FIREBASE_APP_ID \
