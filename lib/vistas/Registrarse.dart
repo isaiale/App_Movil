@@ -5,7 +5,7 @@ import 'dart:convert';
 import '../componentes/CustomElevatedButton.dart';
 import '../componentes/AlertMessage.dart';
 import 'TerminoCondiciones.dart';
-import 'login.dart';
+import 'Login.dart';
 
 class Register extends StatefulWidget {
   @override
