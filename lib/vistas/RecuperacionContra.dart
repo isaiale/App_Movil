@@ -4,7 +4,7 @@ import 'dart:convert';
 import '../componentes/CustomElevatedButton.dart';
 import '../componentes/CustomTextFormField.dart';
 import '../componentes/AlertMessage.dart';
-import 'login.dart';
+import 'Login.dart';
 
 class PasswordRecoveryScreen extends StatefulWidget {
   @override
