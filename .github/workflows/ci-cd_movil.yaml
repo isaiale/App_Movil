@@ -54,7 +54,7 @@ jobs:
 
     # 7. Ejecutar pruebas específicas
     - name: Run Tests
-      run: flutter test test/services/producto_service_test.dart  
+      run: flutter test test/services/url_service_test.dart  
   
     # 8. Instalar Java 17 (requiere Java 17 para la compilación)
     - name: Set up JDK 17
