@@ -80,3 +80,14 @@ jobs:
       with:
         name: flutter-apk
         path: build/app/outputs/flutter-apk/app-release.apk
+    
+        # 13. Distribuir a Firebase App Distribution (opcional)
+      # Requiere configurar FIREBASE_AUTH_TOKEN como un secret en tu repositorio
+    - name: Deploy to Firebase App Distribution
+      env:
+        FIREBASE_AUTH_TOKEN: ${{ secrets.FIREBASE_AUTH_TOKEN }}
+      run: |
+          flutter build apk --release
+          firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk \
+            --app <firebase-app-id> \
+            --groups testers
