@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:app_movil/servicios/producto_service.dart';
 import 'lista_productos.dart';
-import 'package:app_movil/componentes/ProductSearch.dart';
+import '/componentes/ProductSearch.dart';
 import '/componentes/fitroProductos.dart';
 
 class ProductosCategoria extends StatefulWidget {
