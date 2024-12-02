@@ -84,20 +84,15 @@ jobs:
     name: Deploy Flutter App
     runs-on: ubuntu-latest
     needs: build
-    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release/')
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/pruebas' || github.ref == 'refs/heads/test' || startsWith(github.ref, 'refs/heads/release/')
     steps:
-      # Checkout code from GitHub
       - name: Check out repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Clona todo el historial del repositorio
 
-      # Setup Flutter SDK
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.24.5'
 
-      # Run Deployment Script (cambia este paso según tu proceso de despliegue)
       - name: Deploy Application
-        run: echo "Desplegando la aplicación..."  # Aquí se debería colocar el script o comando específico para el despliegue
+        run: echo "Desplegando la aplicación..."  
