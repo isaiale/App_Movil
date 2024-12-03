@@ -97,18 +97,28 @@ jobs:
       - name: Deploy Application
         run: echo "Desplegando la aplicación..."  
 
-    #Descargar butler desde Google Drive
+      # Verificar si el archivo APK existe antes de proceder
+      - name: Verify APK exists
+        run: |
+          if [ -f "build/app/outputs/flutter-apk/app-release.apk" ]; then
+            echo "APK exists"
+          else
+            echo "APK does not exist"
+            exit 1
+          fi
+
+      # Descargar butler desde Google Drive
       - name: Download Butler from Google Drive
         run: |
-                curl -L -o butler.zip "https://drive.google.com/uc?export=download&id=1vfo3W8gMqq3xeJUNgLiTayerBq6G5OGE"
-                unzip butler.zip -d ~/butler
-                sudo mv ~/butler/butler /usr/local/bin/
-                butler -V # Verificar instalación
+          curl -L -o butler.zip "https://drive.google.com/uc?export=download&id=1vfo3W8gMqq3xeJUNgLiTayerBq6G5OGE"
+          unzip butler.zip -d ~/butler
+          sudo mv ~/butler/butler /usr/local/bin/
+          butler -V # Verificar instalación
 
-    # Subir el archivo a itch.io si
+      # Subir el archivo a itch.io
       - name: Deploy to itch.io
         run: |
-          butler push build/app/outputs/apk/release/app-release.apk isaiale/MiApp:android --dry-run --context-timeout=60
+          butler push build/app/outputs/flutter-apk/app-release.apk isaiale/MiApp:android --dry-run --context-timeout=60
 
         env:
           BUTLER_API_KEY: ${{ secrets.ITCH_IO_API_KEY }}
