@@ -111,4 +111,4 @@ jobs:
           butler push build/app/outputs/apk/release/app-release.apk isaiale/Miapp:android
 
         env:
-          ITCH_IO_API_KEY: ${{ secrets.ITCH_IO_API_KEY }}
+          BUTLER_API_KEY: ${{ secrets.ITCH_IO_API_KEY }}
