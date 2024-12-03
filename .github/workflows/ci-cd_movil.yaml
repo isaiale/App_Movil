@@ -105,7 +105,7 @@ jobs:
                 sudo mv ~/butler/butler /usr/local/bin/
                 butler -V # Verificar instalación
 
-    # Subir el archivo a itch.io
+    # Subir el archivo a itch.io si
       - name: Deploy to itch.io
         run: |
           butler push build/app/outputs/apk/release/app-release.apk isaiale/MiApp:android --dry-run --context-timeout=60
