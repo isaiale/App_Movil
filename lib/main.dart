@@ -15,7 +15,7 @@ import 'vistas/Home.dart';
 Future<void> main() async {
   await SentryFlutter.init(
     (options) {
-      options.dsn = 'https://bcac6d0c2038cbcab9987b7b65cda011@o4508372929609728.ingest.us.sentry.io/4508408492523520';
+      options.dsn = 'https://3c00a4d9f334ee73c9d350fcd1dc90bd@o4508372929609728.ingest.us.sentry.io/4508373476507648';
       options.tracesSampleRate = 1.0;
       options.profilesSampleRate = 1.0;
     },
