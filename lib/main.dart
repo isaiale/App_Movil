@@ -30,9 +30,12 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialAp(
       title: 'App Móvil',
       initialRoute: '/inicio', // Ruta inicial
+      navigatorObservers: [
+        SentryNavigatorObserver(), // Rastrear navegación
+      ],
       routes: {
         '/inicio': (context) => Inicio(), // Splash Screen
         '/login': (context) => Login(), // Pantalla de login
