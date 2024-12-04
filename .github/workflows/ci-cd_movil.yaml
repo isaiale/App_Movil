@@ -53,7 +53,14 @@ jobs:
 
     # 7. Ejecutar pruebas específicas
     - name: Run Tests
-      run: flutter test test/services/url_service_test.dart  
+      run: flutter test test/services/url_service_test.dart
+      
+    - name: Monitor with Sentry
+      env:
+        SENTRY_DSN: ${{ secrets.SENTRY_DSN }}  # Utilizando el secreto almacenado
+      run: |
+          # Comando para simular un error y enviar el reporte a Sentry
+          flutter test test/errors_test.dart || echo "Error monitored in Sentry"
   
     # 8. Instalar Java 17 (requiere Java 17 para la compilación)
     - name: Set up JDK 17
