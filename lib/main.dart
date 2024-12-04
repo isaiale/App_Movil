@@ -15,7 +15,7 @@ import 'vistas/Home.dart';
 Future<void> main() async {
   await SentryFlutter.init(
     (options) {
-      options.dsn = 'https://3c00a4d9f334ee73c9d350fcd1dc90bd@o4508372929609728.ingest.us.sentry.io/4508373476507648';
+      options.dsn = 'https://bcac6d0c2038cbcab9987b7b65cda011@o4508372929609728.ingest.us.sentry.io/4508408492523520';
       // Set tracesSampleRate to 1.0 to capture 100% of transactions for tracing.
       // We recommend adjusting this value in production.
       options.tracesSampleRate = 1.0;
