@@ -1,0 +1,3159 @@
+android.content.res.Resources#getIdentifier present: true
+Web content present: true
+Referenced Strings:
+NETWORK_LOST
+view.class
+callerContext
+DISMISS
+app_flutter
+valueCase_
+kRepeat
+java.lang.Integer
+view_names
+.mp4
+muxerConfig
+TAKEN
+preferences_pb
+generatedAdapters
+anr_background
+GeneratedPluginsRegister
+WEB_MESSAGE_LISTENER
+frames
+java.lang.CharSequence
+DIAGNOSTIC_CURRENT_PROFILE_DOES_NOT_E...
+/system/sd/xbin/su
+displayRefreshRate
+click
+fingerprint.json
+0
+POST_WEB_MESSAGE
+1
+2
+3
+4
+size
+left
+5
+kotlinx.coroutines.DefaultExecutor
+com.devadvance.rootcloak
+cellular
+isSideLoaded
+registerWith
+object
+SystemSoundType.alert
+produceFile
+code_file
+S_RESUMING_BY_RCV
+REDUCE_MOTION
+EXTRA_DESCRIPTORS
+Selection
+BEGIN_OBJECT
+autoSessionTrackingIntervalMillis
+sidecarAdapter
+Font
+result
+SystemUiMode.immersiveSticky
+flutter/platform_views
+TextCapitalization.words
+EXTRA_BENCHMARK_OPERATION
+_
+dev.flutter.pigeon.webview_flutter_an...
+io.sentry.sdk.version
+a
+b
+maven:io.sentry:sentry
+address
+c
+Infinity
+f
+replay.id
+destroy_engine_with_activity
+truncated
+effectiveDirectAddress
+RESUMING_BY_EB
+getFactory
+kotlin.String
+sidecarDeviceState
+ReplayRecorder.pause
+app_name
+sentryFlutter
+component
+destroyed
+r
+event_id
+SUSPEND
+java.lang.Module
+x
+y
+sentry.properties
+arch
+SystemUiMode.edgeToEdge
+$replayId
+POST
+io.sentry.android.core.internal.util....
+reader
+displayFeature.rect
+mimeType
+dev.flutter.pigeon.webview_flutter_an...
+relative_cpu_start_ms
+isTagEnabled
+startIndex
+getLoadedPackageInfo
+emailAddress
+/system/bin/su
+payload
+dev.flutter.pigeon.shared_preferences...
+muxerConfig.file.absolutePath
+MouseDown
+Sentry
+addMethodName
+bufferEndSegment
+OPEN_MULTIPLE
+STRICT
+os_1
+visibility
+ViewportResize
+preferencesProto.preferencesMap
+extensionCallback
+list
+LONG_PRESS
+gpu
+HAS_CHECKED_STATE
+user.json
+gone
+FlutterEngine
+flutter/keyevent
+dev.flutter.pigeon.webview_flutter_an...
+Focus
+SENTRY_
+ReplayRecording
+AppLifecycleState.
+SystemChrome.setSystemUIOverlayStyle
+addWindowLayoutInfoListener
+app_start_profiling_config
+enable_state_restoration
+COMPLETING_WAITING_CHILDREN
+RESULT_BASELINE_PROFILE_NOT_FOUND
+_invoked
+/envelope/
+locale
+ui.tap
+os.version
+RESULT_DELETE_SKIP_FILE_SUCCESS
+SDK_INT
+KeyEmbedderResponder
+iterator.baseContext
+provider
+root
+kotlinx.coroutines.main.delay
+NaN
+_delayed
+android.os.Build
+FIXED32_LIST_PACKED
+sampled
+headers
+MOVE_CURSOR_BACKWARD_BY_CHARACTER
+kotlin.collections.List
+deqIdx
+appName
+io.sentry.environment
+flutterPluginBinding
+ip_address
+MOVE_CURSOR_FORWARD_BY_CHARACTER
+portrait
+org.chromium.support_lib_glue.Support...
+memory_size
+args
+resizeUpLeft
+enableAutoNativeBreadcrumbs
+TextInputType.emailAddress
+removeExtra
+ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE
+android.view.View$AttachInfo
+FlutterActivity
+java.lang.Float
+Dispatchers.IO
+cpu_description
+channel
+invisible
+focus
+signatures
+dev.flutter.pigeon.webview_flutter_an...
+dummy
+PAUSED
+WEB_MESSAGE_PORT_CLOSE
+SCOPES_ROUTE
+androidx.profileinstaller.action.SAVE...
+android.os.Build$VERSION
+executor
+androidx.window.extensions.WindowExte...
+block
+performanceSpan
+fullPackage
+write
+io.sentry.ndk.enable
+onStop
+flow
+dev.flutter.pigeon.shared_preferences...
+byte
+proxy.user
+attrs
+sentry:typeCheckHint
+dev.flutter.pigeon.webview_flutter_an...
+resizeUp
+creditCardNumber
+integration
+onPostResume
+SAFE_BROWSING_HIT
+wait
+FlutterActivityAndFragmentDelegate
+birthDateYear
+initialState
+%s.%sParcelizer
+Profile
+CHARACTERS
+top
+io.flutter.embedding.android.EnableVu...
+Ndk
+native
+it.parameterTypes
+plugins.flutter.io/webview
+dev.flutter.pigeon.webview_flutter_an...
+java.lang.String
+GET_WEB_VIEW_RENDERER
+resizeDown
+TextInput.setClient
+android:activity
+dev.flutter.pigeon.webview_flutter_an...
+REQUESTED_WITH_HEADER_ALLOW_LIST
+Default
+android.appwidget.action.APPWIDGET_DI...
+pointerId
+comparator
+framework
+anrTimeoutIntervalMillis
+usable_memory
+dev.flutter.pigeon.webview_flutter_an...
+Drag
+CONNECTED
+android.intent.action.DREAMING_STARTED
+All
+:dev
+New
+start_timestamp
+PORTRAIT
+android.intent.action.TIME_SET
+ReflectionGuard
+android.widget.CheckBox
+function
+$task
+segment_id
+HapticFeedback.vibrate
+eu.chainfire.supersu
+repeatCount
+__unknown__
+NO_PERMISSION
+debug_file
+void
+in_foreground
+swap
+flutter/restoration
+Scroll
+com.google.android.exoplayer2.ui.Styl...
+onUserLeaveHint
+ui.contributes_to_ttid
+SendCachedEnvelope
+mStableInsets
+_cur
+version_major
+spotlightUrl
+Android
+AndroidComposeView
+google_sdk
+condition
+PROXY_OVERRIDE:3
+BYTES_LIST
+END_ARRAY
+UserInteraction
+Mutation
+basic
+onConfigurationChanged
+sidecarDisplayFeatures
+kotlin.Throwable
+dev.flutter.pigeon.shared_preferences...
+parkedWorkersStack
+resource.http
+Anr
+PHONE
+systemNavigationBarColor
+PlatformPlugin
+displayCutout
+cause
+ui.contributes_to_ttfd
+NO_VALUE
+SFIXED64_LIST_PACKED
+dev.flutter.pigeon.webview_flutter_an...
+ui.click
+DUMP
+EVENT_PROCESSOR
+kotlin.Annotation
+extra
+NETWORK_AVAILABLE
+LANDSCAPE_LEFT
+direction
+dev.flutter.pigeon.shared_preferences...
+comments
+BITMAP
+contentprovider.load
+time_to_full_display
+newConfig
+Array
+intrface
+DISCONNECTED
+breadcrumb
+UNKNOWN
+public_key
+fileName
+getByte
+accessibility
+UINT32
+android.intent.action.CAMERA_BUTTON
+sampled_profile
+password
+request_content_length
+kotlinx.coroutines.scheduler.keep.ali...
+VGhpcyBpcyB0aGUgcHJlZml4IGZvciBEb3VibGUu
+NO_TARGET
+ALGORITHMIC_DARKENING
+state
+CompanionObject
+events
+element
+dist.json
+android.intent.action.AIRPLANE_MODE
+external_storage_size
+sentry.
+UNIMPLEMENTED
+zoomIn
+NOT_FOUND
+appStartTime
+android.view.ViewRootImpl
+Destroying.
+isColdStart
+sentry:
+input
+dev.flutter.pigeon.webview_flutter_an...
+androidx.media3.ui.PlayerView
+dev.flutter.pigeon.webview_flutter_an...
+Abnormal
+copyMemory
+WEBVIEW_INTEGRITY_API_STATUS
+auto.ui
+screenshot
+release.json
+getStateMethod
+CUSTOM_ACTION
+startTimestampMsSinceEpoch
+app_start_cold
+$recorderConfig
+cached_engine_id
+STANDARD
+setRemoveOnCancelPolicy
+proxy.port
+receive
+NEW_BUILDER
+IS_LIVE_REGION
+forbidden
+Connection
+symbol_addr
+breadcrumb.data
+dev.flutter.pigeon.webview_flutter_an...
+windowToken
+onTrimMemory
+timeOffset
+getSourceNodeId
+runnable
+it.name
+chars
+arrayIndexScale
+klass.interfaces
+Hint
+converter
+flutter/backgesture
+bitrate
+source
+ALERT
+VIEW
+LocalizationChannel
+android.intent.action.BATTERY_CHANGED
+removeListenerMethod
+java.lang.Short
+sentry.java.android/7.16.0
+dev.flutter.pigeon.webview_flutter_an...
+registers
+android.widget.Button
+_closeCause
+has
+SCALAR
+INTEGER
+addressCity
+UINT32_LIST_PACKED
+androidx.datastore.preferences.protob...
+slow_frame_renders
+UINT64
+span.onCreate
+DIAGNOSTIC_PROFILE_IS_COMPRESSED
+NAME
+segment.replay.timestamp
+warm
+dev.flutter.pigeon.webview_flutter_an...
+phoneNumber
+peekByte
+composingBase
+INTERRUPTED_RCV
+MESSAGE_LIST
+dev.flutter.pigeon.webview_flutter_an...
+previous_session.json
+FORCE_DARK
+mWindow
+onRequestPermissionsResult
+platformViewId
+EDGE_TO_EDGE
+LEAN_BACK
+video
+_isTerminated
+start_type
+libcore.io.Memory
+android.intent.action.ACTION_SHUTDOWN
+LifecycleChannel
+SEALED
+CREATED
+NO_OWNER
+kGamepad
+io.sentry.release
+EXTRA_SKIP_FILE_OPERATION
+INTERNAL_ERROR
+_windowInsetsCompat
+model_id
+windows
+callbackWrapper
+pair
+getPosture
+generic
+BOOL_LIST
+DATETIME
+getWindowExtensions
+BOOL
+PASTE
+short
+FALSE
+IS_HEADER
+com.koushikdutta.superuser
+COMPLETING_RETRY
+VISIBLE_PASSWORD
+IS_FOCUSABLE
+OrBuilderList
+TextInput.clearClient
+SCROLL_RIGHT
+moduleName
+textCapitalization
+android.widget.ImageView
+android.widget.RadioButton
+mDisplayListeners
+CustomElement
+put
+TextInputType.text
+.onStart
+pokeLong
+FAILED
+encodedData
+POISONED
+SCROLL_LEFT
+options
+sentry.dotnet
+HapticFeedbackType.heavyImpact
+InputConnectionAdaptor
+flutter/platform
+identifier
+TEXTURE_WITH_HYBRID_FALLBACK
+SentryNdkLoadLibs
+config.height
+profile_sample_rate
+POSTURE_HALF_OPENED
+SERVICE_WORKER_CONTENT_ACCESS
+POSTAL_ADDRESS
+/system/xbin/su
+priority
+closeHandler
+beginNativeFrames
+viewFocused
+removeWindowLayoutInfoListener
+dev.flutter.pigeon.shared_preferences...
+BUFFERED
+$callback
+light
+.apk
+CHANNEL_CLOSED
+sentry.event
+java.lang.Throwable
+/data/misc/profiles/cur/0/
+log
+SystemSound.play
+className
+ImageReaderSurfaceProducer
+enableAutoPerformanceTracing
+unknown
+undefined
+android.intent.action.RUN
+android.widget.SeekBar
+device_is_emulator
+EMPTY_ID
+com.android.internal.policy.PhoneWind...
+INITIALIZED
+maybeDecorView
+KeyEventChannel
+android.support.v13.view.inputmethod....
+producerIndex
+flutter/settings
+addressLocality
+value.stringSet.stringsList
+END_DOCUMENT
+USER_AGENT_METADATA
+dev.flutter.pigeon.webview_flutter_an...
+options.experimental.sessionReplay
+DeviceOrientation.landscapeLeft
+callbackInterface
+tags.json
+fetchNativeAppStart
+FIXED32_LIST
+DIAGNOSTIC_CURRENT_PROFILE_EXISTS
+.immediate
+sample_rate
+TextInputAction.unspecified
+char
+servername
+TAG
+sendClientReports
+processor_frequency
+IMMERSIVE
+version_patchlevel
+SentryScreenshot
+TAP
+sdk_google
+device.connectivity
+dev.flutter.pigeon.webview_flutter_an...
+uuid
+RESULT_INSTALL_SUCCESS
+Bytes
+Input
+wm.maximumWindowMetrics.bounds
+TextInputAction.commitContent
+inputType
+CLOSE_HANDLER_INVOKED
+BOTH
+java.lang.Cloneable
+created
+runtime
+GeneratedPluginRegistrant
+pause
+DOCUMENT_START_SCRIPT:1
+io.flutter.embedding.android.EnableIm...
+WEB_VIEW_RENDERER_TERMINATE
+MULTI_PROFILE
+SPECULATIVE_LOADING_STATUS
+ReplayRecorder.stop
+getUri
+setLocale
+Clipboard.setData
+request
+TextInputType.phone
+TextInput.sendAppPrivateCommand
+$recording
+CLOSED
+timezone
+values
+GET_COOKIE_INFO
+low_memory
+$currentSegmentTimestamp
+INT32_LIST_PACKED
+consumerIndex
+percent
+point
+_removedRef
+sdk_x86
+attachment
+browser
+alias
+dev.flutter.pigeon.shared_preferences...
+SINT64_LIST_PACKED
+ATTRIBUTION_REGISTRATION_BEHAVIOR
+kotlin.String.Companion
+activity.load
+debug
+ReplayIntegration.finalize_previous_r...
+threads
+jClass
+TextInput.show
+value_
+VECTOR
+windowMetrics
+http.response_content_length
+build
+dev.flutter.pigeon.webview_flutter_an...
+SentryPrivacy
+systemNavigationBarDividerColor
+value.string
+mAttachInfo
+CLIP_PATH
+suggestions
+classes.dex
+Session
+java.specification.version
+resizeColumn
+sidecarCompat
+/system/app/Superuser.apk
+plugins
+androidx.compose.ui.node.Owner
+kotlin.Cloneable
+IS_FOCUSED
+UserFeedback
+android:intent
+PlatformViewsController
+path
+frames.total
+kotlin.reflect.jvm.internal.Reflectio...
+ui.
+PARKING
+mounted_ro
+FOLD
+cleanedAndPointers
+addObserver
+generatedAdapter
+MEDIUM
+dev.flutter.pigeon.webview_flutter_an...
+pass
+profile
+check_in
+removeMethodName
+SFIXED32_LIST
+ON_ANY
+com.android.internal.policy.DecorView
+METHODS
+guava.concurrent.generate_cancellatio...
+attachStacktrace
+tags
+SystemNavigator.setFrameworkHandlesBack
+GMT
+SINT32
+sentry.java
+AdoptedStyleSheet
+ON_PAUSE
+route
+relative_cpu_end_ms
+domain
+viewType
+editingValue
+dev.fluttercommunity.plus/package_info
+GET_WEB_VIEW_CLIENT
+SidecarCompat
+getResPackage
+DROP_LATEST
+Emulator
+sentry.properties.file
+_exceptionsHolder
+transparent
+proguard
+UNKNOWN_ERROR
+background_mode
+NAMES_ROUTE
+defaultDisplay
+appStartMetrics.contentProviderOnCrea...
+event_processor
+RESULT_DESIRED_FORMAT_UNSUPPORTED
+old_view_system
+replay_
+clearFocus
+java.version
+tail
+right
+PERMIT
+DATA_DIRECTORY_BASE_PATH
+version_name
+hintText
+LOCALE
+personNamePrefix
+toString
+TIP
+network_type
+did
+feature.rect
+missingDelimiterValue
+dev.flutter.pigeon.shared_preferences...
+listener
+Attachment
+down
+AwaitContinuation
+kotlin.Boolean
+Blur
+screenshot_recorder.mask
+UNAVAILABLE
+_queue
+setSidecarCallback
+List
+stopTimestampMsSinceEpoch
+BEFORE_SEND
+reply
+info
+DORMANT
+HYBRID_ONLY
+parent_span_id
+kHdmi
+android.intent.action.SCREEN_OFF
+attachThreads
+count
+parentNode
+country_code
+ethernet
+TextInputType.name
+level.json
+installerStore
+month
+navigation_bar_height
+java.lang.annotation.Annotation
+FlutterImageView
+server_name
+status_code
+TERMINATED
+session
+bitField0_
+flutter/navigation
+Localization.getStringResource
+DEADLINE_EXCEEDED
+looper
+$options
+SAFE_BROWSING_PRIVACY_POLICY_URL
+Brush
+android:sensorEvent
+SentryExecutor
+duration
+kotlin.collections.Map
+cached_engine_group_id
+ProcessText.queryTextActions
+hashCode
+updateBackGestureProgress
+alpha
+replay.type
+ProfileInstaller
+TRACING_CONTROLLER_BASIC_USAGE
+java.lang.Boolean
+continuation
+DATA_DIRECTORY_SUFFIX
+totalFrames
+owner
+classSimpleName
+strings_
+spans
+DeviceOrientation.landscapeRight
+.jpg
+IconCompat
+custom
+length
+device.orientation
+globalRect
+monitor
+io.sentry.traces.activity.enable
+GET_MEMOIZED_IS_INITIALIZED
+dev.flutter.pigeon.webview_flutter_an...
+keydown
+%s
+activateSystemCursor
+flutter/accessibility
+hub
+TYPE_AMBIENT_TEMPERATURE
+/su/bin/su
+resize
+kotlin.collections.MutableIterable
+SessionCaptureStrategy.
+TextEditingDelta
+DEFAULT
+$taskName
+SERVICE_WORKER_CACHE_MODE
+DROP_OLDEST
+BACK_FORWARD_CACHE
+lastScheduledTask
+birthdayMonth
+replay.recording
+dev.flutter.pigeon.webview_flutter_an...
+SFIXED64_LIST
+breadcrumb.timestamp
+autocorrect
+navigation
+userdebug
+HapticFeedbackType.selectionClick
+GET_WEB_CHROME_CLIENT
+endIndex
+fingerprint
+transaction_name
+held_locks
+action
+lock
+text
+Vector
+SENTENCES
+ClientReport
+init
+session.json
+TextInput.finishAutofillContext
+primary.prof
+io.flutter.embedding.android.EnableOp...
+signed
+sentry.java.android.flutter
+PlatformChannel
+FlutterView
+sentry_flutter
+PLAIN_TEXT
+frames.delay
+mediaCodec.outputFormat
+dev.flutter.pigeon.webview_flutter_an...
+applicationContext
+getResId
+profile_id
+maxAttachmentSize
+MOVE_CURSOR_FORWARD_BY_WORD
+replayId
+androidx.datastore.preferences.protob...
+AccessibilityChannel
+fullStreetAddress
+snapshot
+status
+arch_disk_io_
+android.intent.action.REBOOT
+StyleDeclaration
+GET_DEFAULT_INSTANCE
+ALWAYS
+file
+BYTE_STRING
+stream
+elapsed_since_start_ns
+onScroll
+api_target
+WEB_MESSAGE_ARRAY_BUFFER
+is_profiling_enabled
+CancellableContinuation
+in_app
+replay_start_timestamp
+battery_level
+max
+onComplete
+statsd
+$this$onScreenshotRecorded
+SAMPLE_RATE
+uri
+url
+getLong
+TextInputAction.done
+dev.flutter.pigeon.webview_flutter_an...
+mLastFrameTimeNanos
+CREATE_WEB_MESSAGE_CHANNEL
+QUEUE_OVERFLOW
+kotlin.internal.JRE8PlatformImplement...
+onSaveInstanceState
+io.flutter.EntrypointUri
+VIRTUAL_DISPLAY_PLATFORM_VIEW
+newIndent
+IS_SLIDER
+dev.flutter.pigeon.webview_flutter_an...
+resizeUpLeftDownRight
+KeyboardManager
+RESUMED
+HIGH
+device_os_build_number
+SpellCheckChannel
+main
+sdk_info
+commitBackGesture
+mVisibleInsets
+host
+backgrounded
+build_type
+thread.id
+Accept
+birthDateMonth
+ListenableEditingState
+raw_description
+image_addr
+separator
+timber.log.Timber
+personMiddleName
+painter
+c2.android.avc.encoder
+task
+null
+backpressure
+INSTALLATION
+Replay
+background
+true
+androidx.datastore.preferences.protob...
+SAFE_BROWSING_ENABLE
+dispose
+position
+phoneNational
+UNDISPATCHED
+android_view_system
+dsn
+featureBounds
+transformer
+statusBarIconBrightness
+peekLong
+sendersAndCloseStatus
+UINT32_LIST
+asyncTraceEnd
+getWindowLayoutComponentMethod
+transform
+$onSegmentCreated
+MetricBucket
+STARTED
+android.permission.ACCESS_NETWORK_STATE
+io.sentry.debug
+rooted
+STARTUP_FEATURE_SET_DATA_DIRECTORY_SU...
+MediaInteraction
+WindowRecorder.capture
+trace_id
+signingInfo.signingCertificateHistory
+vm_snapshot_data
+DONE_RCV
+contexts.json
+free_memory
+Clipboard.getData
+Error
+dev.flutter.pigeon.shared_preferences...
+$result
+ACCESSIBLE_NAVIGATION
+Trace
+WEB_AUTHENTICATION
+initNativeSdk
+bytes
+androidx.datastore.preferences.protob...
+Completed
+callback
+online
+UNINITIALIZED
+RESUME_TOKEN
+app_identifier
+options.executorService
+androidx.fragment.app.FragmentManager...
+Plugin
+ProcessText.processTextAction
+SINT32_LIST
+00
+xiaomi
+PUBLICATION
+frames_frozen
+appStartMetrics.activityLifecycleTime...
+android:view
+TextInput.hide
+granted
+OFF_SCREEN_PRERASTER
+telephoneNumberNational
+observer
+predicate
+character
+Unknown
+java.lang.Long
+metaState
+TRACE_TAG_APP
+SERVICE_WORKER_SHOULD_INTERCEPT_REQUEST
+height
+transaction_id
+PACKED_VECTOR
+debug_id
+CUT
+span_id
+_decision
+module
+$this$require
+user_segment
+memory_footprint
+input_method
+filename
+oldText
+dayOfMonth
+build_id
+meta
+Clipboard.hasStrings
+dev.flutter.pigeon.shared_preferences...
+dev.flutter.pigeon.webview_flutter_an...
+newTimestamp
+$viewHierarchy
+debug_meta
+setExtra
+CLICKABLE
+statusCode
+anr_foreground
+SAFE_BROWSING_WHITELIST
+kotlin.Function
+kJoystick
+long
+DOCUMENT_START_SCRIPT
+startBackGesture
+android.appwidget.action.APPWIDGET_RE...
+min
+kotlinx.coroutines.channels.defaultBu...
+device.battery
+transaction.json
+temperature
+segmentTimestamp
+android.intent.action.DATE_CHANGED
+getBoolean
+FullSnapshot
+dev.flutter.pigeon.webview_flutter_an...
+FIXED64_LIST
+measurements
+android.type.verbatim
+AGGREGATION_COUNT
+BufferCaptureStrategy.add_frame
+readTimeoutMillis
+WORDS
+dev.flutter.pigeon.webview_flutter_an...
+androidx.core.view.inputmethod.Editor...
+removeContexts
+TouchStart
+systemNavigationBarIconBrightness
+sendDefaultPii
+contextMenu
+propertyName
+Event
+progress
+STRING
+replay_type
+autofill
+TextCapitalization.none
+operation
+android.widget.EditText
+NO_DECISION
+app_version
+io.sentry.samples.
+postalCode
+dev.flutter.pigeon.webview_flutter_an...
+relative_end_ns
+Click
+dev.flutter.pigeon.webview_flutter_an...
+android.intent.action.BATTERY_OKAY
+TextInput.setEditingState
+WEB_MESSAGE_PORT_SET_MESSAGE_CALLBACK
+androidx.profileinstaller.action.INST...
+sentry.java/7.16.0
+ON_START
+birthDateFull
+WEB_VIEW_RENDERER_CLIENT_BASIC_USAGE
+kotlinx.coroutines.io.parallelism
+NUMBER
+android_api_level
+collection
+packageManager
+WARNING
+io.sentry.mobile.
+BOOLEAN
+daemon
+android.view.DisplayInfo
+android.intent.action.MEDIA_BAD_REMOVAL
+profileInstalled
+android.intent.action.BOOT_COMPLETED
+DblClick
+RECEIVE_HTTP_ERROR
+_metrics_summary
+_next
+pointerType
+android.intent.action.BATTERY_LOW
+app.start.warm
+recording
+$cache
+STARTUP_FEATURE_SET_DIRECTORY_BASE_PATH
+cacheProvider
+content_type
+textservices
+rendering_system
+dev.flutter.pigeon.webview_flutter_an...
+UncaughtExceptionHandler
+pokeByte
+mask
+kotlinx.coroutines.test.internal.Test...
+profiling_traces_dir_path
+RESOURCE_EXHAUSTED
+creditCardExpirationYear
+CUTOUT
+MULTI_PROCESS
+SystemUiMode.leanBack
+binaryMessenger
+response_body_size
+layout
+mp4
+dev.flutter.pigeon.shared_preferences...
+cpufreq/cpuinfo_max_freq
+80
+step
+/data/local/su
+java.lang.Object
+COLD
+SystemChrome.setSystemUIChangeListener
+base
+dexopt/baseline.profm
+kotlinx.coroutines.bufferedChannel.se...
+extendedPostalCode
+TextInput.setPlatformViewClient
+prefix
+last_anr_report
+kKeyboard
+binding
+zoomOut
+FrameMetricsAggregator.add
+Security
+state1
+getViewRootImpl
+delimiter
+permissions
+superclass
+truncation_reason
+NONE
+application/json
+kotlinx.coroutines.semaphore.maxSpinC...
+LOG
+hints
+onWindowLayoutChangeListenerAdded
+keyup
+java.util.Set
+io.sentry.
+not_granted
+LOW
+END_OBJECT
+brieflyShowPassword
+newDeviceState
+DELETE_SKIP_FILE
+gender
+maxCacheItems
+resizeRow
+android.webkit.WebViewFactory
+usesVirtualDisplay
+MouseUp
+currentReplayId
+HAS_EXPANDED_STATE
+anrEnabled
+NO_THREAD_ELEMENTS
+INTERRUPTED_SEND
+tracker
+FLAT
+getDisplayInfo
+CACHE_DIRECTORY_BASE_PATH
+DOUBLE
+event
+app.launch
+resizeDownRight
+ReplayRecorder.resume
+_availablePermits
+help_link
+WEBVIEW_MEDIA_INTEGRITY_API_STATUS
+newLayout
+DARK
+android.intent.action.LOCALE_CHANGED
+IS_READ_ONLY
+COPY
+PENDING
+androidx.profileinstaller.action.BENC...
+screen_frame_rates
+android.intent.action.BUG_REPORT
+proxy.host
+outState
+BufferCaptureStrategy.
+java.lang.Comparable
+Genymotion
+DAY
+span
+msg
+android.widget.Switch
+resizeUpRightDownLeft
+float
+IS_BUTTON
+trace_ids
+postalAddressExtended
+reference
+SINT64
+application.load
+raw_function
+java.lang.Enum
+api_type
+last_crash
+enableIMEPersonalizedLearning
+familyName
+DETACHED
+BACKPRESSURE
+TextInputType.datetime
+TextInputAction.go
+offset
+dev.flutter.pigeon.webview_flutter_an...
+SystemChrome.setApplicationSwitcherDe...
+error_ids
+IS_HIDDEN
+outbox
+SHOULD_OVERRIDE_WITH_REDIRECTS
+dev.flutter.pigeon.webview_flutter_an...
+sequence
+version_minor
+keyCode
+DATA
+UTF8
+CACHE_OVERFLOW
+flutter/localization
+didGainFocus
+proguardUuid
+putObject
+FlutterRenderer
+androidx.datastore.preferences.protob...
+Brightness.light
+LTR
+error
+platform
+io.sentry.dsn
+kotlin.Byte
+getBoundsMethod
+UserReport
+bufferEnd
+trace
+array
+Feedback
+RECEIVE_WEB_RESOURCE_ERROR
+parameter
+postfix
+WEEK
+value
+DomContentLoaded
+ui.load.initial_display
+opaque
+quantity
+REUSABLE_CLAIMED
+videoFormat
+0x%08x
+dart_entrypoint_args
+charging
+proxyJson
+ReplayRecorder.start
+int
+previous_session
+/proc/version
+ImageReaderPlatformViewRenderTarget
+com.google.android.inputmethod.latin
+videoFile
+modifier::class.java.name
+landscape
+AccessibilityBridge
+exception
+STRING_LIST
+year
+TextInput.requestAutofill
+accuracy
+deviceId
+verticalText
+verificationMode
+FlutterSharedPreferences
+android.util.LongArray
+getUncaughtExceptionPreHandler
+content_length
+onBackPressed
+adapter
+ranchu
+LANDSCAPE_RIGHT
+LEFT
+_handled
+givenName
+packages
+version
+screen_dpi
+replay_recording
+stop
+kotlin.jvm.functions.
+kotlinx.coroutines.scheduler.default....
+vendor_id
+TextInputClient.updateEditingStateWit...
+responseBodySize
+ongoingSegment.entries
+kotlin.internal.JRE7PlatformImplement...
+DECREASE
+DISABLED_ACTION_MODE_MENU_ITEMS
+PORTRAIT_DOWN
+touchOffset
+com.google.android.exoplayer2.ui.Play...
+manual
+android.intent.extra.PROCESS_TEXT_REA...
+dev.flutter.pigeon.webview_flutter_an...
+libapp.so
+MESSAGE
+SMALL
+android.appwidget.action.APPWIDGET_UP...
+RestorationChannel
+middleInitial
+PHYSICAL_DISPLAY_PLATFORM_VIEW
+CUSTOM
+video/avc
+androidSdk
+close
+codePoint
+connection_type
+SystemUiOverlay.top
+replay_video
+WEB_RESOURCE_ERROR_GET_CODE
+RESULT_PARSE_EXCEPTION
+IS_CHECK_STATE_MIXED
+replayType
+displayFeatures
+ALREADY_LOCKED_BY_OWNER
+diagnosticLevel
+SAFE_BROWSING_ALLOWLIST
+this$0
+__all__
+hourOfDay
+onNewIntent
+PROXY_OVERRIDE
+currentPositions.keys
+Startup
+acc
+flutter_assets
+http.start_timestamp
+androidx.core.view.GestureDetectorCompat
+TextInputClient.performPrivateCommand
+androidx.profileinstaller.action.SKIP...
+ack
+MUTE_AUDIO
+code_id
+SFIXED32_LIST_PACKED
+addSuppressed
+replay_id
+addressCountry
+touchRecorderCallback
+nativeSpanTimes
+LIGHT
+rootView
+vendor_name
+buildSignature
+encoding
+user_report
+DID_LOSE_ACCESSIBILITY_FOCUS
+NEW_MUTABLE_INSTANCE
+phoneCountryCode
+telephoneNumberCountryCode
+port
+DATA_LOSS
+http
+deviceState
+decimal
+dev.flutter.pigeon.webview_flutter_an...
+.trace
+device_physical_memory_bytes
+ROOT
+device_model
+TextInput.setEditableSizeAndTransform
+production
+getDouble
+dev.flutter.pigeon.webview_flutter_an...
+directory
+FIXED32
+trace_sample_rate
+event.origin
+urls
+memory_native_footprint
+scope
+environment.json
+SET_SELECTION
+oldValue
+frames_slow
+io.flutter.embedding.android.OldGenHe...
+eng
+BITMAP_MASKABLE
+recorder
+image/png
+ENTERPRISE_AUTHENTICATION_APP_LINK_PO...
+IS_OBSCURED
+label
+mViews
+env
+message
+FORCE_DARK_BEHAVIOR
+scanCode
+FlutterJNI
+java.util.function.Consumer
+environment
+config.width
+setDisplayFeatures
+HapticFeedbackType.lightImpact
+android.appwidget.action.APPWIDGET_UP...
+family
+creditCardExpirationDay
+SAFE_BROWSING_RESPONSE_PROCEED
+username
+release
+UNDEFINED
+WindowSpy
+ActivityLifecycle
+WindowManagerSpy
+messageInfoFactory
+dexopt/baseline.prof
+modifierClassName
+IS_TEXT_FIELD
+property
+kotlinx.coroutines.internal.StackTrac...
+GET_VARIATIONS_HEADER
+RATELIMIT_BACKOFF
+createSegment
+TextInputType.none
+loadContexts
+replay_event
+process.load
+UINT64_LIST_PACKED
+Load
+TextInputAction.none
+getNextMatch
+version_code
+_rootCause
+binding.applicationContext
+DIAGNOSTIC_REF_PROFILE_EXISTS
+datastore/
+putFloat
+$crumbs
+system
+ViewHierarchy
+stacktrace
+user_id
+h264
+RESULT_NOT_WRITABLE
+onUndeliveredElement
+CLIP_RECT
+io.flutter.Entrypoint
+MAP
+onErrorSampleRate
+RESULT_INSTALL_SKIP_FILE_SUCCESS
+WEB_RESOURCE_ERROR_GET_DESCRIPTION
+other
+network.event
+SCROLLABLE
+FORCE_DARK_STRATEGY
+city
+ALREADY_EXISTS
+android.intent.extra.TEXT
+IS_LINK
+putDouble
+cell
+safeCast
+URI
+URL
+FlutterTextureView
+manufacturer
+dev.flutter.pigeon.webview_flutter_an...
+android.intent.action.ACTION_POWER_DI...
+kotlin.Long
+segmentId
+Completing
+SAVE
+LOW_MEMORY
+addressRegion
+android.intent.action.INPUT_METHOD_CH...
+PROXY_OVERRIDE_REVERSE_BYPASS
+_resumed
+TextInputType.multiline
+getChildId
+gzip
+Text
+FIXED64
+free_storage
+instruction_addr
+c2.exynos
+runningWorkers
+/sbin/su
+LIGHT_IMPACT
+api/
+DESTROYED
+mListener
+AppExitInfo
+selectionExtent
+SystemChrome.setEnabledSystemUIOverlays
+MouseCursorChannel
+Fill
+ATOMIC
+UTC
+kotlin.collections.Collection
+ui.action.
+android.intent.action.MEDIA_MOUNTED
+7.16.0
+npot_support
+screen
+segment.id
+TextInputAction.send
+mode
+onStart
+_isCompleting
+FrameMetricsAggregator.stop
+buffer
+currentSegment
+noDrop
+flutter/keydata
+device_cpu_frequencies
+read
+io.sentry.anr.enable
+memoryPressure
+SessionCaptureStrategy.add_frame
+touch
+positions
+CLASSES
+consumerAdapter
+onResume
+extras.json
+unit
+java.util.List
+hybrid
+Transaction
+swipe
+dev.flutter.pigeon.webview_flutter_an...
+sensor
+kotlin.Int
+ui.lifecycle
+VOID
+BackGestureChannel
+/su/bin
+FLOAT
+handleLifecycleEvent
+LANDSCAPE
+IS_IMAGE
+COMPLETING_ALREADY
+serializer
+onSegmentSent
+java.lang.Iterable
+rect
+readException
+Monitor
+kotlinx.coroutines.DefaultExecutor.ke...
+INVERT_COLORS
+synchronizeToNativeViewHierarchy
+packageName
+info.displayFeatures
+OK
+/system/bin/failsafe/su
+arrayBaseOffset
+frames_total
+ui.load.full_display
+windowConfiguration
+resizeUpRight
+dev.flutter.pigeon.webview_flutter_an...
+dev.flutter.pigeon.webview_flutter_an...
+minute
+loadImageList
+CaptureStrategy.runInBackground
+androidx.window.extensions.layout.Win...
+proxy.pass
+android.intent.action.DEVICE_STORAGE_LOW
+flutter/lifecycle
+event.environment
+TextInputType.number
+frozen_frame_renders
+SECOND
+WEB_RESOURCE_REQUEST_IS_REDIRECT
+WEB_MESSAGE_CALLBACK_ON_MESSAGE
+metric_bucket
+Ok
+getParentNodeId
+android.intent.action.CONFIGURATION_C...
+app.
+connectionTimeoutMillis
+Meta
+reason
+options.experimental.sessionReplay.ma...
+context_line
+getAppBounds
+SystemChrome.setEnabledSystemUIMode
+isCrash
+frames_delay
+android.widget.HorizontalScrollView
+receiveSegment
+java
+time_to_initial_display
+NO_CLOSE_CAUSE
+io.sentry.android.fragment.FragmentLi...
+view.id
+INCREASE
+androidx.datastore.preferences.protob...
+ERROR
+jar
+app
+newValue
+cache
+creditCardExpirationMonth
+nanosecond
+deltaText
+BUILD_MESSAGE_INFO
+dev.flutter.pigeon.webview_flutter_an...
+Crashed
+app_build
+dev.flutter.pigeon.shared_preferences...
+profiling_traces
+ReplayEvent
+upload_bandwidth
+breadcrumbs.json
+TouchEnd
+REMOVE_FROZEN
+.tmp
+peekInt
+device_locale
+PROTO2
+PROTO3
+POSTURE_FLAT
+kotlinx.coroutines.semaphore.segmentSize
+SENTRY
+DROP_SHADER_CACHE
+cookies
+oemFeature.bounds
+kotlin.collections.ListIterator
+GROUP
+default
+putByte
+getKeyboardState
+delimiters
+TextInputClient.updateEditingStateWit...
+objectFieldOffset
+mechanism
+class_name
+timestamp
+ActivityBreadcrumbs
+newLayoutInfo
+sentry.native.android.flutter
+image_size
+onSingleTapUp
+blockingTasksInBuffer
+download_bandwidth
+call
+app.start.cold
+streetAddress
+/data/local/xbin/su
+dev.flutter.pigeon.webview_flutter_an...
+kotlin.Char
+flutter/isolate
+ACTION_ARGUMENT_EXTEND_SELECTION_BOOLEAN
+grab
+_decisionAndIndex
+maxBreadcrumbs
+android.os.action.DEVICE_IDLE_MODE_CH...
+dimen
+java.util.ListIterator
+addReplayScreenshot
+DefaultDispatcher
+QUIET
+kotlin.Double
+onActivityResult
+TouchMove
+HistoricalAppExitInfo
+view
+android.view.WindowManagerGlobal
+allScroll
+segment
+SystemChrome.systemUIChange
+ViewCompat
+includeSubdomains
+unreachable
+overlay
+appStartMetrics.applicationOnCreateTi...
+creditCardSecurityCode
+WARM
+UINT64_LIST
+FULL
+finalException
+NETWORK_CAPABILITIES_CHANGED
+flutter
+dev.flutter.pigeon.webview_flutter_an...
+name
+DIAGNOSTIC_REF_PROFILE_DOES_NOT_EXIST
+DartExecutor
+fields
+cpu_usage
+replay.json
+getDescriptor
+keymap
+string
+color
+FlutterLoader
+deltaStart
+kotlin.coroutines.jvm.internal.BaseCo...
+android
+description
+java.lang.module.ModuleDescriptor
+io.sentry.enabled
+nameSuffix
+ContextMenu
+textScaleFactor
+namePrefix
+enableNativeCrashHandling
+SharedPreferencesPlugin
+thisRef
+NANOSECOND
+VALUE_NOT_SET
+START_SAFE_BROWSING
+io.flutter.embedding.android.NormalTheme
+sessionReplay
+SUSPEND_NO_WAITER
+Dispatchers.Main
+colno
+FlutterSurfaceView
+Cancelled
+getEmptyRegistry
+screen_height_pixels
+kernel_version
+io.sentry.sdk.name
+enableSuggestions
+primitiveFqNames.values
+package_name
+IS_MULTILINE
+middleName
+window
+personFamilyName
+Cancelling
+CLIP_RRECT
+container
+processor_count
+logger
+_isCompleted
+hybridFallback
+oemFeature
+getBounds
+EmptyCoroutineContext
+CPU_ACQUIRED
+ACTION_ARGUMENT_SELECTION_END_INT
+connectivity
+io.sentry.debug.level
+TextInputAction.search
+windowBackend
+SINT64_LIST
+SFIXED64
+images
+dart_entrypoint
+kotlinx.coroutines.scheduler.core.poo...
+kotlinx.coroutines.scheduler.max.pool...
+Log
+double
+currentSegmentTimestamp
+GET_PARSER
+newPassword
+matcher
+smsOTPCode
+flutter_deeplinking_enabled
+SystemChannel
+HEAVY_IMPACT
+attachment_type
+phone
+kotlin.Short
+bounds
+dev.flutter.pigeon.webview_flutter_an...
+getDisplayFeatures
+BLOCKING
+transaction_info
+consumeMessage
+BOOL_LIST_PACKED
+BOLD_TEXT
+Dispatchers.Unconfined
+app.lifecycle
+nativeSdk
+formatted
+pattern
+flags
+onPause
+SystemUiOverlay.bottom
+Span
+kotlinx.coroutines.bufferedChannel.ex...
+enabled
+.onCreate
+mContentInsets
+LAZY
+resuming_sender
+PlatformViewWrapper
+CheckIn
+stackTrace
+setDirection
+ENUM_LIST
+architecture
+java.util.Map$Entry
+display
+SpellCheck.initiateSpellCheck
+composingExtent
+sdk_name
+birthDateDay
+dev.flutter.pigeon.webview_flutter_an...
+ASCENDING
+libflutter.so
+width
+PORTRAIT_UP
+sendSegment
+_parentHandle
+SFIXED32
+BYTES
+dev.flutter.pigeon.webview_flutter_an...
+kotlinx.coroutines.fast.service.loader
+VISUAL_STATE_CALLBACK
+FrameMetricsAggregator
+dev.flutter.pigeon.webview_flutter_an...
+completedExpandBuffersAndPauseFlag
+insets
+kotlin.Any
+Brightness.dark
+thread.name
+listString
+hashText
+frameRate
+selectionBase
+SettingsChannel
+2
+sentry.javascript
+getWindowLayoutComponent
+plainCodePoint
+MouseMove
+dev.flutter.pigeon.webview_flutter_an...
+_reusableCancellableContinuation
+android.view.View
+java.lang.Byte
+DONE
+package
+visible
+putInt
+deltaEnd
+kind
+_consensus
+CANCELLED
+pluginRegistrationTime
+SCROLL_UP
+android.intent.action.ACTION_POWER_CO...
+persistingExecutor
+client_report
+CLOSED_EMPTY
+kotlin.collections.Iterator
+com.android.internal.policy.impl.Phon...
+job
+TextInputClient.requestExistingInputS...
+requestBodySize
+wm.defaultDisplay
+android:motionEvent
+SET_TEXT
+dev.flutter.pigeon.webview_flutter_an...
+SystemChrome.restoreSystemUIOverlays
+unexpected
+preferencesMap
+NO_RECEIVE_RESULT
+OUT_OF_RANGE
+$bitmap
+INT
+device_manufacturer
+SAFE_BROWSING_RESPONSE_BACK_TO_SAFETY
+.envelope
+kotlin.Enum
+Swipe
+http.end_timestamp
+PlatformViewsChannel
+deltas
+android.widget.VideoView
+AppLifecycle
+uniqueIdentifier
+move
+setContexts
+q1.a
+setPosture
+WindowInsetsCompat
+android.intent.action.PROCESS_TEXT
+INT32_LIST
+android.intent.action.CONTENT_CHANGED
+TEXTURE_WITH_VIRTUAL_FALLBACK
+STARTUP_FEATURE_SET_DIRECTORY_BASE_PATHS
+NETWORK_ERROR
+ATTRIBUTION_BEHAVIOR
+event.attachment
+SPECULATIVE_LOADING
+user
+NO_DUMP
+.ongoing_segment
+android.permission.READ_PHONE_STATE
+getModule
+extent
+io.sentry.android.replay.ReplayIntegr...
+tooltip
+dev.flutter.pigeon.shared_preferences...
+CONFIGURE_PARTITIONED_COOKIES
+dev.flutter.pigeon.webview_flutter_an...
+messageType
+flutter/keyboard
+dev.flutter.pigeon.webview_flutter_an...
+bitmap
+TempSensorBreadcrumbs
+SAFE_BROWSING_RESPONSE_SHOW_INTERSTITIAL
+systemStatusBarContrastEnforced
+removeTag
+androidx.lifecycle.LifecycleDispatche...
+getSuppressed
+DOUBLE_LIST_PACKED
+CALL_STATE_RINGING
+DartMessenger
+defaultLifecycleObserver
+HIGH_CONTRAST
+com.thirdparty.superuser
+SHOULD_BUFFER
+profiling_traces_hz
+STRING_SET
+sent_at
+_COROUTINE
+MOVE_CURSOR_BACKWARD_BY_WORD
+proxy
+kotlin.Unit
+kotlinx.coroutines.scheduler.resoluti...
+getType
+birthdayDay
+kotlin.jvm.internal.StringCompanionOb...
+ABORTED
+sdk
+frames.slow
+BufferCaptureStrategy.stop
+breadcrumbs
+WEB_MESSAGE_PORT_POST_MESSAGE
+schema
+java.
+createWebViewProviderFactory
+SystemSoundType.click
+resizeUpDown
+/7.16.0
+popRoute
+throwableMethods
+androidx.window.extensions.WindowExte...
+seq
+capture_replay
+completion
+recorderConfig
+set
+device_os_name
+mainLooperHandler
+kUp
+mounted
+FRAMEWORK_CLIENT
+ThreadLocalEventLoop
+auto.ui.activity
+java.vendor
+INACTIVE
+sentry.dart.flutter
+signingInfo.apkContentsSigners
+VGhpcyBpcyB0aGUgcHJlZml4IGZvciBhIGxpc3Qu
+Screenshot
+StyleSheetRule
+config
+query_string
+MEDIUM_IMPACT
+screen_width_pixels
+INT64_LIST
+language
+INFO
+SENTRY_PROPERTIES_FILE
+bufferInfo
+DESCENDING
+configurationId
+ratelimit_backoff
+abnormal_mechanism
+jvm
+image
+TextInputChannel
+Failed
+frozenFrames
+preferences_
+Color
+OPACITY
+nativePattern
+closeNativeSdk
+NonDisposableHandle
+sentry:isFromHybridSdk
+addBreadcrumb
+http.request_content_length
+captureReplay
+emulator
+androidx.datastore.preferences.protob...
+request_body_size
+MULTITHREADED_DEDUPLICATION
+configuration_changed
+AppComponentsBreadcrumbs
+countryName
+resumed
+options.integrations
+endTimestamp
+profile_sampled
+inputAction
+com.devadvance.rootcloakplus
+nodeId
+frame
+$store
+FAILED_PRECONDITION
+origin
+event.view_hierarchy
+getFloat
+putLong
+extendedAddress
+content
+timeout
+wm.currentWindowMetrics.bounds
+sid
+vbox86p
+random
+com.android.internal.os.RuntimeInit$M...
+statusBarColor
+view::class.java.name
+VGhpcyBpcyB0aGUgcHJlZml4IGZvciBCaWdJb...
+contentCommitMimeTypes
+DISABLE_ANIMATIONS
+capturer
+AnrV2
+os.arch
+false
+FlutterEngineCxnRegstry
+cache_overflow
+MouseInteraction
+unmask
+onUp
+workerCtl
+android.intent.action.DOCK_EVENT
+TextInputClient.updateEditingState
+androidx.core.view.ScrollingView
+obj
+resizeLeft
+io.flutter.embedding.android.LeakVM
+pushRouteInformation
+SERVICE_WORKER_BLOCK_NETWORK_LOADS
+androidx.window.extensions.layout.Fol...
+startTimestamp
+setInitialRoute
+TextInputAction.next
+TEXT
+clipboard
+output
+hz
+HINGE
+java.lang.Character
+enableNdkScopeSync
+context
+$newLayoutInfo
+model
+id
+https
+setUser
+kDirectionalPad
+birthdayYear
+isolate_snapshot_data
+ENUM
+SPELLOUT
+surface
+$args
+_bounds
+it
+params
+transactions
+BUFFER
+UNDECIDED
+announce
+getInt
+TextInputType.address
+java.lang
+TextInputType.url
+screenshot.png
+kotlin.jvm.internal.
+Map
+trace_sampled
+androidx.core.app.FrameMetricsAggregator
+charset
+MULTI_PROCESS_QUERY
+classLoader
+telephoneNumber
+startup_crash
+extras
+cancelBackGesture
+http://localhost:8969/stream
+delegate
+IS_EXPANDED
+end_timestamp
+RIGHT
+corruptionHandler
+bundle
+plugged
+android.appwidget.action.APPWIDGET_HO...
+onDestroy
+IS_KEYBOARD_KEY
+android.intent.action.MEDIA_UNMOUNTABLE
+GROUP_LIST
+multi_threaded_rendering
+personNameSuffix
+kotlin.jvm.functions.Function
+OTEL
+resizeLeftRight
+off
+platformBrightness
+android.widget.ScrollView
+equals
+ReplayVideo
+transaction
+/data/misc/profiles/ref/
+paused
+auto
+constant
+flutter/processtext
+newUsername
+dist
+response_content_length
+suffix
+second
+thread_id
+personMiddleInitial
+cleartextTrafficPermitted
+dev.flutter.pigeon.webview_flutter_an...
+MINUTE
+android.webkit.WebView
+flutterPluginBinding.applicationContext
+captureEnvelope
+DID_GAIN_ACCESSIBILITY_FOCUS
+pokeInt
+kotlin.Number
+DeviceOrientation.portraitDown
+TASK
+NULL
+TOO_LATE_TO_CANCEL
+level
+ShutdownHook
+.preferences_pb
+TRUE
+kDown
+sentry.transaction
+pId
+dev.flutter.pigeon.shared_preferences...
+battery_temperature
+segment.timestamp
+synthetic
+io.flutter.embedding.android.Impeller...
+entry
+screenAtStart
+grabbing
+NavigationChannel
+alwaysUse24HourFormat
+SET_MEMOIZED_IS_INITIALIZED
+device_os_version
+device.event
+integrations
+androidx.datastore.preferences.protob...
+android:networkCapabilities
+errors
+TextInputType.visiblePassword
+p0
+birthday
+ANR
+HOUR
+io.sentry.compose.gestures.ComposeGes...
+peekByteArray
+ON_OFF_SWITCH_LABELS
+clearBreadcrumbs
+head
+android.intent.action.DEVICE_STORAGE_OK
+receivers
+kotlin.Comparable
+setTag
+INVALID_ARGUMENT
+TouchCancel
+consumer
+show_password
+on
+sentry
+op
+baseKey
+nativeSpellCheckServiceDefined
+simulator
+os
+currentDisplay
+longPress
+pokeByteArray
+external_free_storage
+DOUBLE_LIST
+DEBUG
+COROUTINE_SUSPENDED
+Share.invoke
+frameCount
+abs_path
+flutter/textinput
+android.intent.action.MEDIA_UNMOUNTED
+_LifecycleAdapter
+uncaught.handler.enabled
+HAS_TOGGLED_STATE
+IS_SELECTED
+http://10.0.2.2:8969/stream
+sentry.java.android
+createAsync
+app_start_warm
+request.json
+.Companion
+EMAIL_ADDRESS
+io.sentry.traces.enable
+java.util.Map
+Painter
+TextInputPlugin
+/data/misc/profiles/cur/0
+brand
+getObject
+BOTTOM_OVERLAYS
+enqIdx
+appStartMetrics.appStartTimeSpan
+kotlin.Array
+TouchMove_Departed
+accept
+android.appwidget.action.APPWIDGET_EN...
+node
+dev.flutter.pigeon.webview_flutter_an...
+CanvasMutation
+screen_density
+storage_size
+CONDITION_FALSE
+taskName
+device
+android.intent.action.SCREEN_ON
+SERVICE_WORKER_BASIC_USAGE
+IS_IN_MUTUALLY_EXCLUSIVE_GROUP
+activity
+app_start_time
+MICROSECOND
+INT32
+NetworkBreadcrumbs
+dev.flutter.pigeon.webview_flutter_an...
+sum
+RTL
+ENUM_LIST_PACKED
+SystemUiMode.immersive
+offline
+discarded_events
+current
+HALF_OPENED
+$this$$receiver
+ImageTextureRegistryEntry
+email
+key
+LONG
+kotlin.Enum.Companion
+RESOURCE
+creditCardExpirationDate
+profileinstaller_profileWrittenFor_la...
+stopped
+su
+obscureText
+texture
+SELECTION_CLICK
+windowMetricsCalculator
+started
+WRITE_SKIP_FILE
+/system/xbin/which
+store
+kotlin.Float
+OPEN
+android.intent.action.DREAMING_STOPPED
+initTasksList
+handled
+SystemNavigator.pop
+resizeRight
+COMPONENT
+to
+TextInputAction.newline
+compressed
+MILLISECOND
+io.flutter.embedding.android.EnableVu...
+_prev
+android.os.action.POWER_SAVE_MODE_CHA...
+/proc/self/stat
+symbol
+ROUTE
+android.intent.action.APP_ERROR
+io.sentry.android.ndk.SentryNdk
+SINT32_LIST_PACKED
+loader
+InstanceManager
+IncrementalSnapshot
+primaryColor
+contexts
+personGivenName
+buildNumber
+pairs
+sessionSampleRate
+/sys/devices/system/cpu
+up
+io.sentry.compose.viewhierarchy.Compo...
+putBoolean
+TOP_OVERLAYS
+BROKEN
+Dispatchers.Default
+frames.frozen
+java.util.Collection
+degree
+CLOSE_HANDLER_CLOSED
+HIDDEN
+endNativeFrames
+modules
+/system/xbin/daemonsu
+postalAddressExtendedPostalCode
+hint
+NOT_IN_STACK
+saveInstanceState
+TextInputAction.previous
+CLICK
+region
+MULTILINE
+removeObserver
+destination
+ON_DESTROY
+enableDeltaModel
+cold
+FLOAT_LIST
+body_size
+device_name
+RESULT_ALREADY_INSTALLED
+flutter/mousecursor
+getTypeMethod
+Exited
+text/plain
+android.intent.action.TIMEZONE_CHANGED
+normal
+INT64
+flutter/system
+device_app_hash
+HAS_IMPLICIT_SCROLLING
+Dispatchers.Main.immediate
+onWindowLayoutChangeListenerRemoved
+dateProvider
+lineno
+sentry.dart
+before_send
+location
+REMOVED_TASK
+os_
+getInstance
+nativeCrash
+INT64_LIST_PACKED
+android.intent.extra.PROCESS_TEXT
+Index:
+none
+foreground
+type
+actionLabel
+feedback
+TextCapitalization.sentences
+DEX_FILES
+IMMERSIVE_STICKY
+children
+enableAutoSessionTracking
+fileOutputStream
+HapticFeedbackType.mediumImpact
+href
+cont
+FATAL
+ui.load
+dev.flutter.pigeon.shared_preferences...
+io.sentry.android.timber.SentryTimber...
+wifi
+ACTION_ARGUMENT_MOVEMENT_GRANULARITY_INT
+DisplayListenerProxy
+DeviceOrientation.portraitUp
+method
+queue_overflow
+mGlobal
+CONSUMED
+systemNavigationBarContrastEnforced
+scroll
+ACTION_ARGUMENT_SELECTION_START_INT
+push
+dev.flutter.pigeon.webview_flutter_an...
+dev.flutter.pigeon.shared_preferences...
+_state
+SHOW_ON_SCREEN
+PhoneStateBreadcrumbs
+java.lang.Double
+auto.ui.gesture_listener.
+FOCUS
+range
+binding.binaryMessenger
+UNAUTHENTICATED
+addListenerMethod
+flutter/spellcheck
+dev.flutter.pigeon.webview_flutter_an...
+IS_TOGGLED
+out
+geo
+archs
+dart
+/data/local/bin/su
+feature
+dev.flutter.pigeon.webview_flutter_an...
+dev.flutter.pigeon.webview_flutter_an...
+get
+produceMigrations
+dark
+oneTimeCode
+copy
+precise
+java.lang.Number
+sentry:eventDropReason
+Custom
+SESSION
+slowFrames
+MANUFACTURER
+initializer
+SystemChrome.setPreferredOrientations
+help
+phoneNumberDevice
+flutter/deferredcomponent
+elements
+SystemEventsBreadcrumbs
+android.appwidget.action.APPWIDGET_DE...
+sharedPreferencesDataStore
+URI_MASKABLE
+ON_CREATE
+HAS_ENABLED_STATE
+network_error
+data
+frameRateType
+ON_RESUME
+IS_ENABLED
+enableSpotlight
+android:configuration
+getWindowExtensionsMethod
+asyncTraceBegin
+TextCapitalization.characters
+relative_start_ns
+crashed
+create
+TRANSFORM
+vpn_active
+tag
+signal_strength
+FIXED64_LIST_PACKED
+PERMISSION_DENIED
+SYNCHRONIZED
+tap
+kotlin.jvm.internal.EnumCompanionObject
+RESULT_UNSUPPORTED_ART_VERSION
+replay
+io.flutter.InitialRoute
+controlState
+transition_animation_scale
+swipeEdge
+Active
+android.widget.TextView
+postalAddress
+telephoneNumberDevice
+kotlin.collections.Iterable
+files
+send
+android.
+span.onStart
+mChildNodeIds
+kotlin.collections.Map.Entry
+line
+BATTERY_CHANGED
+dev.flutter.pigeon.webview_flutter_an...
+IS_CHECKED
+scale
+SERVICE_WORKER_FILE_ACCESS
+kotlinName
+io.sentry.traces.profiling.enable
+%s.%s
+duration_ns
+goldfish
+security
+$screen
+kotlin.collections.Set
+android.intent.action.SEND
+trace.json
+user_agent
+getWindowLayoutInfo
+orientation
+getAll
+java.util.Iterator
+dev.flutter.pigeon.webview_flutter_an...
+view.tag
+TextInputClient.performAction
+onWindowFocusChanged
+org.robolectric.Robolectric
+jar:file:
+com.noshufou.android.su
+io.sentry.ProguardUuids
+ON_STOP
+addressState
+kotlin.CharSequence
+RESULT_IO_EXCEPTION
+BEGIN_ARRAY
+personName
+boot_time
+fragment
+boolean
+getState
+migrations
+response
+Statsd
+FLOAT_LIST_PACKED
+dev.flutter.pigeon.webview_flutter_an...
+category
+emit
+clazz
+SCROLL_DOWN
+Marking id:locale:2131165242 used because it matches string pool constant locale
+Marking id:locale:2131165242 used because it matches string pool constant locale
+Marking id:blocking:2131165228 used because it matches string pool constant block
+Marking id:topToBottom:2131165272 used because it matches string pool constant top
+Marking id:accessibility_action_clickable_span:2131165184 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_0:2131165185 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_1:2131165186 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_10:2131165187 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_11:2131165188 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_12:2131165189 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_13:2131165190 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_14:2131165191 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_15:2131165192 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_16:2131165193 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_17:2131165194 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_18:2131165195 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_19:2131165196 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_2:2131165197 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_20:2131165198 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_21:2131165199 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_22:2131165200 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_23:2131165201 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_24:2131165202 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_25:2131165203 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_26:2131165204 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_27:2131165205 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_28:2131165206 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_29:2131165207 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_3:2131165208 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_30:2131165209 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_31:2131165210 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_4:2131165211 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_5:2131165212 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_6:2131165213 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_7:2131165214 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_8:2131165215 used because it matches string pool constant accessibility
+Marking id:accessibility_custom_action_9:2131165216 used because it matches string pool constant accessibility
+Marking attr:shortcutMatchRequired:2130903067 used because it matches string pool constant short
+Marking id:right_icon:2131165250 used because it matches string pool constant right
+Marking id:right_side:2131165251 used because it matches string pool constant right
+Marking id:info:2131165238 used because it matches string pool constant info
+Marking id:info:2131165238 used because it matches string pool constant info
+Marking attr:alpha:2130903042 used because it matches string pool constant alpha
+Marking attr:alpha:2130903042 used because it matches string pool constant alpha
+Marking layout:custom_dialog:2131296256 used because it matches string pool constant custom
+Marking id:action_container:2131165217 used because it matches string pool constant action
+Marking id:action_divider:2131165218 used because it matches string pool constant action
+Marking id:action_image:2131165219 used because it matches string pool constant action
+Marking id:action_text:2131165220 used because it matches string pool constant action
+Marking id:actions:2131165221 used because it matches string pool constant action
+Marking id:text:2131165268 used because it matches string pool constant text
+Marking id:text:2131165268 used because it matches string pool constant text
+Marking id:text2:2131165269 used because it matches string pool constant text
+Marking integer:status_bar_notification_info_maxnum:2131230720 used because it matches string pool constant status
+Marking string:status_bar_notification_info_overflow:2131427336 used because it matches string pool constant status
+Marking id:accessibility_action_clickable_span:2131165184 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_0:2131165185 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_1:2131165186 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_10:2131165187 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_11:2131165188 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_12:2131165189 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_13:2131165190 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_14:2131165191 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_15:2131165192 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_16:2131165193 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_17:2131165194 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_18:2131165195 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_19:2131165196 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_2:2131165197 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_20:2131165198 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_21:2131165199 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_22:2131165200 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_23:2131165201 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_24:2131165202 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_25:2131165203 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_26:2131165204 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_27:2131165205 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_28:2131165206 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_29:2131165207 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_3:2131165208 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_30:2131165209 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_31:2131165210 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_4:2131165211 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_5:2131165212 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_6:2131165213 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_7:2131165214 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_8:2131165215 used because it matches string pool constant acc
+Marking id:accessibility_custom_action_9:2131165216 used because it matches string pool constant acc
+Marking style:TextAppearance_Compat_Notification:2131492866 used because it matches string pool constant Text
+Marking style:TextAppearance_Compat_Notification_Info:2131492867 used because it matches string pool constant Text
+Marking style:TextAppearance_Compat_Notification_Line2:2131492868 used because it matches string pool constant Text
+Marking style:TextAppearance_Compat_Notification_Time:2131492869 used because it matches string pool constant Text
+Marking style:TextAppearance_Compat_Notification_Title:2131492870 used because it matches string pool constant Text
+Marking id:info:2131165238 used because it matches string pool constant info.displayFeatures
+Marking color:call_notification_answer_color:2130968578 used because it matches string pool constant call
+Marking color:call_notification_decline_color:2130968579 used because it matches string pool constant call
+Marking string:call_notification_answer_action:2131427329 used because it matches string pool constant call
+Marking string:call_notification_answer_video_action:2131427330 used because it matches string pool constant call
+Marking string:call_notification_decline_action:2131427331 used because it matches string pool constant call
+Marking string:call_notification_hang_up_action:2131427332 used because it matches string pool constant call
+Marking string:call_notification_incoming_text:2131427333 used because it matches string pool constant call
+Marking string:call_notification_ongoing_text:2131427334 used because it matches string pool constant call
+Marking string:call_notification_screening_text:2131427335 used because it matches string pool constant call
+Marking id:view_tree_lifecycle_owner:2131165273 used because it matches string pool constant view
+Marking id:view_tree_on_back_pressed_dispatcher_owner:2131165274 used because it matches string pool constant view
+Marking id:view_tree_saved_state_registry_owner:2131165275 used because it matches string pool constant view
+Marking id:view_tree_view_model_store_owner:2131165276 used because it matches string pool constant view
+Marking color:androidx_core_ripple_material_light:2130968576 used because it matches string pool constant android
+Marking color:androidx_core_secondary_text_default_material_light:2130968577 used because it matches string pool constant android
+Marking id:androidx_window_activity_scope:2131165226 used because it matches string pool constant android
+Marking string:androidx_startup:2131427328 used because it matches string pool constant android
+Marking id:visible_removing_fragment_view_tag:2131165277 used because it matches string pool constant visible
+Marking attr:secondaryActivityAction:2130903065 used because it matches string pool constant second
+Marking attr:secondaryActivityName:2130903066 used because it matches string pool constant second
+Marking id:sentry_privacy:2131165253 used because it matches string pool constant sentry
+Marking attr:activityAction:2130903040 used because it matches string pool constant activity
+Marking attr:activityName:2130903041 used because it matches string pool constant activity
+Marking id:normal:2131165245 used because it matches string pool constant normal
+Marking id:normal:2131165245 used because it matches string pool constant normal
+Marking attr:tag:2130903076 used because it matches string pool constant tag
+Marking attr:tag:2130903076 used because it matches string pool constant tag
+Marking id:tag_accessibility_actions:2131165255 used because it matches string pool constant tag
+Marking id:tag_accessibility_clickable_spans:2131165256 used because it matches string pool constant tag
+Marking id:tag_accessibility_heading:2131165257 used because it matches string pool constant tag
+Marking id:tag_accessibility_pane_title:2131165258 used because it matches string pool constant tag
+Marking id:tag_on_apply_window_listener:2131165259 used because it matches string pool constant tag
+Marking id:tag_on_receive_content_listener:2131165260 used because it matches string pool constant tag
+Marking id:tag_on_receive_content_mime_types:2131165261 used because it matches string pool constant tag
+Marking id:tag_screen_reader_focusable:2131165262 used because it matches string pool constant tag
+Marking id:tag_state_description:2131165263 used because it matches string pool constant tag
+Marking id:tag_transition_group:2131165264 used because it matches string pool constant tag
+Marking id:tag_unhandled_key_event_manager:2131165265 used because it matches string pool constant tag
+Marking id:tag_unhandled_key_listeners:2131165266 used because it matches string pool constant tag
+Marking id:tag_window_insets_animation_callback:2131165267 used because it matches string pool constant tag
+Marking id:line1:2131165240 used because it matches string pool constant line
+Marking id:line3:2131165241 used because it matches string pool constant line
+Marking anim:fragment_fast_out_extra_slow_in:2130771968 used because it matches string pool constant fragment
+Marking animator:fragment_close_enter:2130837504 used because it matches string pool constant fragment
+Marking animator:fragment_close_exit:2130837505 used because it matches string pool constant fragment
+Marking animator:fragment_fade_enter:2130837506 used because it matches string pool constant fragment
+Marking animator:fragment_fade_exit:2130837507 used because it matches string pool constant fragment
+Marking animator:fragment_open_enter:2130837508 used because it matches string pool constant fragment
+Marking animator:fragment_open_exit:2130837509 used because it matches string pool constant fragment
+Marking id:fragment_container_view_tag:2131165234 used because it matches string pool constant fragment
+@anim/fragment_fast_out_extra_slow_in : reachable=true
+@animator/fragment_close_enter : reachable=true
+    @anim/fragment_fast_out_extra_slow_in
+@animator/fragment_close_exit : reachable=true
+    @anim/fragment_fast_out_extra_slow_in
+@animator/fragment_fade_enter : reachable=true
+@animator/fragment_fade_exit : reachable=true
+@animator/fragment_open_enter : reachable=true
+    @anim/fragment_fast_out_extra_slow_in
+@animator/fragment_open_exit : reachable=true
+    @anim/fragment_fast_out_extra_slow_in
+@attr/activityAction : reachable=true
+@attr/activityName : reachable=true
+@attr/alpha : reachable=true
+@attr/alwaysExpand : reachable=false
+@attr/animationBackgroundColor : reachable=false
+@attr/clearTop : reachable=false
+@attr/finishPrimaryWithPlaceholder : reachable=false
+@attr/finishPrimaryWithSecondary : reachable=false
+@attr/finishSecondaryWithPrimary : reachable=false
+@attr/font : reachable=false
+@attr/fontProviderAuthority : reachable=false
+@attr/fontProviderCerts : reachable=false
+@attr/fontProviderFetchStrategy : reachable=false
+@attr/fontProviderFetchTimeout : reachable=false
+@attr/fontProviderPackage : reachable=false
+@attr/fontProviderQuery : reachable=false
+@attr/fontProviderSystemFontFamily : reachable=false
+@attr/fontStyle : reachable=false
+@attr/fontVariationSettings : reachable=false
+@attr/fontWeight : reachable=false
+@attr/lStar : reachable=false
+@attr/nestedScrollViewStyle : reachable=false
+@attr/placeholderActivityName : reachable=false
+@attr/primaryActivityName : reachable=false
+@attr/queryPatterns : reachable=false
+@attr/secondaryActivityAction : reachable=true
+@attr/secondaryActivityName : reachable=true
+@attr/shortcutMatchRequired : reachable=true
+@attr/splitLayoutDirection : reachable=false
+@attr/splitMaxAspectRatioInLandscape : reachable=false
+@attr/splitMaxAspectRatioInPortrait : reachable=false
+@attr/splitMinHeightDp : reachable=false
+@attr/splitMinSmallestWidthDp : reachable=false
+@attr/splitMinWidthDp : reachable=false
+@attr/splitRatio : reachable=false
+@attr/stickyPlaceholder : reachable=false
+@attr/tag : reachable=true
+@attr/ttcIndex : reachable=false
+@color/androidx_core_ripple_material_light : reachable=true
+@color/androidx_core_secondary_text_default_material_light : reachable=true
+@color/call_notification_answer_color : reachable=true
+@color/call_notification_decline_color : reachable=true
+@color/notification_action_color_filter : reachable=false
+    @color/androidx_core_secondary_text_default_material_light
+@color/notification_icon_bg_color : reachable=false
+@dimen/compat_button_inset_horizontal_material : reachable=false
+@dimen/compat_button_inset_vertical_material : reachable=false
+@dimen/compat_button_padding_horizontal_material : reachable=false
+@dimen/compat_button_padding_vertical_material : reachable=false
+@dimen/compat_control_corner_material : reachable=false
+@dimen/compat_notification_large_icon_max_height : reachable=false
+@dimen/compat_notification_large_icon_max_width : reachable=false
+@dimen/notification_action_icon_size : reachable=false
+@dimen/notification_action_text_size : reachable=false
+@dimen/notification_big_circle_margin : reachable=false
+@dimen/notification_content_margin_start : reachable=false
+@dimen/notification_large_icon_height : reachable=false
+@dimen/notification_large_icon_width : reachable=false
+@dimen/notification_main_column_padding_top : reachable=false
+@dimen/notification_media_narrow_margin : reachable=false
+@dimen/notification_right_icon_size : reachable=false
+@dimen/notification_right_side_padding_top : reachable=false
+@dimen/notification_small_icon_background_padding : reachable=false
+@dimen/notification_small_icon_size_as_large : reachable=false
+@dimen/notification_subtext_size : reachable=false
+@dimen/notification_top_pad : reachable=false
+@dimen/notification_top_pad_large_text : reachable=false
+@drawable/ic_call_answer : reachable=false
+@drawable/ic_call_answer_low : reachable=false
+@drawable/ic_call_answer_video : reachable=false
+@drawable/ic_call_answer_video_low : reachable=false
+@drawable/ic_call_decline : reachable=false
+@drawable/ic_call_decline_low : reachable=false
+@drawable/launch_background : reachable=false
+@drawable/notification_action_background : reachable=false
+    @color/androidx_core_ripple_material_light
+    @dimen/compat_button_inset_horizontal_material
+    @dimen/compat_button_inset_vertical_material
+    @dimen/compat_control_corner_material
+    @dimen/compat_button_padding_vertical_material
+    @dimen/compat_button_padding_horizontal_material
+@drawable/notification_bg : reachable=false
+    @drawable/notification_bg_normal_pressed
+    @drawable/notification_bg_normal
+@drawable/notification_bg_low : reachable=false
+    @drawable/notification_bg_low_pressed
+    @drawable/notification_bg_low_normal
+@drawable/notification_bg_low_normal : reachable=false
+@drawable/notification_bg_low_pressed : reachable=false
+@drawable/notification_bg_normal : reachable=false
+@drawable/notification_bg_normal_pressed : reachable=false
+@drawable/notification_icon_background : reachable=false
+    @color/notification_icon_bg_color
+@drawable/notification_oversize_large_icon_bg : reachable=false
+@drawable/notification_template_icon_bg : reachable=false
+@drawable/notification_template_icon_low_bg : reachable=false
+@drawable/notification_tile_bg : reachable=false
+    @drawable/notify_panel_notification_icon_bg
+@drawable/notify_panel_notification_icon_bg : reachable=false
+@id/accessibility_action_clickable_span : reachable=true
+@id/accessibility_custom_action_0 : reachable=true
+@id/accessibility_custom_action_1 : reachable=true
+@id/accessibility_custom_action_10 : reachable=true
+@id/accessibility_custom_action_11 : reachable=true
+@id/accessibility_custom_action_12 : reachable=true
+@id/accessibility_custom_action_13 : reachable=true
+@id/accessibility_custom_action_14 : reachable=true
+@id/accessibility_custom_action_15 : reachable=true
+@id/accessibility_custom_action_16 : reachable=true
+@id/accessibility_custom_action_17 : reachable=true
+@id/accessibility_custom_action_18 : reachable=true
+@id/accessibility_custom_action_19 : reachable=true
+@id/accessibility_custom_action_2 : reachable=true
+@id/accessibility_custom_action_20 : reachable=true
+@id/accessibility_custom_action_21 : reachable=true
+@id/accessibility_custom_action_22 : reachable=true
+@id/accessibility_custom_action_23 : reachable=true
+@id/accessibility_custom_action_24 : reachable=true
+@id/accessibility_custom_action_25 : reachable=true
+@id/accessibility_custom_action_26 : reachable=true
+@id/accessibility_custom_action_27 : reachable=true
+@id/accessibility_custom_action_28 : reachable=true
+@id/accessibility_custom_action_29 : reachable=true
+@id/accessibility_custom_action_3 : reachable=true
+@id/accessibility_custom_action_30 : reachable=true
+@id/accessibility_custom_action_31 : reachable=true
+@id/accessibility_custom_action_4 : reachable=true
+@id/accessibility_custom_action_5 : reachable=true
+@id/accessibility_custom_action_6 : reachable=true
+@id/accessibility_custom_action_7 : reachable=true
+@id/accessibility_custom_action_8 : reachable=true
+@id/accessibility_custom_action_9 : reachable=true
+@id/action_container : reachable=true
+@id/action_divider : reachable=true
+@id/action_image : reachable=true
+@id/action_text : reachable=true
+@id/actions : reachable=true
+@id/adjacent : reachable=false
+@id/always : reachable=false
+@id/alwaysAllow : reachable=false
+@id/alwaysDisallow : reachable=false
+@id/androidx_window_activity_scope : reachable=true
+@id/async : reachable=false
+@id/blocking : reachable=true
+@id/bottomToTop : reachable=false
+@id/chronometer : reachable=false
+@id/dialog_button : reachable=false
+@id/edit_text_id : reachable=false
+@id/forever : reachable=false
+@id/fragment_container_view_tag : reachable=true
+@id/hide_ime_id : reachable=false
+@id/icon : reachable=false
+@id/icon_group : reachable=false
+@id/info : reachable=true
+@id/italic : reachable=false
+@id/line1 : reachable=true
+@id/line3 : reachable=true
+@id/locale : reachable=true
+@id/ltr : reachable=false
+@id/never : reachable=false
+@id/normal : reachable=true
+@id/notification_background : reachable=false
+@id/notification_main_column : reachable=false
+@id/notification_main_column_container : reachable=false
+@id/report_drawn : reachable=false
+@id/right_icon : reachable=true
+@id/right_side : reachable=true
+@id/rtl : reachable=false
+@id/sentry_privacy : reachable=true
+@id/special_effects_controller_view_tag : reachable=false
+@id/tag_accessibility_actions : reachable=true
+@id/tag_accessibility_clickable_spans : reachable=true
+@id/tag_accessibility_heading : reachable=true
+@id/tag_accessibility_pane_title : reachable=true
+@id/tag_on_apply_window_listener : reachable=true
+@id/tag_on_receive_content_listener : reachable=true
+@id/tag_on_receive_content_mime_types : reachable=true
+@id/tag_screen_reader_focusable : reachable=true
+@id/tag_state_description : reachable=true
+@id/tag_transition_group : reachable=true
+@id/tag_unhandled_key_event_manager : reachable=true
+@id/tag_unhandled_key_listeners : reachable=true
+@id/tag_window_insets_animation_callback : reachable=true
+@id/text : reachable=true
+@id/text2 : reachable=true
+@id/time : reachable=false
+@id/title : reachable=false
+@id/topToBottom : reachable=true
+@id/view_tree_lifecycle_owner : reachable=true
+@id/view_tree_on_back_pressed_dispatcher_owner : reachable=true
+@id/view_tree_saved_state_registry_owner : reachable=true
+@id/view_tree_view_model_store_owner : reachable=true
+@id/visible_removing_fragment_view_tag : reachable=true
+@integer/status_bar_notification_info_maxnum : reachable=true
+@layout/custom_dialog : reachable=true
+@layout/ime_base_split_test_activity : reachable=false
+@layout/ime_secondary_split_test_activity : reachable=false
+@layout/notification_action : reachable=false
+    @style/Widget_Compat_NotificationActionContainer
+    @dimen/notification_action_icon_size
+    @style/Widget_Compat_NotificationActionText
+@layout/notification_action_tombstone : reachable=false
+    @style/Widget_Compat_NotificationActionContainer
+    @dimen/notification_action_icon_size
+    @style/Widget_Compat_NotificationActionText
+@layout/notification_template_custom_big : reachable=false
+    @layout/notification_template_icon_group
+    @dimen/notification_large_icon_width
+    @dimen/notification_large_icon_height
+    @dimen/notification_right_side_padding_top
+    @layout/notification_template_part_time
+    @layout/notification_template_part_chronometer
+    @style/TextAppearance_Compat_Notification_Info
+@layout/notification_template_icon_group : reachable=false
+    @dimen/notification_large_icon_width
+    @dimen/notification_large_icon_height
+    @dimen/notification_big_circle_margin
+    @dimen/notification_right_icon_size
+@layout/notification_template_part_chronometer : reachable=false
+    @style/TextAppearance_Compat_Notification_Time
+@layout/notification_template_part_time : reachable=false
+    @style/TextAppearance_Compat_Notification_Time
+@mipmap/ic_launcher : reachable=true
+@string/androidx_startup : reachable=true
+@string/call_notification_answer_action : reachable=true
+@string/call_notification_answer_video_action : reachable=true
+@string/call_notification_decline_action : reachable=true
+@string/call_notification_hang_up_action : reachable=true
+@string/call_notification_incoming_text : reachable=true
+@string/call_notification_ongoing_text : reachable=true
+@string/call_notification_screening_text : reachable=true
+@string/status_bar_notification_info_overflow : reachable=true
+@style/LaunchTheme : reachable=true
+    @drawable/launch_background
+@style/NormalTheme : reachable=true
+@style/TextAppearance_Compat_Notification : reachable=true
+@style/TextAppearance_Compat_Notification_Info : reachable=true
+@style/TextAppearance_Compat_Notification_Line2 : reachable=true
+    @style/TextAppearance_Compat_Notification_Info
+@style/TextAppearance_Compat_Notification_Time : reachable=true
+@style/TextAppearance_Compat_Notification_Title : reachable=true
+@style/Widget_Compat_NotificationActionContainer : reachable=false
+    @drawable/notification_action_background
+@style/Widget_Compat_NotificationActionText : reachable=false
+    @color/androidx_core_secondary_text_default_material_light
+    @dimen/notification_action_text_size
+
+The root reachable resources are:
+ anim:fragment_fast_out_extra_slow_in:2130771968
+ animator:fragment_close_enter:2130837504
+ animator:fragment_close_exit:2130837505
+ animator:fragment_fade_enter:2130837506
+ animator:fragment_fade_exit:2130837507
+ animator:fragment_open_enter:2130837508
+ animator:fragment_open_exit:2130837509
+ attr:activityAction:2130903040
+ attr:activityName:2130903041
+ attr:alpha:2130903042
+ attr:secondaryActivityAction:2130903065
+ attr:secondaryActivityName:2130903066
+ attr:shortcutMatchRequired:2130903067
+ attr:tag:2130903076
+ color:androidx_core_ripple_material_light:2130968576
+ color:androidx_core_secondary_text_default_material_light:2130968577
+ color:call_notification_answer_color:2130968578
+ color:call_notification_decline_color:2130968579
+ id:accessibility_action_clickable_span:2131165184
+ id:accessibility_custom_action_0:2131165185
+ id:accessibility_custom_action_1:2131165186
+ id:accessibility_custom_action_10:2131165187
+ id:accessibility_custom_action_11:2131165188
+ id:accessibility_custom_action_12:2131165189
+ id:accessibility_custom_action_13:2131165190
+ id:accessibility_custom_action_14:2131165191
+ id:accessibility_custom_action_15:2131165192
+ id:accessibility_custom_action_16:2131165193
+ id:accessibility_custom_action_17:2131165194
+ id:accessibility_custom_action_18:2131165195
+ id:accessibility_custom_action_19:2131165196
+ id:accessibility_custom_action_2:2131165197
+ id:accessibility_custom_action_20:2131165198
+ id:accessibility_custom_action_21:2131165199
+ id:accessibility_custom_action_22:2131165200
+ id:accessibility_custom_action_23:2131165201
+ id:accessibility_custom_action_24:2131165202
+ id:accessibility_custom_action_25:2131165203
+ id:accessibility_custom_action_26:2131165204
+ id:accessibility_custom_action_27:2131165205
+ id:accessibility_custom_action_28:2131165206
+ id:accessibility_custom_action_29:2131165207
+ id:accessibility_custom_action_3:2131165208
+ id:accessibility_custom_action_30:2131165209
+ id:accessibility_custom_action_31:2131165210
+ id:accessibility_custom_action_4:2131165211
+ id:accessibility_custom_action_5:2131165212
+ id:accessibility_custom_action_6:2131165213
+ id:accessibility_custom_action_7:2131165214
+ id:accessibility_custom_action_8:2131165215
+ id:accessibility_custom_action_9:2131165216
+ id:action_container:2131165217
+ id:action_divider:2131165218
+ id:action_image:2131165219
+ id:action_text:2131165220
+ id:actions:2131165221
+ id:androidx_window_activity_scope:2131165226
+ id:blocking:2131165228
+ id:fragment_container_view_tag:2131165234
+ id:info:2131165238
+ id:line1:2131165240
+ id:line3:2131165241
+ id:locale:2131165242
+ id:normal:2131165245
+ id:right_icon:2131165250
+ id:right_side:2131165251
+ id:sentry_privacy:2131165253
+ id:tag_accessibility_actions:2131165255
+ id:tag_accessibility_clickable_spans:2131165256
+ id:tag_accessibility_heading:2131165257
+ id:tag_accessibility_pane_title:2131165258
+ id:tag_on_apply_window_listener:2131165259
+ id:tag_on_receive_content_listener:2131165260
+ id:tag_on_receive_content_mime_types:2131165261
+ id:tag_screen_reader_focusable:2131165262
+ id:tag_state_description:2131165263
+ id:tag_transition_group:2131165264
+ id:tag_unhandled_key_event_manager:2131165265
+ id:tag_unhandled_key_listeners:2131165266
+ id:tag_window_insets_animation_callback:2131165267
+ id:text:2131165268
+ id:text2:2131165269
+ id:topToBottom:2131165272
+ id:view_tree_lifecycle_owner:2131165273
+ id:view_tree_on_back_pressed_dispatcher_owner:2131165274
+ id:view_tree_saved_state_registry_owner:2131165275
+ id:view_tree_view_model_store_owner:2131165276
+ id:visible_removing_fragment_view_tag:2131165277
+ integer:status_bar_notification_info_maxnum:2131230720
+ layout:custom_dialog:2131296256
+ mipmap:ic_launcher:2131361792
+ string:androidx_startup:2131427328
+ string:call_notification_answer_action:2131427329
+ string:call_notification_answer_video_action:2131427330
+ string:call_notification_decline_action:2131427331
+ string:call_notification_hang_up_action:2131427332
+ string:call_notification_incoming_text:2131427333
+ string:call_notification_ongoing_text:2131427334
+ string:call_notification_screening_text:2131427335
+ string:status_bar_notification_info_overflow:2131427336
+ style:LaunchTheme:2131492864
+ style:NormalTheme:2131492865
+ style:TextAppearance_Compat_Notification:2131492866
+ style:TextAppearance_Compat_Notification_Info:2131492867
+ style:TextAppearance_Compat_Notification_Line2:2131492868
+ style:TextAppearance_Compat_Notification_Time:2131492869
+ style:TextAppearance_Compat_Notification_Title:2131492870
+Unused resources are: 
+ color:notification_action_color_filter:2130968580
+ color:notification_icon_bg_color:2130968581
+ dimen:compat_button_inset_horizontal_material:2131034112
+ dimen:compat_button_inset_vertical_material:2131034113
+ dimen:compat_button_padding_horizontal_material:2131034114
+ dimen:compat_button_padding_vertical_material:2131034115
+ dimen:compat_control_corner_material:2131034116
+ dimen:compat_notification_large_icon_max_height:2131034117
+ dimen:compat_notification_large_icon_max_width:2131034118
+ dimen:notification_action_icon_size:2131034119
+ dimen:notification_action_text_size:2131034120
+ dimen:notification_big_circle_margin:2131034121
+ dimen:notification_content_margin_start:2131034122
+ dimen:notification_large_icon_height:2131034123
+ dimen:notification_large_icon_width:2131034124
+ dimen:notification_main_column_padding_top:2131034125
+ dimen:notification_media_narrow_margin:2131034126
+ dimen:notification_right_icon_size:2131034127
+ dimen:notification_right_side_padding_top:2131034128
+ dimen:notification_small_icon_background_padding:2131034129
+ dimen:notification_small_icon_size_as_large:2131034130
+ dimen:notification_subtext_size:2131034131
+ dimen:notification_top_pad:2131034132
+ dimen:notification_top_pad_large_text:2131034133
+ drawable:ic_call_answer:2131099648
+ drawable:ic_call_answer_low:2131099649
+ drawable:ic_call_answer_video:2131099650
+ drawable:ic_call_answer_video_low:2131099651
+ drawable:ic_call_decline:2131099652
+ drawable:ic_call_decline_low:2131099653
+ drawable:notification_action_background:2131099655
+ drawable:notification_bg:2131099656
+ drawable:notification_bg_low:2131099657
+ drawable:notification_bg_low_normal:2131099658
+ drawable:notification_bg_low_pressed:2131099659
+ drawable:notification_bg_normal:2131099660
+ drawable:notification_bg_normal_pressed:2131099661
+ drawable:notification_icon_background:2131099662
+ drawable:notification_oversize_large_icon_bg:2131099663
+ drawable:notification_template_icon_bg:2131099664
+ drawable:notification_template_icon_low_bg:2131099665
+ drawable:notification_tile_bg:2131099666
+ drawable:notify_panel_notification_icon_bg:2131099667
+ id:adjacent:2131165222
+ id:always:2131165223
+ id:alwaysAllow:2131165224
+ id:alwaysDisallow:2131165225
+ id:async:2131165227
+ id:bottomToTop:2131165229
+ id:chronometer:2131165230
+ id:dialog_button:2131165231
+ id:edit_text_id:2131165232
+ id:forever:2131165233
+ id:hide_ime_id:2131165235
+ id:icon:2131165236
+ id:icon_group:2131165237
+ id:italic:2131165239
+ id:ltr:2131165243
+ id:never:2131165244
+ id:notification_background:2131165246
+ id:notification_main_column:2131165247
+ id:notification_main_column_container:2131165248
+ id:report_drawn:2131165249
+ id:rtl:2131165252
+ id:special_effects_controller_view_tag:2131165254
+ id:time:2131165270
+ id:title:2131165271
+ layout:ime_base_split_test_activity:2131296257
+ layout:ime_secondary_split_test_activity:2131296258
+ layout:notification_action:2131296259
+ layout:notification_action_tombstone:2131296260
+ layout:notification_template_custom_big:2131296261
+ layout:notification_template_icon_group:2131296262
+ layout:notification_template_part_chronometer:2131296263
+ layout:notification_template_part_time:2131296264
+ style:Widget_Compat_NotificationActionContainer:2131492871
+ style:Widget_Compat_NotificationActionText:2131492872
+Skipped unused resource res/drawable-v21/notification_action_background.xml: 2250 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable/notification_bg.xml: 751 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable/notification_bg_low.xml: 753 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable/notification_icon_background.xml: 314 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable/notification_tile_bg.xml: 319 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_answer.png: 270 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_answer_low.png: 270 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_answer_video.png: 199 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_answer_video_low.png: 199 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_decline.png: 201 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-ldpi-v4/ic_call_decline_low.png: 201 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_answer.png: 317 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_answer_low.png: 317 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_answer_video.png: 206 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_answer_video_low.png: 206 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_decline.png: 264 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/ic_call_decline_low.png: 264 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_low_normal.9.png: 215 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_low_pressed.9.png: 223 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_normal.9.png: 215 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png: 223 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png: 98 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_answer.png: 472 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_answer_low.png: 472 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_answer_video.png: 254 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_answer_video_low.png: 254 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_decline.png: 375 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/ic_call_decline_low.png: 375 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_low_normal.9.png: 212 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_low_pressed.9.png: 225 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_normal.9.png: 212 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png: 225 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notification_oversize_large_icon_bg.png: 909 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png: 107 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_answer.png: 623 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_answer_low.png: 623 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_answer_video.png: 290 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_answer_video_low.png: 290 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_decline.png: 452 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/ic_call_decline_low.png: 452 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_low_normal.9.png: 221 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png: 252 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_normal.9.png: 221 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png: 247 bytes (replaced with small dummy file of size 77 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png: 138 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_answer.png: 884 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_answer_low.png: 884 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_answer_video.png: 384 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_answer_video_low.png: 384 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_decline.png: 628 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/ic_call_decline_low.png: 628 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_answer.png: 1171 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_answer_low.png: 1171 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_answer_video.png: 465 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_answer_video_low.png: 465 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_decline.png: 823 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxxhdpi-v4/ic_call_decline_low.png: 823 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_answer.xml: 1515 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_answer_low.xml: 1373 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_answer_video.xml: 931 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_answer_video_low.xml: 789 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_decline.xml: 1689 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/drawable-anydpi-v21/ic_call_decline_low.xml: 1547 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout/ime_base_split_test_activity.xml: 365 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout/ime_secondary_split_test_activity.xml: 1465 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout-v21/notification_action.xml: 2216 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout-v21/notification_action_tombstone.xml: 2677 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout-v21/notification_template_custom_big.xml: 6318 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout-v21/notification_template_icon_group.xml: 2432 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout/notification_template_part_chronometer.xml: 643 bytes (replaced with small dummy file of size 9 bytes)
+Skipped unused resource res/layout/notification_template_part_time.xml: 630 bytes (replaced with small dummy file of size 9 bytes)

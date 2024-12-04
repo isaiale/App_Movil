@@ -22,7 +22,7 @@ class _InicioState extends State<Inicio> {
 
     // Si el token es válido, redirigir a la pantalla principal
     if (token != null && !JwtDecoder.isExpired(token)) {
-      Navigator.pushReplacementNamed(context, '/tabs');  // Navegar a la pantalla principal
+      Navigator.pushReplacementNamed(context, '/home');  // Navegar a la pantalla principal
     } else {
       Navigator.pushReplacementNamed(context, '/login');  // Navegar a la pantalla de Login
     }
@@ -34,7 +34,7 @@ class _InicioState extends State<Inicio> {
       backgroundColor: Colors.white, // Fondo blanco
       body: Center(
         child: Image.asset(
-          'imagenes/Logo de mi enfermera favorita.jpg',  // Coloca tu logo aquí
+          'imagenes/LogoM.png',  // Coloca tu logo aquí
           width: 150,
           height: 150,
         ),

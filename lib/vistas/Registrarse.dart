@@ -5,7 +5,7 @@ import 'dart:convert';
 import '../componentes/CustomElevatedButton.dart';
 import '../componentes/AlertMessage.dart';
 import 'TerminoCondiciones.dart';
-import 'login.dart';
+import 'Login.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -29,13 +29,11 @@ class _RegisterState extends State<Register> {
       });
 
       try {
-        // Verificar si el correo ya existe
         final response = await http.get(
           Uri.parse('https://back-end-enfermera.vercel.app/api/usuario'),
         );
         final usuarios = jsonDecode(response.body);
 
-        // Verificar si el correo ya está en uso
         if (usuarios
             .any((usuario) => usuario['correo'] == emailController.text)) {
           AlertMessage.show(
@@ -49,7 +47,6 @@ class _RegisterState extends State<Register> {
           return;
         }
 
-        // Si no está en uso, proceder con el registro
         final registerResponse = await http.post(
           Uri.parse('https://back-end-enfermera.vercel.app/api/usuario'),
           headers: {'Content-Type': 'application/json'},
@@ -63,7 +60,6 @@ class _RegisterState extends State<Register> {
         );
 
         if (registerResponse.statusCode == 201) {
-          // Registro exitoso
           AlertMessage.show(
             context: context,
             message:
@@ -71,14 +67,12 @@ class _RegisterState extends State<Register> {
             type: MessageType.success,
           );
 
-          // Limpiar los campos después de un registro exitoso
           nameController.clear();
           lastNameController.clear();
           phoneController.clear();
           emailController.clear();
           passwordController.clear();
 
-          // Esperar 2 segundos antes de navegar a la pantalla de login
           Future.delayed(Duration(seconds: 2), () {
             Navigator.pushReplacement(
               context,
@@ -86,7 +80,6 @@ class _RegisterState extends State<Register> {
             );
           });
         } else {
-          // Error en el registro
           AlertMessage.show(
             context: context,
             message: 'Error al registrar el usuario. Inténtalo nuevamente.',
@@ -94,7 +87,6 @@ class _RegisterState extends State<Register> {
           );
         }
       } catch (error) {
-        // Error al hacer la solicitud
         AlertMessage.show(
           context: context,
           message: 'Error al conectar con el servidor. Inténtalo más tarde.',
@@ -106,111 +98,123 @@ class _RegisterState extends State<Register> {
         });
       }
     } else if (!_acceptTerms) {
-      // Mostrar error si no aceptan los términos
       AlertMessage.show(
-          context: context,
-          message: 'Debes aceptar los términos y condiciones',
-          type: MessageType.info,
-        );
+        context: context,
+        message: 'Debes aceptar los términos y condiciones',
+        type: MessageType.info,
+      );
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            children: [
-              Container(
-                child: Text(
-                  'Registro',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              SizedBox(height: 16.0),
-
-              // Campo de nombre (solo letras y primera letra mayúscula)
-              CustomTextFormField(
-                labelText: 'Nombre',
-                validationType: 'letters', // Validación para solo letras
-                controller: nameController,
-              ),
-              SizedBox(height: 16.0),
-
-              // Campo de apellido (solo letras y primera letra mayúscula)
-              CustomTextFormField(
-                labelText: 'Apellido',
-                validationType: 'letters', // Validación para solo letras
-                controller: lastNameController,
-              ),
-              SizedBox(height: 16.0),
-
-              // Campo de teléfono (usando PhoneNumberField)
-              PhoneNumberField(
-                controller: phoneController,
-              ),
-              SizedBox(height: 16.0),
-
-              // Campo de correo electrónico
-              CustomTextFormField(
-                labelText: 'Correo electrónico',
-                validationType: 'gmail',
-                controller: emailController,
-                keyboardType: TextInputType.emailAddress,
-              ),
-              SizedBox(height: 16.0),
-
-              // Campo de contraseña utilizando el componente especializado PasswordField
-              PasswordFieldRegistro(
-                controller: passwordController,
-              ),
-              SizedBox(height: 16.0),
-
-              // Checkbox para aceptar términos y condiciones
-              Row(
+      appBar: AppBar(
+        backgroundColor: Color(0xFFFF4081),
+        elevation: 0,
+      ),              
+      body: Container(        
+        decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color(0xFFFF4081), // Color degradado superior
+            Color(0xFFF1F1F1), // Color degradado inferior
+          ],
+        ),
+      ),
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Form(
+            key: _formKey,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Checkbox(
-                    value: _acceptTerms,
-                    onChanged: (bool? value) {
-                      setState(() {
-                        _acceptTerms = value ?? false;
-                      });
-                    },
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => TermsAndConditionsScreen(),
-                        ),
-                      );
-                    },
+                  Center(
                     child: Text(
-                      'Aceptar los términos y condiciones',
-                      style: TextStyle(fontSize: 16),
+                      'Registro',
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
+                  ),
+                  SizedBox(height: 32.0),
+
+                  CustomTextFormField(
+                    labelText: 'Nombre',
+                    validationType: 'letters',
+                    controller: nameController,
+                  ),
+                  SizedBox(height: 16.0),
+
+                  CustomTextFormField(
+                    labelText: 'Apellido',
+                    validationType: 'letters',
+                    controller: lastNameController,
+                  ),
+                  SizedBox(height: 16.0),
+
+                  PhoneNumberField(
+                    controller: phoneController,
+                  ),
+                  SizedBox(height: 16.0),
+
+                  CustomTextFormField(
+                    labelText: 'Correo electrónico',
+                    validationType: 'gmail',
+                    controller: emailController,
+                    keyboardType: TextInputType.emailAddress,
+                  ),
+                  SizedBox(height: 16.0),
+
+                  PasswordFieldRegistro(
+                    controller: passwordController,
+                  ),
+                  SizedBox(height: 16.0),
+
+                  Row(
+                    children: [
+                      Checkbox(
+                        value: _acceptTerms,
+                        onChanged: (bool? value) {
+                          setState(() {
+                            _acceptTerms = value ?? false;
+                          });
+                        },
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => TermsAndConditionsScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Aceptar los términos y condiciones',
+                          style: TextStyle(fontSize: 16, color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 32.0),
+
+                  if (_isLoading)
+                    Center(child: CircularProgressIndicator()),
+
+                  CustomElevatedButton(
+                    text: "Registrar",
+                    onPressed: _register,
                   ),
                 ],
               ),
-              SizedBox(height: 16.0),
-
-              // Mostrar indicador de carga si está en progreso
-              if (_isLoading) CircularProgressIndicator(),
-
-              // Botón de registro
-              CustomElevatedButton(
-                text: "Registrar",
-                onPressed: _register,
-              ),
-            ],
+            ),
           ),
         ),
       ),

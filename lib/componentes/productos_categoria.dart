@@ -1,19 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'package:app_movil/servicios/producto_service.dart';
+import 'lista_productos.dart';
+import 'package:app_movil/componentes/ProductSearch.dart';
+import '/componentes/fitroProductos.dart';
 
 class ProductosCategoria extends StatefulWidget {
   final String categoriaId;
+  final String nombreCategoria;
 
-  ProductosCategoria({required this.categoriaId});
+  ProductosCategoria(
+      {required this.categoriaId, required this.nombreCategoria});
 
   @override
   _ProductosCategoriaState createState() => _ProductosCategoriaState();
 }
 
 class _ProductosCategoriaState extends State<ProductosCategoria> {
+  final ProductosCategoriaService _productoService =
+      ProductosCategoriaService();
   List<dynamic> productos = [];
+  List<dynamic> productosFiltrados = [];
   bool isLoading = true;
+  final TextEditingController _searchController =
+      TextEditingController(); // Controlador para el campo de búsqueda
 
   @override
   void initState() {
@@ -22,177 +31,178 @@ class _ProductosCategoriaState extends State<ProductosCategoria> {
   }
 
   Future<void> fetchProductosByCategoria() async {
+    print(
+        'Iniciando la solicitud para obtener productos de la categoría: ${widget.categoriaId}');
     try {
-      final response = await http.get(
-        Uri.parse(
-          'https://back-end-enfermera.vercel.app/api/productos/productos/categoria/${widget.categoriaId}',
-        ),
-      );
+      final data =
+          await _productoService.fetchProductosByCategoria(widget.categoriaId);
 
-      if (response.statusCode == 200) {
-        final data = json.decode(response.body);
-        print(data); // Imprime la respuesta para verificar su estructura
-
-        // Verificamos si data es un Map y contiene la clave 'productos'
-        if (data is Map<String, dynamic> && data.containsKey('productos')) {
-          setState(() {
-            productos = data['productos']; // Accedemos a la lista de productos
-            isLoading = false;
-          });
-        } else {
-          setState(() {
-            productos = []; // Si no hay productos, dejamos la lista vacía
-            isLoading = false;
-          });
-        }
-      } else {
-        setState(() {
-          isLoading = false;
-        });
-        print('Error: ${response.statusCode}');
-      }
+      setState(() {
+        productos = data;
+        productosFiltrados =
+            data; // Inicialmente, los productos filtrados son todos los productos
+        isLoading = false;
+      });
+      print('Productos cargados: ${productos.length} encontrados');
     } catch (e) {
       setState(() {
         isLoading = false;
       });
-      print('Error: $e');
+      print('Error al obtener los productos: $e');
     }
+  }
+
+  void _filterProductos(String query) {
+    setState(() {
+      if (query.isEmpty) {
+        productosFiltrados = productos;
+      } else {
+        productosFiltrados = productos
+            .where((producto) => producto['nombre']
+                .toString()
+                .toLowerCase()
+                .contains(query.toLowerCase()))
+            .toList();
+      }
+    });
+  }
+
+  void _applyFilters(Map<String, dynamic> filters) {
+    setState(() {
+      productosFiltrados = productos.where((producto) {
+        // Validar que el precio y descuento no sean nulos antes de compararlos
+        final precio = (producto['precio'] ?? 0).toDouble();
+        final descuento = (producto['descuento'] ?? 0).toDouble();
+
+        final tieneDescuento = filters['onlyDiscounted'] ? descuento > 0 : true;
+        final precioMinimo =
+            filters['minPrice'] != null ? precio >= filters['minPrice'] : true;
+        final precioMaximo =
+            filters['maxPrice'] != null ? precio <= filters['maxPrice'] : true;
+
+        return tieneDescuento && precioMinimo && precioMaximo;
+      }).toList();
+    });
+  }
+
+  void _showFilterDialog() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return ProductFilterDialog(
+          onApplyFilter: (filters) {
+            _applyFilters(filters);
+          },
+        );
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Productos por Categoría'),
+        title: Text(
+          widget.nombreCategoria,
+          style: TextStyle(
+            color: Colors.white, // Cambia el color del texto a blanco
+            fontSize: 20.0, // Tamaño de fuente opcional
+            fontWeight: FontWeight.bold, // Negrita opcional
+          ),
+        ),
+        centerTitle: true, // Centrar el título
+        backgroundColor: Colors.pinkAccent, // Color de fondo del AppBar
+        iconTheme: IconThemeData(
+            color: Colors.white), // Iconos también en blanco, si aplica
       ),
       body: isLoading
           ? Center(child: CircularProgressIndicator())
           : productos.isEmpty
               ? Center(child: Text("No hay productos en esta categoría"))
-              : Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: GridView.builder(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2, // Número de productos por fila
-                      crossAxisSpacing: 10.0,
-                      mainAxisSpacing: 10.0,
-                      childAspectRatio:
-                          0.75, // Relación de aspecto de los productos
+              : Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: ProductSearch(
+                            controller: _searchController,
+                            onSearch: _filterProductos,
+                          ),
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.filter_alt, color: Colors.black),
+                          onPressed: _showFilterDialog,
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.clear, color: Colors.red),
+                          onPressed: _clearFilters,
+                        ),
+                      ],
                     ),
-                    itemCount: productos.length,
-                    itemBuilder: (context, index) {
-                      return ProductCard(
-                        id: productos[index]['_id'],
-                        title: productos[index]['nombre'],
-                        price: productos[index]['precio'].toDouble(),
-                        imageUrl: productos[index]['imagenes'][0]['url'],
-                        inventario: productos[index]['inventario'],
-                        categoria: productos[index]['categoria'] ?? [],
-                        descuento: productos[index]['descuento'] ?? 0,
-                        talla: productos[index]['talla'] ?? [],
-                        sexo: productos[index]['sexo'] ?? 'Desconocido',
-                      );
-                    },
-                  ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: GridView.builder(
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 2.0,
+                            mainAxisSpacing: 5.0,
+                            childAspectRatio: 0.65,
+                          ),
+                          itemCount: productosFiltrados.length,
+                          itemBuilder: (context, index) {
+                            final producto = productosFiltrados[index];
+
+                            if (producto is! Map<String, dynamic>) {
+                              print('Producto inesperado: $producto');
+                              return Center(
+                                  child: Text('Producto no disponible'));
+                            }
+
+                            final nombre = producto['nombre'] ?? 'Sin nombre';
+                            final precio = (producto['precio'] ?? 0).toDouble();
+                            final descripcion =
+                                producto['descripcion'] ?? 'Sin descripción';
+                            final inventario = producto['inventario'] ?? 0;
+                            final descuento = producto['descuento'] ?? 0;
+                            final talla = producto['talla'] ?? [];
+                            final sexo = producto['sexo'] ?? 'No aplica';
+                            final categoria = producto['categoria']
+                                    ?['nombre'] ??
+                                'Sin categoría';
+                            final imagenes = producto['imagenes'] ?? [];
+                            final imageUrl = imagenes.isNotEmpty
+                                ? imagenes[0]['url']
+                                : 'https://via.placeholder.com/150';
+
+                            return ProductCard(
+                              id: producto['_id'] ?? '',
+                              title: nombre,
+                              price: precio,
+                              descripcion: descripcion,
+                              inventario: inventario,
+                              descuento: descuento,
+                              talla: talla,
+                              sexo: sexo,
+                              categoria: categoria,
+                              imageUrl: imageUrl,
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
     );
   }
-}
 
-class ProductCard extends StatelessWidget {
-  final String id;
-  final String title;
-  final double price;
-  final String imageUrl;
-  final int inventario;
-  final List<dynamic> categoria;
-  final int descuento;
-  final List<dynamic> talla;
-  final String sexo;
-
-  ProductCard({
-    required this.id,
-    required this.title,
-    required this.price,
-    required this.imageUrl,
-    required this.inventario,
-    required this.categoria,
-    required this.descuento,
-    required this.talla,
-    required this.sexo,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 4.0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15.0),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          AspectRatio(
-            aspectRatio: 1,
-            child: ClipRRect(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15.0),
-                topRight: Radius.circular(15.0),
-              ),
-              child: Image.network(
-                imageUrl,
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  Spacer(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '\$$price',
-                        style: const TextStyle(
-                          fontSize: 18.0,
-                          color: Colors.green,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          // Lógica para manejar la acción cuando se presiona el botón
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
-                          minimumSize: Size(40, 40),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                        child: Icon(Icons.add_shopping_cart, color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+  /// Función para limpiar filtros y restaurar la lista original
+  void _clearFilters() {
+    setState(() {
+      productosFiltrados = productos;
+      _searchController.clear(); // Limpia el campo de búsqueda
+    });
   }
 }
