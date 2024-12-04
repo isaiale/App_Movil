@@ -16,11 +16,7 @@ Future<void> main() async {
   await SentryFlutter.init(
     (options) {
       options.dsn = 'https://bcac6d0c2038cbcab9987b7b65cda011@o4508372929609728.ingest.us.sentry.io/4508408492523520';
-      // Set tracesSampleRate to 1.0 to capture 100% of transactions for tracing.
-      // We recommend adjusting this value in production.
       options.tracesSampleRate = 1.0;
-      // The sampling rate for profiling is relative to tracesSampleRate
-      // Setting to 1.0 will profile 100% of sampled transactions:
       options.profilesSampleRate = 1.0;
     },
     appRunner: () => runApp(MyApp()),
@@ -30,7 +26,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialAp(
+    return MaterialApp(
       title: 'App Móvil',
       initialRoute: '/inicio', // Ruta inicial
       navigatorObservers: [
