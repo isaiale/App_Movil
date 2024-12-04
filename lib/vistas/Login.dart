@@ -98,6 +98,7 @@ class _LoginState extends State<Login> {
       ),
       extendBodyBehindAppBar: true,
       body: Container(
+        // Se agregó un fondo con degradado para mejorar el diseño visual
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -117,6 +118,7 @@ class _LoginState extends State<Login> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    // Se agregó un icono dentro de un CircleAvatar para representar al usuario
                     CircleAvatar(
                       radius: 60,
                       backgroundColor: Colors.white,
@@ -127,6 +129,7 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                     const SizedBox(height: 32.0),
+                    // Campo de correo electrónico
                     CustomTextFormField(
                       labelText: 'Correo electrónico',
                       validationType: 'gmail',
@@ -134,10 +137,12 @@ class _LoginState extends State<Login> {
                       keyboardType: TextInputType.emailAddress,
                     ),
                     const SizedBox(height: 16.0),
+                    // Campo de contraseña
                     PasswordField(
                       controller: passwordController,
                     ),
                     const SizedBox(height: 8.0),
+                    // Enlace de olvido de contraseña
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
@@ -159,6 +164,8 @@ class _LoginState extends State<Login> {
                             onPressed: _login,
                           ),
                     const SizedBox(height: 16.0),
+
+                    // Texto para registrarse
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -181,15 +188,6 @@ class _LoginState extends State<Login> {
                           ),
                         ),
                       ],
-                    ),
-                    const SizedBox(height: 32.0),
-
-                    // Agregar botón de prueba de error
-                    ElevatedButton(
-                      onPressed: () {
-                        throw Exception('This is a test exception for Sentry!');
-                      },
-                      child: Text('Probar Error de Sentry'),
                     ),
                   ],
                 ),
