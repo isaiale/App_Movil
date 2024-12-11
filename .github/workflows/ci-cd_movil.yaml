@@ -108,7 +108,7 @@ jobs:
       # Verificar si el archivo APK existe antes de proceder
       - name: Verify APK exists
         run: |
-          if [ -f "build\app\outputs\flutter-apk\app-release.apk" ]; then
+          if [ -f "build/app/outputs/flutter-apk/app-release.apk" ]; then
             echo "APK exists"
           else
             echo "APK does not exist"
@@ -126,7 +126,7 @@ jobs:
       # Subir el archivo a itch.io
       - name: Deploy to itch.io
         run: |
-          butler push build\app\outputs\flutter-apk\app-release.apk isaiale/MiApp:android --dry-run --context-timeout=60
+          butler push build/app/outputs/flutter-apk/app-release.apk isaiale/MiApp:android --dry-run --context-timeout=60
 
         env:
           BUTLER_API_KEY: ${{ secrets.ITCH_IO_API_KEY }}
