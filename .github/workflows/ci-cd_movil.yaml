@@ -82,13 +82,6 @@ jobs:
         # Ejecutar prueba
         flutter test integration_test/image_slider_test.dart || echo "Prueba completada con éxito, con o sin emulador."
 
-    
-      # monitoreo con Sentry   
-    - name: Monitor with Sentry
-      env:
-        SENTRY_DSN: ${{ secrets.SENTRY_DSN }}  # Utilizando el secreto almacenado
-      run: |
-          flutter test test/services/url_service_test.dart || echo "Error monitored in Sentry"
   
     # 11 .Test Integration Test Driver
     - name: Simulate Test Driver
@@ -127,73 +120,80 @@ jobs:
         name: flutter-apk
         path: build/app/outputs/flutter-apk/app-release.apk
     
-  # deploy:
-  #   name: Deploy Flutter MEF
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/pruebas' || github.ref == 'refs/heads/test' || startsWith(github.ref, 'refs/heads/release/')
-  #   steps:
-  #     - name: Check out repository
-  #       uses: actions/checkout@v3
+  deploy:
+    name: Deploy Flutter MEF
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/pruebas' || github.ref == 'refs/heads/test' || startsWith(github.ref, 'refs/heads/release/')
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
 
-  #     - name: Setup Flutter
-  #       uses: subosito/flutter-action@v2
-  #       with:
-  #         flutter-version: '3.24.5'
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.5'
 
-  #     - name: Deploy Application
-  #       run: echo "Desplegando la aplicación..."  
+      - name: Deploy Application
+        run: echo "Desplegando la aplicación..."  
 
-  #     # Verificar si el archivo APK existe antes de proceder
-  #     - name: Verify APK exists
-  #       run: |
-  #         if [ -f "build/app/outputs/flutter-apk/app-release.apk" ]; then
-  #           echo "APK exists"
-  #         else
-  #           echo "APK does not exist"
-  #           exit 1
-  #         fi
+      # Verificar si el archivo APK existe antes de proceder
+      - name: Verify APK exists
+        run: |
+          if [ -f "build/app/outputs/flutter-apk/app-release.apk" ]; then
+            echo "APK exists"
+          else
+            echo "APK does not exist"
+            exit 1
+          fi
 
-  #     # Descargar butler desde Google Drive
-  #     - name: Download Butler from Google Drive
-  #       run: |
-  #         curl -L -o butler.zip "https://drive.google.com/uc?export=download&id=1vfo3W8gMqq3xeJUNgLiTayerBq6G5OGE"
-  #         unzip butler.zip -d ~/butler
-  #         sudo mv ~/butler/butler /usr/local/bin/
-  #         butler -V # Verificar instalación
+      # Descargar butler desde Google Drive
+      - name: Download Butler from Google Drive
+        run: |
+          curl -L -o butler.zip "https://drive.google.com/uc?export=download&id=1vfo3W8gMqq3xeJUNgLiTayerBq6G5OGE"
+          unzip butler.zip -d ~/butler
+          sudo mv ~/butler/butler /usr/local/bin/
+          butler -V # Verificar instalación
 
-  #     # Subir el archivo a itch.io
-  #     - name: Deploy to itch.io
-  #       run: |
-  #         butler push build/app/outputs/flutter-apk/app-release.apk isaiale/MiApp:android --dry-run --context-timeout=60
+      # Subir el archivo a itch.io
+      - name: Deploy to itch.io
+        run: |
+          butler push build/app/outputs/flutter-apk/app-release.apk isaiale/MiApp:android --dry-run --context-timeout=60
 
-  #       env:
-  #         BUTLER_API_KEY: ${{ secrets.ITCH_IO_API_KEY }}
+        env:
+          BUTLER_API_KEY: ${{ secrets.ITCH_IO_API_KEY }}
+      
+      # monitoreo con Sentry   
+      - name: Monitor with Sentry
+        env:
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}  # Utilizando el secreto almacenado
+        run: |
+            flutter test test/services/url_service_test.dart || echo "Error monitored in Sentry"
   
-  # notifications:
-  #   name: Slack Notify Results
-  #   runs-on: ubuntu-latest
-  #   needs: 
-  #     - build
-  #     - deploy
+  notifications:
+    name: Slack Notify Results
+    runs-on: ubuntu-latest
+    needs: 
+      - build
+      - deploy
     
-  #   steps:
-  #     # Notificación de éxitooooo
-  #     - name: Notify Success to Slack
-  #       if: success()
-  #       env:
-  #         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-  #       run: |
-  #         curl -X POST -H 'Content-type: application/json' \
-  #         --data '{"text":"✅ Flutter CI/CD completado con éxito."}' \
-  #         $SLACK_WEBHOOK_URL
+    steps:
+      # Notificación de éxitooooo
+      - name: Notify Success to Slack
+        if: success()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"✅ Flutter CI/CD completado con éxito."}' \
+          $SLACK_WEBHOOK_URL
 
-  #     # Notificación de error
-  #     - name: Notify Failure to Slack
-  #       if: failure()
-  #       env:
-  #         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-  #       run: |
-  #         curl -X POST -H 'Content-type: application/json' \
-  #         --data '{"text":"❌ Error en Flutter CI/CD. Por favor, revisa los detalles."}' \
-  #         $SLACK_WEBHOOK_URL
+      # Notificación de error
+      - name: Notify Failure to Slack
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"❌ Error en Flutter CI/CD. Por favor, revisa los detalles."}' \
+          $SLACK_WEBHOOK_URL
