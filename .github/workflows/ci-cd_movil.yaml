@@ -52,12 +52,16 @@ jobs:
       run: flutter pub run build_runner build --delete-conflicting-outputs
 
     # 7. Ejecutar pruebas con Flutter test
-    - name: Run Tests
+    - name: Run Flutter Tests
       run: flutter test test/services/url_service_test.dart
     
     # 8. Ejecutar pruebas con Mockito
     - name: Run Mockito Tests
       run: flutter test test/services/url_service_test_mockito.dart
+    
+    # 9. Ejecutar pruebas con Cypress
+    - name: Run Cypress Tests
+      run: flutter test test/test_cypress.dart
 
     # # 8. Ejecutar pruebas de integración
     # - name: Run Integration Test
