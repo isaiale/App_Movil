@@ -50,12 +50,11 @@ jobs:
     # 6. Generar mocks
     - name: Generate mocks
       run: flutter pub run build_runner build --delete-conflicting-outputs
-
-   # 7. Instalar Android SDK y configurar emulador
+    
     - name: Set up Android Emulator
       run: |
         sudo apt-get update
-        sudo apt-get install -yq lib32stdc++6 lib32gcc1 lib32ncurses5
+        sudo apt-get install -yq lib32stdc++6 lib32gcc-s1 lib32ncurses6
         wget https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
         unzip commandlinetools-linux-9477386_latest.zip
         yes | ./cmdline-tools/bin/sdkmanager --licenses
@@ -68,7 +67,6 @@ jobs:
       run: |
         flutter devices
         sleep 60 # Esperar hasta que el emulador esté completamente iniciado
-
 
     # 7. Ejecutar pruebas con Flutter test
     - name: Run Tests
