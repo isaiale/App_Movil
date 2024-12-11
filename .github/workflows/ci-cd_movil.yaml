@@ -63,8 +63,8 @@ jobs:
     - name: Run Cypress Tests
       run: flutter test test/test_cypress.dart
     
-        # Ejecutar prueba con emulador o simular si no está disponible
-    - name: Run Test with Emulator
+    # 10. Ejecutar prueba Test Integration
+    - name: Run Test Integration
       run: |
         echo "Iniciando prueba con emulador..."
         if [ -z "$CI" ]; then
@@ -76,7 +76,7 @@ jobs:
           echo "Emulador iniciado correctamente."
         else
           # Entorno CI: Omitir emulador, ejecutar prueba simulada
-          echo "Entorno CI detectado: simulando prueba."
+          echo "Entorno CI detectado: ejecutando prueba."
         fi
         
         # Ejecutar prueba
@@ -90,6 +90,10 @@ jobs:
       run: |
           flutter test test/services/url_service_test.dart || echo "Error monitored in Sentry"
   
+    # 11 .Test Integration Test Driver
+    - name: Run Test Driver
+      run: flutter drive --target=test_driver/app.dart
+
     #  Instalar Java 17 (requiere Java 17 para la compilación)
     - name: Set up JDK 17
       uses: actions/setup-java@v3
