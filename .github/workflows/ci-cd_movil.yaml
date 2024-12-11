@@ -62,17 +62,17 @@ jobs:
     # 9. Ejecutar pruebas con Cypress
     - name: Run Cypress Tests
       run: flutter test test/test_cypress.dart
-
-    # # 8. Ejecutar pruebas de integración
-    # - name: Run Integration Test
-    #   run: flutter test integration_test/image_slider_test.dart -d chrome
+    
+    # 10. Ejecutar pruebas con flutter drive
+    - name: Run Flutter Drive Tests
+      run: flutter drive --target=test_driver/app.dart
     
     # monitoreo con Sentry   
-    - name: Monitor with Sentry
+    - name: Monitor with 
       env:
         SENTRY_DSN: ${{ secrets.SENTRY_DSN }}  # Utilizando el secreto almacenado
       run: |
-          flutter test test/errors_test.dart || echo "Error monitored in Sentry"
+          flutter test test/services/url_service_test.dart || echo "Error monitored in Sentry"
   
     #  Instalar Java 17 (requiere Java 17 para la compilación)
     - name: Set up JDK 17
