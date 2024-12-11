@@ -92,7 +92,7 @@ jobs:
   
     # 11 .Test Integration Test Driver
     - name: Run Test Driver
-      run: flutter drive --target=test_driver/app.dart
+      run: flutter drive --target=test_driver/app.dart -d chrome
 
     #  Instalar Java 17 (requiere Java 17 para la compilación)
     - name: Set up JDK 17
