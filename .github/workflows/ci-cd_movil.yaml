@@ -63,7 +63,36 @@ jobs:
     - name: Run Cypress Tests
       run: flutter test test/test_cypress.dart
     
-    # monitoreo con Sentry   
+    # Configurar y ejecutar un emulador de Android
+    - name: Set up Android Emulator
+      uses: actions/setup-android@v3
+      with:
+        java-version: 11  # Se requiere Java 11 para el Android SDK
+        components: |
+          build-tools;33.0.2
+          platforms;android-33
+          emulator
+          platform-tools
+          system-images;android-33;google_apis;x86_64
+
+    # Iniciar el emulador
+    - name: Start Android Emulator
+      run: |
+        echo "Iniciando emulador de Android..."
+        avdmanager create avd -n test_emulator -k "system-images;android-33;google_apis;x86_64" --device "pixel_3" || echo "AVD ya existe."
+        nohup emulator -avd test_emulator -no-audio -no-window -no-snapshot-load &
+        adb wait-for-device
+        adb shell input keyevent 82
+        echo "Emulador iniciado correctamente."
+
+    # Ejecutar las pruebas Flutter con el emulador
+    - name: Run Flutter Tests on Emulator
+      run: |
+        echo "Ejecutando pruebas Flutter en el emulador..."
+        flutter devices
+        flutter test integration_test/image_slider_test.dart
+    
+      # monitoreo con Sentry   
     - name: Monitor with Sentry
       env:
         SENTRY_DSN: ${{ secrets.SENTRY_DSN }}  # Utilizando el secreto almacenado
