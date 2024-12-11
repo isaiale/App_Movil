@@ -65,8 +65,8 @@ jobs:
     
     # 10. Ejecutar pruebas con flutter drive
     - name: Run Flutter Drive Tests
-      run: flutter drive --target=test_driver/app.dart --platform chrome
-
+      run: flutter drive --target=test_driver/app.dart 
+      
     # Configurar y ejecutar un emulador de Android
     - name: Set up Android Emulator
       uses: actions/setup-android@v3
