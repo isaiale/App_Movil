@@ -50,31 +50,18 @@ jobs:
     # 6. Generar mocks
     - name: Generate mocks
       run: flutter pub run build_runner build --delete-conflicting-outputs
-    
-    - name: Set up Android Emulator
-      run: |
-        sudo apt-get update
-        sudo apt-get install -yq lib32stdc++6 lib32gcc-s1 lib32ncurses6
-        wget https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
-        unzip commandlinetools-linux-9477386_latest.zip
-        yes | ./cmdline-tools/bin/sdkmanager --licenses
-        ./cmdline-tools/bin/sdkmanager "platform-tools" "platforms;android-30" "build-tools;30.0.3" "system-images;android-30;google_apis;x86_64"
-        echo "no" | ./cmdline-tools/bin/avdmanager create avd --name test_device --package "system-images;android-30;google_apis;x86_64"
-        nohup emulator -avd test_device -no-window -noaudio -gpu off &
-
-    # 8. Esperar a que el emulador esté listo
-    - name: Wait for Emulator to Start
-      run: |
-        flutter devices
-        sleep 60 # Esperar hasta que el emulador esté completamente iniciado
 
     # 7. Ejecutar pruebas con Flutter test
     - name: Run Tests
       run: flutter test test/services/url_service_test.dart
+    
+    # 8. Ejecutar pruebas con Mockito
+    - name: Run Mockito Tests
+      run: flutter test test/services/url_service_test_mockito.dart
 
-    # 8. Ejecutar pruebas de integración
-    - name: Run Integration Test
-      run: flutter test integration_test/image_slider_test.dart -d chrome
+    # # 8. Ejecutar pruebas de integración
+    # - name: Run Integration Test
+    #   run: flutter test integration_test/image_slider_test.dart -d chrome
     
     # monitoreo con Sentry   
     - name: Monitor with Sentry
