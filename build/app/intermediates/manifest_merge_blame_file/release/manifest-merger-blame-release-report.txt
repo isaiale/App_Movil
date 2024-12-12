@@ -51,7 +51,7 @@
 36        android:extractNativeLibs="true"
 37        android:icon="@mipmap/ic_launcher"
 37-->C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\AndroidManifest.xml:5:9-43
-38        android:label="Jueves" >
+38        android:label="Isai" >
 38-->C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\AndroidManifest.xml:3:9-31
 39        <activity
 39-->C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\AndroidManifest.xml:6:9-27:20
