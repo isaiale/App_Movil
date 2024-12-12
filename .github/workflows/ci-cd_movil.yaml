@@ -157,10 +157,12 @@ jobs:
 
       # Subir el archivo a itch.io
       - name: Deploy to itch.io
-        run: |
-          butler push build/app/outputs/flutter-apk/app-release.apk isaiale/MiApp:android --context-timeout=60
         env:
           BUTLER_API_KEY: ${{ secrets.ITCH_IO_API_KEY }}
+          
+        run: |
+          butler push build/app/outputs/flutter-apk/app-release.apk isaiale/MiApp:android
+        
       
       # monitoreo con Sentry   
       - name: Monitor with Sentry
