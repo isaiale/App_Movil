@@ -172,30 +172,30 @@ jobs:
         run: |
             flutter test test/services/url_service_test.dart || echo "Error monitored in Sentry"
   
-  # notifications:
-  #   name: Slack Notify Results
-  #   runs-on: ubuntu-latest
-  #   needs: 
-  #     - build
-  #     - deploy
+  notifications:
+    name: Slack Notify Results
+    runs-on: ubuntu-latest
+    needs: 
+      - build
+      - deploy
     
-  #   steps:
-  #     # Notificación de éxitooooo
-  #     - name: Notify Success to Slack
-  #       if: success()
-  #       env:
-  #         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-  #       run: |
-  #         curl -X POST -H 'Content-type: application/json' \
-  #         --data '{"text":"✅ Flutter CI/CD completado con éxito."}' \
-  #         $SLACK_WEBHOOK_URL
+    steps:
+      # Notificación de éxitooooo
+      - name: Notify Success to Slack
+        if: success()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"✅ Flutter CI/CD completado con éxito."}' \
+          $SLACK_WEBHOOK_URL
 
-  #     # Notificación de error
-  #     - name: Notify Failure to Slack
-  #       if: failure()
-  #       env:
-  #         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-  #       run: |
-  #         curl -X POST -H 'Content-type: application/json' \
-  #         --data '{"text":"❌ Error en Flutter CI/CD. Por favor, revisa los detalles."}' \
-  #         $SLACK_WEBHOOK_URL
+      # Notificación de error
+      - name: Notify Failure to Slack
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"❌ Error en Flutter CI/CD. Por favor, revisa los detalles."}' \
+          $SLACK_WEBHOOK_URL
