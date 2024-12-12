@@ -153,7 +153,8 @@ jobs:
           curl -L -o butler.zip "https://drive.google.com/uc?export=download&id=1vfo3W8gMqq3xeJUNgLiTayerBq6G5OGE"
           unzip butler.zip -d ~/butler
           sudo mv ~/butler/butler /usr/local/bin/
-          butler -V # Verificar instalación
+          butler upgrade 
+          butler -V 
 
       # Subir el archivo a itch.io
       - name: Deploy to itch.io
@@ -161,7 +162,7 @@ jobs:
           BUTLER_API_KEY: ${{ secrets.ITCH_IO_API_KEY }}
           
         run: |
-          butler push build/app/outputs/flutter-apk/app-release.apk isaiale/MiApp:android
+          butler push build/app/outputs/flutter-apk/app-release.apk isaiale/mi-app:android
         
       
       # monitoreo con Sentry   
