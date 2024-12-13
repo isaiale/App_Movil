@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AlertMessage {
-  // Función estática para mostrar el mensaje de alerta centrado en la pantalla
+  // Función estática para mostrar el mensaje de alerta centrado en la pantallaaa
   static void show({
     required BuildContext context,
     required String message,
