@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.example.app_movil"
+3    package="com.example.MEF"
 4    android:versionCode="1"
 5    android:versionName="1.0.0" >
 6
@@ -38,12 +38,12 @@
 30
 31    <permission
 31-->[androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
-32        android:name="com.example.app_movil.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32        android:name="com.example.MEF.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 32-->[androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
 33        android:protectionLevel="signature" />
 33-->[androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
 34
-35    <uses-permission android:name="com.example.app_movil.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+35    <uses-permission android:name="com.example.MEF.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 35-->[androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
 35-->[androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
 36
@@ -54,9 +54,9 @@
 40        android:debuggable="true"
 41        android:extractNativeLibs="true"
 42        android:icon="@mipmap/ic_launcher"
-43        android:label="Mi app" >
+43        android:label="mi appp" >
 44        <activity
-45            android:name="com.example.app_movil.MainActivity"
+45            android:name="com.example.MEF.MainActivity"
 46            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
 47            android:exported="true"
 48            android:hardwareAccelerated="true"
@@ -103,20 +103,20 @@
 83-->[androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\3e108fe9d597d03770ae82acaebb5b63\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
 84
 85        <provider
-85-->[io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:16:9-20:39
+85-->[io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:16:9-20:39
 86            android:name="io.sentry.android.core.SentryPerformanceProvider"
-86-->[io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:17:13-76
-87            android:authorities="com.example.app_movil.SentryPerformanceProvider"
-87-->[io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:18:13-77
+86-->[io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:17:13-76
+87            android:authorities="com.example.MEF.SentryPerformanceProvider"
+87-->[io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:18:13-77
 88            android:exported="false"
-88-->[io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:19:13-37
+88-->[io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:19:13-37
 89            android:initOrder="200" />
-89-->[io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:20:13-36
+89-->[io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:20:13-36
 90        <provider
 90-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\DELL\.gradle\caches\transforms-3\5d9083683aa46ad6646ca7a884bd56df\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
 91            android:name="androidx.startup.InitializationProvider"
 91-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\DELL\.gradle\caches\transforms-3\5d9083683aa46ad6646ca7a884bd56df\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
-92            android:authorities="com.example.app_movil.androidx-startup"
+92            android:authorities="com.example.MEF.androidx-startup"
 92-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\DELL\.gradle\caches\transforms-3\5d9083683aa46ad6646ca7a884bd56df\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
 93            android:exported="false" >
 93-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\DELL\.gradle\caches\transforms-3\5d9083683aa46ad6646ca7a884bd56df\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37

@@ -6,8 +6,8 @@ MERGED from [:sentry_flutter] C:\Users\DELL\Desktop\Proyectos\App_Movil\build\se
 MERGED from [:sentry_flutter] C:\Users\DELL\Desktop\Proyectos\App_Movil\build\sentry_flutter\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-14:19
 MERGED from [androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\3e108fe9d597d03770ae82acaebb5b63\transformed\jetified-window-1.2.0\AndroidManifest.xml:22:5-29:19
 MERGED from [androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\3e108fe9d597d03770ae82acaebb5b63\transformed\jetified-window-1.2.0\AndroidManifest.xml:22:5-29:19
-MERGED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:9:5-21:19
-MERGED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:9:5-21:19
+MERGED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:9:5-21:19
+MERGED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:9:5-21:19
 MERGED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\DELL\.gradle\caches\transforms-3\5d9083683aa46ad6646ca7a884bd56df\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
@@ -35,14 +35,16 @@ MERGED from [:sentry_flutter] C:\Users\DELL\Desktop\Proyectos\App_Movil\build\se
 MERGED from [:package_info_plus] C:\Users\DELL\Desktop\Proyectos\App_Movil\build\package_info_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:shared_preferences_android] C:\Users\DELL\Desktop\Proyectos\App_Movil\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:webview_flutter_android] C:\Users\DELL\Desktop\Proyectos\App_Movil\build\webview_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
-MERGED from [io.sentry:sentry-android:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\27b3926e938ed5985d340354c0e67a71\transformed\jetified-sentry-android-7.16.0\AndroidManifest.xml:2:1-10:12
-MERGED from [io.sentry:sentry-android-replay:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\684cbe56e2301c3046b5a7090b9f49ab\transformed\jetified-sentry-android-replay-7.16.0\AndroidManifest.xml:2:1-7:12
+MERGED from [io.sentry:sentry-android:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\2a512987d8bbd7d0bcbfa3a5c3bbe9cc\transformed\jetified-sentry-android-7.18.1\AndroidManifest.xml:2:1-10:12
+MERGED from [io.sentry:sentry-android-replay:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\ccfcd8761fb877c9326b8d6c14ad2166\transformed\jetified-sentry-android-replay-7.18.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\7374f32381d954e34124ee720ff47df8\transformed\jetified-datastore-preferences-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.datastore:datastore:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\1471cc351ba4f9046368b464c95dce27\transformed\jetified-datastore-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.7.1] C:\Users\DELL\.gradle\caches\transforms-3\a49cd171355a6a39687e69f028c8bcbc\transformed\fragment-1.7.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.webkit:webkit:1.12.1] C:\Users\DELL\.gradle\caches\transforms-3\e41db09f4a417a719f3e0f2572503bbc\transformed\webkit-1.12.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\3e108fe9d597d03770ae82acaebb5b63\transformed\jetified-window-1.2.0\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.window:window-java:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\bf78d940cc78ca45c77421e3af64376e\transformed\jetified-window-java-1.2.0\AndroidManifest.xml:17:1-21:12
-MERGED from [io.sentry:sentry-android-ndk:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\1b8fe6263520deb550bd2b94bd7a16e4\transformed\jetified-sentry-android-ndk-7.16.0\AndroidManifest.xml:2:1-7:12
-MERGED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:2:1-23:12
+MERGED from [io.sentry:sentry-android-ndk:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\8dbb62cf88d6e23da20305968be89f5e\transformed\jetified-sentry-android-ndk-7.18.1\AndroidManifest.xml:2:1-7:12
+MERGED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:2:1-23:12
 MERGED from [androidx.activity:activity:1.8.1] C:\Users\DELL\.gradle\caches\transforms-3\3e4063b07db37bd08626b21245b0f82d\transformed\jetified-activity-1.8.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\2b9c9404689a5c622c078d5da9ff626f\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\878dadbdc8c0f130b446b0870752f824\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -57,8 +59,6 @@ MERGED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\DELL\.gradle\caches\transforms-3\c8996eb6ce8efabee1883fe1486006c9\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\DELL\.gradle\caches\transforms-3\5d9083683aa46ad6646ca7a884bd56df\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\DELL\.gradle\caches\transforms-3\010887bb3359843376c02ecf4bf2ef43\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.datastore:datastore-preferences:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\7374f32381d954e34124ee720ff47df8\transformed\jetified-datastore-preferences-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.datastore:datastore:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\1471cc351ba4f9046368b464c95dce27\transformed\jetified-datastore-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.test:rules:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\96536699df0deb7307dec1521953336d\transformed\rules-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.test.espresso:espresso-core:3.2.0] C:\Users\DELL\.gradle\caches\transforms-3\a458e07bf61b14b5596e3bbd036187f9\transformed\espresso-core-3.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.test:runner:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\b57214dba62f6ccd0b35db65f4a6a663\transformed\runner-1.2.0\AndroidManifest.xml:17:1-24:12
@@ -94,8 +94,8 @@ ADDED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\Androi
 		ADDED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\AndroidManifest.xml:42:19-48
 uses-permission#android.permission.INTERNET
 ADDED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\debug\AndroidManifest.xml:6:5-66
-MERGED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:7:5-67
-MERGED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:7:5-67
+MERGED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:7:5-67
+MERGED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:7:5-67
 	android:name
 		ADDED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\debug\AndroidManifest.xml:6:22-64
 uses-sdk
@@ -112,10 +112,14 @@ MERGED from [:shared_preferences_android] C:\Users\DELL\Desktop\Proyectos\App_Mo
 MERGED from [:shared_preferences_android] C:\Users\DELL\Desktop\Proyectos\App_Movil\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:webview_flutter_android] C:\Users\DELL\Desktop\Proyectos\App_Movil\build\webview_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:webview_flutter_android] C:\Users\DELL\Desktop\Proyectos\App_Movil\build\webview_flutter_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [io.sentry:sentry-android:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\27b3926e938ed5985d340354c0e67a71\transformed\jetified-sentry-android-7.16.0\AndroidManifest.xml:6:5-8:57
-MERGED from [io.sentry:sentry-android:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\27b3926e938ed5985d340354c0e67a71\transformed\jetified-sentry-android-7.16.0\AndroidManifest.xml:6:5-8:57
-MERGED from [io.sentry:sentry-android-replay:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\684cbe56e2301c3046b5a7090b9f49ab\transformed\jetified-sentry-android-replay-7.16.0\AndroidManifest.xml:5:5-44
-MERGED from [io.sentry:sentry-android-replay:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\684cbe56e2301c3046b5a7090b9f49ab\transformed\jetified-sentry-android-replay-7.16.0\AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\2a512987d8bbd7d0bcbfa3a5c3bbe9cc\transformed\jetified-sentry-android-7.18.1\AndroidManifest.xml:6:5-8:57
+MERGED from [io.sentry:sentry-android:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\2a512987d8bbd7d0bcbfa3a5c3bbe9cc\transformed\jetified-sentry-android-7.18.1\AndroidManifest.xml:6:5-8:57
+MERGED from [io.sentry:sentry-android-replay:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\ccfcd8761fb877c9326b8d6c14ad2166\transformed\jetified-sentry-android-replay-7.18.1\AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android-replay:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\ccfcd8761fb877c9326b8d6c14ad2166\transformed\jetified-sentry-android-replay-7.18.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\7374f32381d954e34124ee720ff47df8\transformed\jetified-datastore-preferences-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\7374f32381d954e34124ee720ff47df8\transformed\jetified-datastore-preferences-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\1471cc351ba4f9046368b464c95dce27\transformed\jetified-datastore-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\1471cc351ba4f9046368b464c95dce27\transformed\jetified-datastore-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.7.1] C:\Users\DELL\.gradle\caches\transforms-3\a49cd171355a6a39687e69f028c8bcbc\transformed\fragment-1.7.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment:1.7.1] C:\Users\DELL\.gradle\caches\transforms-3\a49cd171355a6a39687e69f028c8bcbc\transformed\fragment-1.7.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.webkit:webkit:1.12.1] C:\Users\DELL\.gradle\caches\transforms-3\e41db09f4a417a719f3e0f2572503bbc\transformed\webkit-1.12.1\AndroidManifest.xml:5:5-44
@@ -124,10 +128,10 @@ MERGED from [androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\transfor
 MERGED from [androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\3e108fe9d597d03770ae82acaebb5b63\transformed\jetified-window-1.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.window:window-java:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\bf78d940cc78ca45c77421e3af64376e\transformed\jetified-window-java-1.2.0\AndroidManifest.xml:19:5-44
 MERGED from [androidx.window:window-java:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\bf78d940cc78ca45c77421e3af64376e\transformed\jetified-window-java-1.2.0\AndroidManifest.xml:19:5-44
-MERGED from [io.sentry:sentry-android-ndk:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\1b8fe6263520deb550bd2b94bd7a16e4\transformed\jetified-sentry-android-ndk-7.16.0\AndroidManifest.xml:5:5-44
-MERGED from [io.sentry:sentry-android-ndk:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\1b8fe6263520deb550bd2b94bd7a16e4\transformed\jetified-sentry-android-ndk-7.16.0\AndroidManifest.xml:5:5-44
-MERGED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:5:5-44
-MERGED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android-ndk:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\8dbb62cf88d6e23da20305968be89f5e\transformed\jetified-sentry-android-ndk-7.18.1\AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android-ndk:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\8dbb62cf88d6e23da20305968be89f5e\transformed\jetified-sentry-android-ndk-7.18.1\AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.activity:activity:1.8.1] C:\Users\DELL\.gradle\caches\transforms-3\3e4063b07db37bd08626b21245b0f82d\transformed\jetified-activity-1.8.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.8.1] C:\Users\DELL\.gradle\caches\transforms-3\3e4063b07db37bd08626b21245b0f82d\transformed\jetified-activity-1.8.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\2b9c9404689a5c622c078d5da9ff626f\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
@@ -156,10 +160,6 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\DELL\.gradle\c
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\DELL\.gradle\caches\transforms-3\5d9083683aa46ad6646ca7a884bd56df\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\DELL\.gradle\caches\transforms-3\010887bb3359843376c02ecf4bf2ef43\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\DELL\.gradle\caches\transforms-3\010887bb3359843376c02ecf4bf2ef43\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.datastore:datastore-preferences:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\7374f32381d954e34124ee720ff47df8\transformed\jetified-datastore-preferences-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.datastore:datastore-preferences:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\7374f32381d954e34124ee720ff47df8\transformed\jetified-datastore-preferences-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.datastore:datastore:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\1471cc351ba4f9046368b464c95dce27\transformed\jetified-datastore-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.datastore:datastore:1.0.0] C:\Users\DELL\.gradle\caches\transforms-3\1471cc351ba4f9046368b464c95dce27\transformed\jetified-datastore-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.test:rules:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\96536699df0deb7307dec1521953336d\transformed\rules-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.test:rules:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\96536699df0deb7307dec1521953336d\transformed\rules-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.test.espresso:espresso-core:3.2.0] C:\Users\DELL\.gradle\caches\transforms-3\a458e07bf61b14b5596e3bbd036187f9\transformed\espresso-core-3.2.0\AndroidManifest.xml:20:5-22:41
@@ -187,14 +187,14 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\DELL\.g
 MERGED from [androidx.test.espresso:espresso-idling-resource:3.2.0] C:\Users\DELL\.gradle\caches\transforms-3\9ecaca7a427183ee551030c9b8623590\transformed\espresso-idling-resource-3.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.test.espresso:espresso-idling-resource:3.2.0] C:\Users\DELL\.gradle\caches\transforms-3\9ecaca7a427183ee551030c9b8623590\transformed\espresso-idling-resource-3.2.0\AndroidManifest.xml:20:5-22:41
 	tools:overrideLibrary
-		ADDED from [io.sentry:sentry-android:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\27b3926e938ed5985d340354c0e67a71\transformed\jetified-sentry-android-7.16.0\AndroidManifest.xml:8:9-54
+		ADDED from [io.sentry:sentry-android:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\2a512987d8bbd7d0bcbfa3a5c3bbe9cc\transformed\jetified-sentry-android-7.18.1\AndroidManifest.xml:8:9-54
 	android:targetSdkVersion
 		INJECTED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\debug\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\debug\AndroidManifest.xml
 provider#io.sentry.android.core.SentryInitProvider
 ADDED from [:sentry_flutter] C:\Users\DELL\Desktop\Proyectos\App_Movil\build\sentry_flutter\intermediates\merged_manifest\debug\AndroidManifest.xml:9:9-13:35
-REJECTED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:12:9-15:40
+REJECTED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:12:9-15:40
 	tools:node
 		ADDED from [:sentry_flutter] C:\Users\DELL\Desktop\Proyectos\App_Movil\build\sentry_flutter\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-32
 	android:authorities
@@ -216,22 +216,22 @@ ADDED from [androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\transform
 	android:name
 		ADDED from [androidx.window:window:1.2.0] C:\Users\DELL\.gradle\caches\transforms-3\3e108fe9d597d03770ae82acaebb5b63\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
 provider#io.sentry.android.core.SentryPerformanceProvider
-ADDED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:16:9-20:39
+ADDED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:16:9-20:39
 	android:authorities
-		ADDED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:18:13-77
+		ADDED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:18:13-77
 	android:exported
-		ADDED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:19:13-37
+		ADDED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:19:13-37
 	android:initOrder
-		ADDED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:20:13-36
+		ADDED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:20:13-36
 	android:name
-		ADDED from [io.sentry:sentry-android-core:7.16.0] C:\Users\DELL\.gradle\caches\transforms-3\a4aaa9b0a2277df4a7bd967ca3790f6b\transformed\jetified-sentry-android-core-7.16.0\AndroidManifest.xml:17:13-76
+		ADDED from [io.sentry:sentry-android-core:7.18.1] C:\Users\DELL\.gradle\caches\transforms-3\a70b3bdd10c39367d632b78441665f64\transformed\jetified-sentry-android-core-7.18.1\AndroidManifest.xml:17:13-76
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
-permission#com.example.app_movil.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.example.MEF.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
@@ -241,7 +241,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
-uses-permission#com.example.app_movil.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.example.MEF.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
