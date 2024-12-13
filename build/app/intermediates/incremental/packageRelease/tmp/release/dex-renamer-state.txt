@@ -1,4 +1,4 @@
-#Thu Dec 12 10:45:09 CST 2024
+#Thu Dec 12 22:16:30 CST 2024
 base.0=C\:\\Users\\DELL\\Desktop\\Proyectos\\App_Movil\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

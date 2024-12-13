@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.app_movil.app-mergeReleaseResources-31:/values/values.xml",
+            "outputFile": "com.example.MEF.app-mergeReleaseResources-31:/values/values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\010887bb3359843376c02ecf4bf2ef43\\transformed\\jetified-savedstate-1.2.1\\res\\values\\values.xml",

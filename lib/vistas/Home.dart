@@ -119,7 +119,7 @@ class _HomeState extends State<Home> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: Text(
-                  'Pantalones',
+                  'Pantalones P',
                   style: TextStyle(
                     fontSize: 22.0,
                     fontWeight: FontWeight.bold,

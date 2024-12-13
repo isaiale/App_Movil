@@ -23,7 +23,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DE
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\AndroidManifest.xml:3:9-31
+		ADDED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\AndroidManifest.xml:3:9-35
 	android:icon
 		ADDED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\AndroidManifest.xml:5:9-43
 	android:name
@@ -96,7 +96,7 @@ data
 ADDED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\AndroidManifest.xml:42:13-50
 	android:mimeType
 		ADDED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\AndroidManifest.xml:42:19-48
-activity#com.example.app_movil.MainActivity
+activity#com.example.MEF.MainActivity
 ADDED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\AndroidManifest.xml:6:9-27:20
 	android:launchMode
 		ADDED from C:\Users\DELL\Desktop\Proyectos\App_Movil\android\app\src\main\AndroidManifest.xml:9:13-43
@@ -273,7 +273,7 @@ ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3
 		ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
-permission#com.example.app_movil.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.example.MEF.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
@@ -283,7 +283,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
-uses-permission#com.example.app_movil.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.example.MEF.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.1] C:\Users\DELL\.gradle\caches\transforms-3\c666c258fca39b3353b46678a6b928ab\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
