@@ -13,8 +13,8 @@ class _TabsScreenState extends State<TabsScreen> {
 
   // Lista de pantallas
   final List<Widget> _pages = [
-    Productos(),
     Home(),
+    Productos(),
     Compras(),
   ];
 
@@ -34,12 +34,12 @@ class _TabsScreenState extends State<TabsScreen> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Productos',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Inicio',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart),
+            label: 'Productos',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_bag),
